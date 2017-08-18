@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../public/scripts/jquery.min.js"></script>
+    <script src="../public/scripts/json.human.js"></script>
+    <script>
+
+
+        var storedSelections = [];
+        var simulatedSelections = [];
+
+        window.onmousedown = clearSimulatedSelections;
+
+        function storeSelection() {
+            if (window.getSelection) {
+                var currSelection = window.getSelection();
+                for (var i = 0; i < currSelection.rangeCount; i++) {
+                    storeRecursive(currSelection.getRangeAt(i));
+                }
+                currSelection.removeAllRanges();
+            }
+            else {
+                alert("Your browser does not support this example!");
+            }
+        }
+
+        function storeRecursive(selection, node, started) {
+            node = node || document.body;
+            started = started || false;
+            var nodes = node.childNodes;
+            for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].nodeType == 3) {
+                    var first = nodes[i] == selection.startContainer;
+                    var last = nodes[i] == selection.endContainer;
+                    if (first) {
+                        started = true;
+                    }
+                    if (started) {
+                        var sel = selection.cloneRange();
+                        if (!first) {
+                            sel.setStartBefore(nodes[i]);
+                        }
+                        if (!last) {
+                            sel.setEndAfter(nodes[i]);
+                        }
+                        storedSelections.push(sel);
+                        if (last) {
+                            return false;
+                        }
+                    }
+                }
+                else {
+                    started = storeRecursive(selection, nodes[i], started);
+                }
+            }
+            return started;
+        }
+
+        function clearStoredSelections() {
+            storedSelections = [];
+        }
+
+        function showStoredSelections() {
+            if (window.getSelection) {
+                var currSelection = window.getSelection();
+                currSelection.removeAllRanges();
+                for (var i = 0; i < storedSelections.length; i++) {
+                    var node = document.createElement("span");
+                    node.className = "highlight";
+                    storedSelections[i].surroundContents(node);
+                    simulatedSelections.push(node);
+                }
+            }
+            else {
+                alert("Your browser does not support this example!");
+            }
+        }
+
+        function clearSimulatedSelections() {
+            for (var i = 0; i < simulatedSelections.length; i++) {
+                var sec = simulatedSelections[i];
+                var pn = sec.parentNode;
+                while (sec.firstChild) {
+                    pn.insertBefore(sec.firstChild, sec);
+                }
+                pn.removeChild(sec);
+            }
+            simulatedSelections = [];
+        }
+
+        $(document).ready(function () {
+            var node = JsonHuman.format({a: 123, b: 'sdf',c:{d:123,e:234}});
+            document.body.appendChild(node);
+            function prcess(event) {
+                processNode(event.target);
+            }
+
+            function processNode(node) {
+//                node = node.firstChild;
+                if (node.className == 'my' || node.parentNode.className == 'my') return;
+
+                if (node.nodeName == '#text') {
+                    var mydiv = document.createElement('span');
+                    var patt = /(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])(\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])){3}/g;
+//                    mydiv.innerHTML = node.textContent.replace(patt,
+//                        "<span  class='my' contenteditable='false' style='color: #8eb4a0;'>$&</span>");
+//
+//                    if (mydiv.getElementsByClassName('my').length <= 0) return;
+
+                    mydiv.setAttribute('class', 'my');
+                    var matched = patt.exec(node.textContent);
+
+                    if (!matched) return;
+                    console.log(matched);
+                    $('#editor').unbind('DOMCharacterDataModified', prcess);
+                    var range = document.createRange();
+                    for (var j = 0; j < matched.length; ++j) {
+                        range.setStart(node, matched[j].index);
+                        range.setEnd(node, matched[j].index + matched[j].length);
+                        range.surroundContents(mydiv);
+                        console.log(range)
+                    }
+
+                    $('#editor').bind('DOMCharacterDataModified', prcess);
+
+//                    node.textContent = '';
+//                    node.parentNode.insertBefore(mydiv, node);
+//                    var currSelection = window.getSelection();
+//                    var range = document.createRange();
+//                    range.setStart(node, node.textContent.length);
+//                    currSelection.removeAllRanges();
+//                    currSelection.addRange(range);
+                    return;
+                }
+
+                for (var i = 0; i < node.childNodes.length; ++i) {
+                    processNode(node.childNodes[i])
+                }
+            }
+
+            $('#editor').bind('DOMCharacterDataModified', prcess);
+            //            $('#editor').one('DOMNodeInserted', function (e) {
+            //                console.log(e);
+            //                processNode(e.target);
+            //            });
+        })
+        ;
+
+        function _setCaretToEnd(editor) {
+            var range = document.createRange();
+            range.selectNodeContents(editor);
+            range.collapse(false);
+//            range.select();
+            // 上一行的select是rangy提供的非标准api，可用以下两行代替
+            var selection = document.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            return range;
+        }
+
+        function set_focus(el) {
+//            el = el[0];  // jquery 对象转dom对象
+            el.focus();
+//            if ($.browser.msie) {
+//                var rng;
+//                el.focus();
+//                rng = document.selection.createRange();
+//                rng.moveStart('character', -el.innerText.length);
+//                var text = rng.text;
+//                for (var i = 0; i < el.innerText.length; i++) {
+//                    if (el.innerText.substring(0, i + 1) == text.substring(text.length - i - 1, text.length)) {
+//                        result = i + 1;
+//                    }
+//                }
+//            }
+//            else {
+            var range = document.createRange();
+//            range.selectNodeContents(el);
+            range.setStartAfter(el.lastChild);
+            range.collapse(false);
+            var sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+            console.log(range);
+//            }
+        }
+
+        function insertHtmlAtCaret(html) {
+            var sel, range;
+            if (window.getSelection) {
+                // IE9 and non-IE
+                sel = window.getSelection();
+                if (sel.getRangeAt && sel.rangeCount) {
+                    range = sel.getRangeAt(0);
+                    range.deleteContents();
+                    var el = document.createElement("div");
+                    el.innerHTML = html;
+                    var frag = document.createDocumentFragment(), node, lastNode, tempNode;
+                    while ((node = el.firstChild)) {
+                        tempNode = frag.appendChild(node);
+                        if (tempNode.nodeName != '#text')
+                            lastNode = tempNode;
+                    }
+                    range.insertNode(frag);
+                    // Preserve the selection
+//                    if (lastNode) {
+//                    var tempRange = document.getElementById('123').createTextRange();
+//                    tempRange.collapse(true);
+//                    tempRange.select();
+//                        range.setStartAfter(lastNode);
+//                    if (sel.rangeCount > 0) sel.removeAllRanges();
+//                    sel.extend(document.getElementById('123'), 1);
+//                    tempRange.setStart(document.getElementById('123').firstChild, 1);
+//                    tempRange.collapse(true);
+//                    sel.addRange(tempRange);
+//                    sel.collapseToEnd();
+//                    console.log(sel.focusNode);
+//                    }
+                }
+            } else if (document.selection && document.selection.type != "Control") {
+// IE < 9
+                document.selection.createRange().pasteHTML(html);
+            }
+        }
+    </script>
+    <style>
+        .highlight {
+            background: red;
+        }
+    </style>
+</head>
+<body id="editor" contenteditable="true">
+Select some content on this page and use the buttons below.<br><br>
+
+</body>
+<body>
+<button onclick="storeSelection();">Store the selection</button>
+<button onclick="clearStoredSelections();">Clear stored selections</button>
+<button onclick="showStoredSelections();">Show stored selections</button>
+</body>
+</html>

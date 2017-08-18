@@ -1,0 +1,35 @@
+<% include head.ejs %>
+<link rel="stylesheet" href="/css/data_table.css">
+<script type="text/javascript" src="/jqwidgets/jqxtabs.js"></script>
+<script type="text/javascript" src="/jqwidgets/jqxcheckbox.js"></script>
+<div style="height: 100%; overflow: hidden;">
+    <div class="top">
+        <div class="top-bar" align="center">
+            数据来自&nbsp;&nbsp;&nbsp;&nbsp;<span class="sys-title" id="sys_title">多维查询</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="api-title" id="api_title">IMEI查询</span>
+        </div>
+    </div>
+    <div class="bottom" id="data_bottom">
+        <a class="callback-btn" data-info="<%= info %>" id="callback_btn" href="javascript:;">回传数据</a>
+        <div class="list-tab" id="list_tab">
+            <ul>
+                <li><span id="tab1"></span></li>
+            </ul>
+            <div></div>
+        </div>
+        <div id="table_container" class="table-container">
+        </div>
+    </div>
+</div>
+<div id="jqxMenu">
+
+</div>
+<div id="jqxPopover"></div>
+<!--<script type="text/javascript" src="/scripts/jquery-2.2.4.min.js"></script>-->
+<script src="/scripts/json.human.js"></script>
+
+<script src="/scripts/data.js"></script>
+<script src="/jqwidgets/jqxmenu.js"></script>
+<script src="/scripts/data_table.js"></script>
+
+<% include footer.ejs %>

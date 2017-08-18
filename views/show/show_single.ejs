@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>协同展示</title>
+    <link rel="stylesheet" href="/css/font-awesome.min.css"></link>
+    <script src="/scripts/vis/vis.min.js"></script>
+    <script src="/scripts/json.human.js"></script>
+    <script src="/scripts/show/iconfont.js"></script>
+    <link rel="stylesheet" href="/scripts/vis/vis.min.css">
+    <link rel="stylesheet" href="/jqwidgets/styles/jqx.base.css"/>
+    <link href="/css/showcss/svg.css" rel="stylesheet">
+    <link href="/css/showcss/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/showcss/bootstrap.css" rel="stylesheet">
+    <script src="/scripts/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="/jqwidgets/jqxtabs.js"></script>
+    <script type="text/javascript" src="/jqwidgets/jqxcheckbox.js"></script>
+    <script src="/jqwidgets/jqxmenu.js"></script>
+    <link rel="stylesheet" href="/css/meeting.css">
+    <link href="/css/showcss/showcustom.css" rel="stylesheet">
+    <link href="/css/showcss/svg.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/data_table.css">
+    <link rel="stylesheet" href="css/custom.css"/>
+
+    <link rel="stylesheet" href="/css/handsontable.full.css"/>
+    <link rel="stylesheet" href="/css/bootstrap-pagination.min.css"/>
+    <link rel="stylesheet" href="/css/sweetalert2.css"/>
+    <link rel="stylesheet" href="/css/bootstrap-clockpicker.css"/>
+    <!--<link rel="stylesheet" href="/css/jquery.mCustomScrollbar.css"/>-->
+    <link rel="stylesheet" href="/css/jquery-ui-timepicker-addon.css"/>
+    <!--<link rel="stylesheet" href="/css/flipclock.css"/>-->
+    <link rel="stylesheet" href="/css/jquery-ui.css"/>
+    <link rel="stylesheet" href="/css/smartmenu.css">
+    <link rel="stylesheet" href="/jqwidgets/styles/jqx.base.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/base.css"/>
+    <link rel="stylesheet" href="/css/toastr.min.css">
+    <link rel="stylesheet" href="/css/mission.css"></link>
+    <link rel="stylesheet" href="/css/meeting.css"></link>
+    <link rel="stylesheet" href="/css/font-awesome.min.css"></link>
+    <link rel="stylesheet" href="/css/handsontable.full.css"/>
+    <link rel="stylesheet" href="/css/bootstrap-pagination.min.css"/>
+    <link rel="stylesheet" href="/css/sweetalert2.css"/>
+    <link rel="stylesheet" href="/css/bootstrap-clockpicker.css"/>
+
+    <script type="text/javascript">
+        $(function () {
+            $.jqx.theme = 'meeting';
+        });
+    </script>
+</head>
+<body>
+<div class="single-animent z-index">
+</div>
+<div class="svg">
+    <div id="eventgraph">
+        <button class="add_custom_object_btn" style="display: none">添加标准对象</button>
+        <div id="customObjectMenu" style="display: none"></div>
+        <div id="showMemberGrid"></div>
+        <ul id="set_btn_group">
+            <li class="fa fa-unlock" onclick="switchForceState(0)"></li>
+            <li id="changeZoomAuto" class="fa fa-crosshairs" onclick="changeZoomAuto()"></li>
+            <li class="fa fa-superpowers" id="changelayout_btn"></li>
+            <li class="fa fa-arrows-alt" id="allshrink"></li>
+        </ul>
+        <div class="explain-info" id="explain_info" style="">
+
+            <span class="fa fa-arrow-circle-up"></span>
+            <h3>会战描述</h3>
+            <p id="explain_info_desc" style="word-break: break-all;">
+            </p>
+            <h3> 会战列表 </h3>
+
+
+            <div id="explain_info-p" style="">
+                <% rooms.forEach(function(room){ %>
+                <div class="room-item"><a href="javascript:;"
+                                          data-room="<%= JSON.stringify(room) %>"><%= room.name %></a></div>
+                <% }) %>
+            </div>
+        </div>
+        <ul id="cutline">
+            <li style="text-align: center;">
+                <div style="display: inline-block;font-weight: bold;">对照列表</div>
+                <span id="hide_api" style="float: right;font-size: 1em;cursor: pointer;line-height: 1em;"
+                      class="fa fa-arrow-circle-down fa-2x"></span>
+            </li>
+            <li>
+                <div class="div_circle" id="circle2"></div>
+                <span>：输入数据</span></li>
+            <li>
+                <div class="div_circle" id="circle4"></div>
+                <span>：结果数据</span></li>
+
+            <li>
+                <div class="div_circle" id="circle6"></div>
+                <span>：回传数据</span></li>
+            <li>
+                <div class="div_circle" id="circle3"></div>
+                <span>：应用系统</span></li>
+        </ul>
+    </div>
+    <div id="show_tabs" style="width:100%;height:20%">
+
+        <div class="full-tabs-parent">
+            <% include ../show/report.ejs %>
+            <div class="close-tabs fa fa-times-circle" id="close_tabs-btn"></div>
+            <div class="back-bottom fa fa-arrow-circle-o-down" id="timeLineShowAndHide"></div>
+            <div class="full-tabs" id="full-tabs">
+                <ul>
+                    <li>结果数据</li>
+                </ul>
+                <div></div>
+            </div>
+        </div>
+        <div class="row" style="width:100%;height:100%">
+            <div id="mytimeline" style="height:100%" class="col-lg-12">
+                <div class="tool-bar">
+                    <button id="auto_btn" class="btn btn-sm btn-success">停止自动</button>
+                    <button id="overview_btn" class="btn btn-sm btn-warning">数据概览</button>
+                    <button id="jumpcurrent_btn" class="btn btn-sm btn-info">当前时间</button>
+                    <button id="selarea_btn" class="btn btn-sm btn-danger">建立选区</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="message-list" id="message_list">
+        <div style="padding: 2px 8px 0;"><span id="message_shrink" class="fa fa-arrow-circle-down fa-2x"></span>
+            <p class="message-title">操作动态 </p></div>
+        <div class="messages">
+        </div>
+    </div>
+    <div class="message-tabs" id="message_tabs">
+        <div class="hide-tabs fa fa-times-circle" id="hide_tabs"></div>
+        <div class="hide-tab top-tab fa fa-plus-circle fa-1x" id="full_tabs_btn"></div>
+        <div style="font-size: 1.2em;" class="show-table top-table fa fa-file" id="show_table-excle" title="发送报告"></div>
+        <div id="message-node-title" style="text-align: center"></div>
+        <div id="message-node-info"></div>
+    </div>
+    <svg width="0" height="0">
+        <defs>
+            <radialGradient id="grad1" cx="50%" cy="50%" r="70%" fx="30%" fy="30%">
+                <stop offset="0%" style="stop-color:rgb(215,215,215);stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:#00b7ff;stop-opacity:1"/>
+            </radialGradient>
+            <radialGradient id="grad2" cx="50%" cy="50%" r="70%" fx="30%" fy="30%">
+                <stop offset="0%" style="stop-color:#d7d7d7;stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:rgb(95,37,255);stop-opacity:1"/>
+            </radialGradient>
+            <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:rgb(70,206,255);stop-opacity:1"/>
+            </linearGradient>
+            <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#edc66d;stop-opacity:1"/>
+                <stop offset="100%" style="stop-color:rgb(255,184,73);stop-opacity:1"/>
+            </linearGradient>
+            <radialGradient id="grad5" cx="0%" cy="0%" r="100%" fx="0%" fy="0%">
+                <stop offset="0%" style="stop-color:rgb(38,38,38);stop-opacity:0.5"/>
+                <stop offset="100%" style="stop-color:#262626;stop-opacity:0.5"/>
+            </radialGradient>
+            <filter id="f1" x="-1" y="-1" width="300%" height="300%">
+                <feOffset result="offOut" in="SourceAlpha" dx="20" dy="20"/>
+                <feFlood result="floodOut" flood-opacity="0.3"/>
+                <feComposite in="floodOut" in2="offOut" operator="in" result="floodOut"/>
+                <feGaussianBlur result="blurOut" in="floodOut" stdDeviation="4"/>
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+            </filter>
+            <!--</radialGradient>-->
+            <!--<filter id="fgb" x="0" y="0" width="100%" height="100%">-->
+            <!--<feGaussianBlur in="SourceGraphic" stdDeviation="8" />-->
+            <!--</filter>-->
+            <!--<radialGradient id="gradbg" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">-->
+            <!--<stop offset="5%" style="stop-color:rgb(61,83,97);stop-opacity:1" />-->
+            <!--<stop offset="100%" style="stop-color:rgb(28,35,45);stop-opacity:1" />-->
+            <!--</radialGradient>-->
+        </defs>
+    </svg>
+</div>
+<div id="show_jqxMenu"></div>
+
+<div id="query_container">
+    <div class="query-cover"></div>
+    <div class="content-box">
+        <div class="border">
+            <div class="header">
+                <div id="cancel_query" class="cancel-query">×</div>
+
+                <div class="form-group-custom">
+                    <label for="system_title">查询标题</label>
+                    <input type="text" autocomplete="off" class="form-control" id="system_title" placeholder="请输入查询标题(默认 人工业务分析)">
+                </div>
+                <span class="current-time"></span>
+                <div class="form-group-custom">
+                    <label for="system_des">行为描述</label>
+                    <input type="text" autocomplete="off" class="form-control" id="system_des" placeholder="请输入查询描述(默认 人工业务描述)">
+                </div>
+
+            </div>
+
+            <div class="body">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="buttons">
+                            <button class="btn btn-sm btn-success add-query">添加子项</button>
+                            <button class="btn btn-sm btn-success add-panel">添加子项组</button>
+                            <button class="btn btn-sm btn-danger delete-panel">-</button>
+                        </div>
+
+                        <div class="inputs">
+                            <div class="input-item">
+                                <div class="input-group input-group-sm">
+                                    <input type="text" class="form-control custom-description" placeholder="请添加描述(主键)">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown"
+                                                aria-haspopup="false" aria-expanded="false">类型 <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu"></ul>
+                                        <button class="btn btn-success  shidden"></button>
+                                    </div>
+                                    <input type="text" class="form-control custom-value" disabled placeholder="请选择类型">
+                                    <div class="input-group-btn">
+                                        <!--<button class="btn btn-success add-query">+</button>-->
+                                        <button class="btn input-delete">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <button class="btn btn-sm btn-success pull-left" id="table-input-toggle">表格展示</button>
+                <button class="btn btn-sm btn-success" id="submit_query">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="#" style="display: none" id="export-csv" download="download.csv"></a>
+<script type="text/template" id="add_template">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="buttons">
+                <button class="btn btn-sm btn-success add-query">添加子项</button>
+                <button class="btn btn-sm btn-success add-panel">添加子项组</button>
+                <button class="btn btn-sm btn-danger delete-panel">-</button>
+            </div>
+            <div class="input-group input-group-sm group-label">
+                <div class="input-group-btn">
+                    <div class="btn btn-success">当前子分组名称</div>
+                </div>
+                <input type="text" onchange="this.dataset.key = this.value;" placeholder="子分组名称" class="form-control ">
+            </div>
+            <div class="inputs">
+                <div class="input-item">
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control custom-description" placeholder="请添加描述(主键)">
+                        <div class="input-group-btn">
+                            <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown"
+                                    aria-haspopup="false" aria-expanded="false">类型 <span class="caret"></span></button>
+                            <ul class="dropdown-menu"></ul>
+                            <button class="btn btn-success shidden"></button>
+                        </div>
+                        <input type="text" class="form-control custom-value" disabled placeholder="请选择类型">
+                        <div class="input-group-btn">
+                            <!--<button class="btn btn-success add-query">+</button>-->
+                            <button class="btn input-delete">-</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="input_template">
+    <div class="input-item">
+        <div class="input-group input-group-sm">
+            <input type="text" class="form-control custom-description" placeholder="请添加描述(主键)">
+            <div class="input-group-btn">
+                <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="false" aria-expanded="false">类型 <span class="caret"></span></button>
+                <ul class="dropdown-menu"></ul>
+                <button class="btn btn-success shidden"></button>
+            </div>
+            <input type="text" class="form-control custom-value" disabled placeholder="请选择类型">
+            <div class="input-group-btn">
+                <!--<button class="btn btn-success add-query">+</button>-->
+                <button class="btn input-delete">-</button>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="tables-input">
+
+    <div class="table-header" style="margin-bottom: 10px;">
+        <div class="btn-group pull-right">
+            <button type="button" id="table-btn" class="btn btn-info" data-action="creatBlackTable">创建空白表格</button>
+            <button type="button" id="table-toggle" class="btn btn-info" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                <span class="caret"></span>
+                <!--<span class="sr-only">Toggle Dropdown</span>-->
+            </button>
+            <ul class="dropdown-menu-table">
+                <li type="creatBlackTable">创建空白表格</li>
+                <li type="introCSV">导入CSV文件</li>
+                <li type="introJson">导入Json文件</li>
+                <li type="exportCSV" class="table-exports-aLink">导出CSV文件</li>
+            </ul>
+            <input type="file" class="input-file" name="files[]" multiple style="display: none;"/>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <div id="table-content">
+
+    </div>
+    <div class="table-footer"></div>
+
+
+</script>
+<script src="/scripts/show/d3.js"></script>
+<script src="/scripts/bootstrap.min.js"></script>
+<script src="/scripts/showtlconfig.js"></script>
+<script src="/scripts/show/missionsvg.js"></script>
+<script src="/scripts/show/membertable.js"></script>
+<script src="/scripts/lodash.min.js"></script>
+<script type="text/javascript" src="/scripts/sweetalert2.min.js"></script>
+<script type="text/javascript" src="/scripts/bootstrap-pagination.min.js"></script>
+<script type="text/javascript" src="/scripts/dmuploader.min.js"></script>
+<script type="text/javascript" src="/scripts/handsontable.full.js"></script>
+<script type="text/javascript" src="/scripts/handsontable-custom.js"></script>
+<script type="text/javascript" src="/scripts/Please.js"></script>
+<script type="text/javascript" src="/scripts/papaparse.min.js"></script>
+<script type="text/javascript" src="/scripts/sweetalert2.min.js"></script>
+<script type="text/javascript" src="/scripts/bootstrap-clockpicker.js"></script>
+<script type="text/javascript" src="/scripts/jquery.mCustomScrollbar.min.js"></script>
+<script type="text/javascript" src="/scripts/velocity.min.js"></script>
+<script type="text/javascript" src="/scripts/velocity.ui.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery-ui-timepicker-addon.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery-ui-sliderAccess.js"></script>
+<!--<script type="text/javascript" src="/scripts/flipclock.min.js"></script>-->
+<script src="/scripts/customInquire.js"></script>
+<!--<script src="/scripts/show/showsingle.js"></script>-->
+<script src="/scripts/show/just4show.js"></script>
+<script src="/scripts/toastr.min.js"></script>
+<script src="/scripts/data.js"></script>
+<script src="/jqwidgets/jqxcore.js"></script>
+<script src="/jqwidgets/jqxdata.js"></script>
+<script src="/jqwidgets/jqxbuttons.js"></script>
+<script src="/jqwidgets/jqxscrollbar.js"></script>
+<script src="/jqwidgets/jqxmenu.js"></script>
+<script src="/jqwidgets/jqxlistbox.js"></script>
+<script src="/jqwidgets/jqxdropdownlist.js"></script>
+<script src="/jqwidgets/jqxtree.js"></script>
+<script src="/jqwidgets/jqxgrid.js"></script>
+<script src="/jqwidgets/jqxgrid.selection.js"></script>
+<script src="/jqwidgets/jqxgrid.columnsresize.js"></script>
+<script src="/jqwidgets/jqxgrid.filter.js"></script>
+<script src="/jqwidgets/jqxgrid.sort.js"></script>
+<script src="/jqwidgets/jqxgrid.pager.js"></script>
+<script src="/jqwidgets/jqxgrid.grouping.js"></script>
+<script src="/jqwidgets/jqxcheckbox.js"></script>
+<script src="/jqwidgets/jqxradiobutton.js"></script>
+<script src="/jqwidgets/jqxdatetimeinput.js"></script>
+<script src="/jqwidgets/jqxtextarea.js"></script>
+<script src="/jqwidgets/jqxcalendar.js"></script>
+<script src="/jqwidgets/globalization/globalize.js"></script>
+<script src="/jqwidgets/jqxpanel.js"></script>
+<script src="/jqwidgets/jqxdropdownbutton.js"></script>
+<script src="/jqwidgets/jqxcolorpicker.js"></script>
+<script src="/jqwidgets/jqxwindow.js"></script>
+<script src="/jqwidgets/jqxpopover.js"></script>
+<script src="/jqwidgets/jqxeditor.js"></script>
+<script src="/jqwidgets/jqxtooltip.js"></script>
+<script src="/jqwidgets/jqxlayout.js"></script>
+<script src="/jqwidgets/jqxribbon.js"></script>
+<script src="/jqwidgets/jqxmaskedinput.js"></script>
+<script src="/jqwidgets/jqxinput.js"></script>
+<script src="/jqwidgets/jqxcalendar.js"></script>
+<script src="/jqwidgets/jqxdatetimeinput.js"></script>
+<script src="/jqwidgets/jqxdatatable.js"></script>
+<script src="/jqwidgets/jqxtreegrid.js"></script>
+<script src="/jqwidgets/jqxfileupload.js"></script>
+<script src="/scripts/custom-object.js"></script>
+<script src="/scripts/dynamic-createDom-event.js"></script>
+<script src="/scripts/msgframe.js"></script>
+<script src="/scripts/mission-client.js"></script>
+<script src="/scripts/handsontable.full.js"></script>
+</body>
+</html>

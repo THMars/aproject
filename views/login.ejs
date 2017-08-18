@@ -1,0 +1,53 @@
+<% include head.ejs %>
+<style type="text/css" xmlns="http://www.w3.org/1999/html">
+    #main-container {
+        width: 30%;
+        height: 40%;
+        marign: 0, auto;
+        border: 1px solid #3F434C;
+    }
+</style>
+
+<div id="main-container">
+    <h1>用户登录</h1>
+    <span>用户名：</span><input id="nameInput" type="text" value="x1"/></br>
+    <span>密码：</span><input id="pwdInput" type="password" value="api12345678"/></br>
+    <input id="confirm" type="button" value="确定"/>
+</div>
+
+
+<script type="text/javascript" src="/jqwidgets/jqxcore.js"></script>
+<script type="text/javascript" src="/jqwidgets/jqxbuttons.js"></script>
+<script type="text/javascript" src="/jqwidgets/jqxscrollbar.js"></script>
+<script type="text/javascript" src="/jqwidgets/jqxlistbox.js"></script>
+<script type="text/javascript">
+    $("#confirm").on("click", function () {
+        var name = $("#nameInput").val(),
+                passWord = $("#pwdInput").val();
+        if (name === '') {
+            console.log('用户名不能为空');
+        } else if (passWord == '') {
+            console.log('密码不能为空');
+        } else {
+            $.ajax({
+                        type: 'POST',
+                        url: '/v1/smcli/tokenauth/',
+                        data: JSON.stringify({
+                            "username": name,
+                            "password": passWord
+                        }),
+                        success: function (data) {
+                            data = JSON.parse(data);
+                            console.log(data.detail);
+                            if (data.detail == 'ok' && data.results == "ok") {
+                                console.log(data['token']);
+                                window.location.href = '/?token=' + data['token']
+                            }
+                        }
+                    }
+            )
+        }
+    })
+</script>
+
+<% include footer.ejs %>

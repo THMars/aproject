@@ -1,0 +1,123 @@
+<% include head.ejs %>
+<select id="args"></select>
+<div><%= data %></div>
+
+</body>
+<script>
+    var authorization = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZGVwdF9uYW1lIjoiZGVwMSIsImV4cCI6MTUwMTQ2OTc0Njc2OCwiaWF0IjoxNTAxNDY2MTQ2fQ.kgIwVzsIGMN4Y_uV77PUcziu3wG6t9dBN6fEOzr4ICA";
+
+
+
+//    1.通过getConfigAll获取全部字段
+    var api = new missionClient.ConfigApi();
+    var opts = {'authorization':authorization};
+    api.getConfigAll(opts).then(function (data) {
+        let arglist = data.d;
+        let html = "";
+        arglist.forEach(function (item,index) {
+            html += `<option value="${item.id}">${item.label}</option>`
+        })
+        $("#args").html(html);
+    },function (err) {
+        console.log(err);
+    })
+//
+//     2.查询每个api的返回数据结构，并展现出来
+    $("#args").change(function () {
+        var params=[$(this).val()];
+        api.getApiConfig(params,opts).then(function (data) {
+            console.log(data);
+            var arr=[];
+            data.d[0].apiList.forEach(function (item,index) {
+                console.log(item.url);
+                arr.push(item.url);
+            })
+            addOpt(arr,function (arr) {
+                makeOpt(arr);
+            });
+        },function (err) {
+            console.log(err);
+        })
+    })
+
+
+
+    function addOpt(arr,cb) {
+        $.ajax({
+            type:"get",
+            url:`/testApi?token=${authorization}`,
+            success:function (data) {
+                localStorage.setItem("apis",JSON.stringify(data));
+                var result = [];
+                arr.forEach(function (arg,index) {
+                    data.forEach(function (item,index) {
+                        if(item.hash==arg){
+                            result.push({desc:item.desc,hash:item.hash});
+                        }
+                    })
+                })
+
+                cb(result);
+            }
+        })
+    }
+
+    function makeOpt(arr) {
+        var html = "";
+        arr.forEach(function (item,index) {
+            html += `<option data=${JSON.stringify(item.hash)}>${item.desc}</option>`
+        })
+
+        $("body").append(`<select id="childSelect">${html}</select>`);
+    }
+
+//    $("#childSelect").change(function () {
+//        alert($(this).find("option:selected").attr("data"));
+//    })
+
+    $(document).on("change","#childSelect",function () {
+        var hash = $(this).find("option:selected").attr("data");
+        var apis = JSON.parse(localStorage.getItem("apis"));
+        var res = {};
+        apis.forEach(function (item,index) {
+            if(item.hash==hash){
+                res = item.res;
+            }
+        })
+        console.log(res);
+        var apiCanBeUse=new Set();
+        for(var k in res){
+            apis.forEach(function (item,index) {
+                if(item.params.indexOf(res[k])!=-1){
+                    apiCanBeUse.add(item.hash);
+                }
+            })
+        }
+        var apiShow =[];
+        apiCanBeUse = [...apiCanBeUse];
+        apiCanBeUse.forEach(function (api,index) {
+            apis.forEach(function (item,index) {
+                if (api==item.hash){
+                    if (apiShow.length==0){
+                        apiShow.push({desc:item.desc,hash:item.hash})
+                    }else {
+                        var descArr=[];
+                        for(var i=0;i<apiShow.length;i++){
+                            descArr.push(apiShow[i].desc);
+                        }
+                        if(descArr.indexOf(item.desc)==-1){
+                            apiShow.push({desc:item.desc,hash:item.hash});
+                        }
+                    }
+                }
+            })
+        })
+        console.log(apiShow);
+        makeOpt(apiShow);
+    })
+
+
+</script>
+
+</html>
+

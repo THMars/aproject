@@ -1,0 +1,191 @@
+<% include head.ejs %>
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-2 column">
+                <h3>会战列表</h3>
+                <div class="my_create" style="width:100%;height:40%">
+                    <h4>我创建的会战大厅</h4>
+                    <div style="width:100%; " id="jqxWidget">
+                        <input type="button" value="创建大厅" id="showWindowButton"/>
+                        <div id="mainDemoContainer">
+                            <div id="customWindow">
+                                <div id="customWindowHeader">
+                                    <span id="captureContainer" style="float: left">创建</span>
+                                </div>
+                                <div id="customWindowContent" style="overflow: hidden">
+                                    <div style="margin: 10px">
+                                        <h3 style="display:inline-block;">创建大厅</h3>
+                                        <input type="text" style="width: 175px; border: 1px solid #aaa"
+                                               id="searchTextInput"/>
+
+                                        <div  id="memberList" style="width:100%;height:400px;margin:30px 0px;"></div>
+                                        <div style="/*float: right;*/overflow:hidden;">
+                                            <input type="button" value="确认"
+                                                   style="float:left;margin: 15px 80px;padding:5px;"
+                                                   id="searchTextButton"/>
+                                            <input type="button" value="取消"
+                                                   style="float:left;margin:15px  80px;padding:5px;" id="cancelButton"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="events" style=" width:90%;height:50%;position:absolute; border-width: 0px;">
+                        </div>
+                        <div id="eventWindow">
+                            <div>
+                                <img width="14" height="14" src="../../images/help.png" alt="" />
+                                Modal Window</div>
+                            <div>
+                                <div>
+                                    <p>删除房间</p>
+                                </div>
+                                <div>
+                                    <div style="float: right; margin-top: 15px;">
+                                        <input type="button" id="ok" value="确定" style="margin-right: 10px" />
+                                        <input type="button" id="cancel" value="取消" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="del_house" style="">
+                             <p>删除房间</p>
+                             <button id="confirm1">确定</button>
+                             <button id="cancel_house1">取消</button>
+                         </div>-->
+
+                    </div>
+                    <div id='jqxTree'>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-6 column">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div class="shrink-show shrink-pl"><span class="shrink shrink-l"></span></div>
+                    <div class="shrink-show shrink-pr"><span class="shrink shrink-r"></span></div>
+                    <div class="chat-content">
+                        <div class="scroll">
+                            <ul id="add-element"></ul>
+                        </div>
+                        <span class="back"></span>
+                    </div>
+                    <div class="chat-input">
+                        <div class="text">
+                            <textarea name="MSG" id="j-text" cols="50" rows="3"></textarea>
+                            <div class="accessory">
+                    <span class="btn btn-file">
+                        <input id="fileupload" type="file" name="files[]" multiple>
+                    </span>
+                            </div>
+                        </div>
+                        <!--xw-->
+                        <div class="advanced-text" style="display: none">
+                <textarea id="editor">
+                </textarea>
+                            <div id="imageWindow">
+                                <div id="imageUpload">
+                                </div>
+                            </div>
+                            <div id="fileWindow">
+                                <div id="fileUpload">
+                                </div>
+                            </div>
+                            <div class="customWindow" id="ipWindow">
+                                <div>
+                                    <input type="text" id="ipInput" />
+                                    <input type="button" value="确定" id="confirmIp" />
+                                </div>
+                            </div>
+                            <div class="customWindow" id="macWindow">
+                                <div>
+                                    <input type="text" id="macInput" />
+                                    <input type="button" value="确定" id="confirmMac" />
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn send" id="j-send">send</button>
+                        <button class="btn send common" id="j-advanced-send">a-send</button>
+                        <button class="btn advanced" id="j-advanced">advanced</button>
+                        <button class="btn advanced common" id="j-common">common</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-md-12 column" id="memberHeader">
+                    <h4>成员列表</h4>
+                    <input id="setMemberBtn" type="button" value="成员管理" />
+                </div>
+                <div id="memberInputContainer">
+                    <input id="memberInput" type="text"/>
+                    <div id="memberSearch">
+                    </div>
+                </div>
+                <div>
+                    <div id="popoverMember">
+                        <div id="searchInputContainer">
+                            <input id="searchMemberInput" type="text"/>
+                            <div id="searchMember">
+                            </div>
+                        </div>
+                        <div id = "memberSearchedList">
+                        </div>
+                        <div id="adddis">
+                            <input id="addMember" type="button" value="确定" />
+                            <input id="disAdd" type="button" value="取消" />
+                        </div>
+                    </div>
+                    <div id="memberGridWrap">
+                        <div id="memberGrid">
+                        </div>
+                    </div>
+                    <div id="deleteWindow">
+                        <div>
+                            ！提示
+                        </div>
+                        <p style="margin-top: 15px; text-align: center">
+                            您确定将<span id ="deleteName">###</span>从本房间中删除吗？
+                        </p>
+                        <div style="float: right; margin-top: 15px;">
+                            <input type="button" id="deleteConfirm" value="确认" style="margin-right: 10px; margin-left: 120px;">
+                            <input type="button" id="deleteCancel" value = "取消">
+                        </div>
+                    </div>
+                    <div id='gridMenu'>
+                        <ul>
+                            <!--<li>修改成员名片</li>-->
+                            <li>从本房间中删除</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 column">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                </div>
+            </div>
+            <div class="row clearfix">
+                <div class="col-md-12 column" id="demoContainer" >
+                        <div style="overflow:hidden;">
+                            <span style="display:block;padding:5px;float:left">附件列表</span>
+                            <ul class="show_style" style="float:right">
+                                <li id="table_grid"><img src="../../images/photo.png" alt=""/></li>
+                                <li id="list_grid"><img src="../../images/list.png" alt=""/></li>
+                            </ul>
+                        </div>
+                        <div id="container">
+                            <div class="search_name" style="position:relative;width:100%;">
+                                <span  id="attach_search" style="position:absolute;width:25px;height:25px;background:url('../../images/search.png') no-repeat 5px;"></span>
+                                <input id="attach_content"style=" top:5px;padding:5px 2px 5px 20px ;margin:5px 0px;border-radius:3px;border:1px solid black;display:block;width:100%;" type="search" placeholder="请输入文件名称/成员名称" value="">
+                            </div>
+                            <div style="border: none;" id='grid'>
+                            </div>
+                            <div style="border:none;" id="dataTable"></div>
+                        </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% include footer.ejs %>

@@ -1,0 +1,972 @@
+
+.search {
+    float: right;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.search .search-member {
+    overflow: hidden;
+    background: #43536d;
+}
+
+.search .search-file {
+    overflow: hidden;
+    /*background: #43536d;*/
+    padding: 0.3em 0.625em;
+}
+
+/*editor css*/
+#editor html, #editor body {
+    /*background: #3f434c;*/
+}
+
+i.fa {
+    font-weight: 100;
+}
+
+#fileButton {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url("./images/file_upload.png") no-repeat center;
+}
+
+#file_btn {
+    text-align: center;
+    line-height: 36px;
+    display: block;
+    border-radius: 5px;
+    width: 80px;
+    height: 36px;
+    background: #35C94A;
+    /*background: url("./images/file_upload.png") no-repeat center;*/
+}
+
+#fileupload {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+#uploadProgress {
+    position: absolute;
+    height: 2px;
+    background: #35C94A;
+    display: block;
+}
+
+#fileDisplay > div {
+    width: 100%;
+    height: 26px;
+    margin-top: 4px;
+    background: url("./images/file.png") no-repeat 8px center;
+    background-size: 26px 26px;
+}
+
+#fileDisplay > div > span {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding-left: 20%;
+    padding-right: 2%;
+    line-height: 26px;
+}
+
+/*body css*/
+html {
+    background: rgba(255, 255, 255, 0);
+}
+
+body {
+    /*background-color: #3f434c;*/
+    color: #ffffff;
+    font-family: "Microsoft Yahei";
+    font-size: 16px;
+    overflow: hidden;
+    font-weight: normal;
+}
+
+/*fileDropZone css*/
+#fileDropZone {
+    display: none;
+    opacity: 0.2;
+    border: 1px dashed red;
+    z-index: 10000;
+    position: absolute;
+    margin: 0 5px 0 10px;
+    top: 59px;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    background-color: yellow;
+}
+
+/*memberGrid css*/
+#memberGridWrap, #fileGridWrap {
+    /*width:100%;*/
+    position: absolute;
+    top: 59px;
+    bottom: 8px;
+    left: 0px;
+    right: 0px;
+}
+
+/*#fileGridWrap{
+    height: 90%;
+}*/
+
+/*13点07修改*/
+#fileGridWrap {
+    margin: 15px 15px 0 15px;
+}
+
+#memberGridWrap {
+    margin: 15px 20px 0 15px;
+}
+
+#memberContainer, #fileContainer {
+    /*padding: 0.625em;*/
+    height: 100%;
+    width: 100%;
+    /*display: none;*/
+    box-sizing: border-box;
+    /*border: 1px solid #43536d;*/
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+#fileContainer {
+    height: 98%;
+}
+
+/*over*/
+#memberContainer h4, #fileContainer h4 {
+    float: left;
+    font-weight: normal;
+    overflow-x: hidden;
+}
+
+.cellJoin, .cellOnline, .cellOffline {
+    text-align: left;
+    width: 100%;
+    margin-top: 0.5em;
+    padding-left: 1.5em;
+}
+
+.cellJoin {
+    background: url("../images/join.png");
+    background-size: 0.5em;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+}
+
+.cellOnline {
+    /*background: url("../images/online.png");*/
+    background: url("../images/join.png");
+    background-size: 0.5em;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+}
+
+.cellOffline {
+    background: url("../images/offline.png");
+    background-size: 0.5em;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+}
+
+#setMemberBtn, #iconBtn, #listBtn {
+    display: block;
+    float: right;
+}
+
+#iconBtn {
+    marign-right: 2px;
+}
+
+#memberHeader, #fileHeader {
+    padding-top: 5px;
+}
+
+/*#memberHeader:after, #fileHeader:after {*/
+/*clear: both;*/
+/*content: '.';*/
+/*display: block;*/
+/*width: 0;*/
+/*height: 0;*/
+/*visibility: hidden;*/
+/*}*/
+
+#memberInputContainer, #fileInputContainer {
+    /*position: relative;*/
+    margin-top: 10px;
+    width: 100%;
+    overflow: hidden;
+    *zoom: 1;
+}
+
+#memberInputContainer:after, #fileInputContainer:after {
+    clear: both;
+    content: '.';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    margin-left: 0px;
+}
+
+#memberInputWrap, #fileInputWrap {
+    padding: 0 10px 0 8px;
+    margin-right: 25px;
+}
+
+#memberInput, #fileInput {
+    padding-left: 12px;
+    padding-right: 17px;
+    /*border-radius: 11px;
+    -moz-border-radius:11px;
+    -webkit-border-radius:11px;
+    -ms-border-radius:11px;
+    -khtml-border-radius:11px;*/
+}
+
+/*#memberInput:focus, #fileInput:focus {
+    border-color: rgba(102, 175, 233, 0.6);
+!*    outline: inherit;
+    -webkit-box-shadow:0px 0px 10px #5f06f3;
+    box-shadow:0px 0px 10px #5f06f3;
+    -moz-border-radius: 11px;
+    -webkit-border-radius: 11px;*!
+    border-radius: 11px;
+}*/
+
+#memberSearch, #fileSearch {
+    float: right;
+    border: 0px;
+    margin-right: 4px;
+    background: rgba(0, 0, 0, 0);
+}
+
+/*fileIconTable Css样式*/
+#fileIconTable {
+    display: none;
+}
+
+/*添加成员窗口css*/
+#memberSearchedList {
+    margin-top: 20px;
+}
+
+.jqx-popover-arrow:after {
+    border-right-color: #43536d
+}
+
+#searchMemberInput {
+    float: left;
+    padding-left: 6px;
+    padding-right: 20px;
+}
+
+#searchMember {
+    left: 305px;
+    top: -25px;
+    border: 0px;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0);
+    border-bottom-right-radius: 11px;
+    border-top-right-radius: 11px;
+}
+
+/*富文本编辑器样式*/
+#adddis {
+    float: right;
+    /*margin-right:16px;
+    margin-top: 5px;*/
+    margin: 5px 16px 10px;
+}
+
+#adddis span {
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+    cursor: pointer;
+    background: rgba(37, 48, 55, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #dedede;
+    border-radius: 5px;
+}
+
+.configWindow, .changeConfigWindow, .apiConfigWindow {
+    max-width: 800px;
+    background: #3f434c;
+}
+
+.configWindow, .changeConfigWindow span, .apiConfigWindow label {
+    font-size: 16px;
+}
+
+.configWindow, .changeConfigWindow, .apiConfigWindow {
+    position: absolute;
+    /*border: 1px solid #43536d;*/
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    background: rgba(37, 48, 55, 0.9);
+    z-index: 9999;
+}
+
+.configWindow div:first-child, .apiConfigWindow div:first-child {
+    background: rgba(37, 48, 55, 0.3);
+}
+
+.changeConfigWindow > p {
+    padding: 5px 0;
+    text-align: center;
+}
+
+.configWindow div input {
+    float: right;
+}
+
+.apiConfigWindow div input, .apiConfigWindow div label {
+    display: inline-block;
+}
+
+.apiConfigWindow div label {
+    width: 100px;
+    text-align: center;
+    border: 1px solid #3a475d;
+}
+
+.apiConfigWindow p label {
+    vertical-align: bottom;
+    width: 2em;
+    border-width: 0;
+    font-size: 10px;
+    line-height: 21px;
+}
+
+/*
+.changeConfigWindow div:first-child {
+    text-align: center;
+}
+*/
+
+.changeConfigWindow div, .apiConfigWindow div:not(:nth-child(2)) {
+    overflow: hidden;
+}
+
+.changeConfigWindow div span:first-child {
+    float: left;
+}
+
+.changeConfigWindow div input {
+    float: right;
+}
+
+.apiConfigWindow > div:last-child > input {
+    float: right;
+    margin-right: 4px;
+}
+
+.apiConfigWindow > div:last-child > p {
+    float: left;
+    margin-left: 4px;
+}
+
+div.configWindow div span[title*="格式"], div.changeConfigWindow div span[title*="格式"] {
+    font-size: medium;
+    padding-left: 4px;
+    cursor: pointer;
+    color: #ffffff;
+    visibility: hidden;
+    float: right;
+}
+
+.changeConfigWindow div span.backApiForJumpArray {
+    float: right;
+    cursor: pointer;
+    color: #777;
+}
+
+.rightClickApiDesc {
+    float: left;
+}
+
+.apiIsRequired {
+    float: left;
+}
+
+.configWindow div:first-child, .changeConfigWindow div:first-child, .apiConfigWindow div:first-child {
+    margin: 0;
+    padding: 5px;
+    /*background: -webkit-linear-gradient(#586477, #3a475d);*/
+}
+
+.configWindow input, .changeConfigWindow input, .apiConfigWindow input {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid #3a475d;
+    color: #dedede;
+    border-radius: 5px;
+}
+
+.apiConfigWindow input {
+    border-radius: 0;
+}
+
+.configWindow span {
+    font-size: 12px;
+}
+
+.configWindow div:last-child, .changeConfigWindow div:last-child {
+    float: right;
+}
+
+.configWindow div:last-child input, .changeConfigWindow div:last-child input, .apiConfigWindow div:last-child button {
+    margin-left: 10px;
+}
+
+.configWindow div, .changeConfigWindow div, .apiConfigWindow div {
+    margin: 5px;
+}
+
+.apiConfigWindow {
+    display: none;
+}
+
+.apiConfigWindow > div:nth-child(2) {
+    text-align: center;
+    position: relative;
+}
+
+.apiConfigWindow .add_sys_api {
+    width: 100px;
+    height: 26px;
+    background: none;
+    border: none;
+}
+
+#sys_api_list {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 280px;
+}
+
+/*#sys_api_list::before {*/
+    /*content: '';*/
+    /*position: absolute;*/
+    /*z-index: -1;*/
+    /*top: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*!*background: rgba(37, 48, 55, 1);*!*/
+    /*background: url("../../images/123.jpg") no-repeat;*/
+    /*background-size: 100% 100%;*/
+    /*filter: blur(5px);*/
+    /*opacity: 0.9;*/
+    /*!*margin: -30px;*!*/
+/*}*/
+
+#custom_object_type_list {
+    float: left !important;
+    margin-right: 4px;
+}
+
+#custom_object_window_top {
+    margin-bottom: 110px;
+}
+
+#custom_object_window_bottom {
+    margin-left: 200px;
+    color: #000;
+}
+
+/*王新宇11.18修改*/
+
+.serverVisualModal, .personVisualModal, .customizeObj {
+    cursor: pointer;
+    /*border: 1px solid #002a80;*/
+    box-shadow: 0 1px 0 #212121;
+    background: #0097A7;
+    padding: 0.5em;
+    border-radius: 0.1em;
+}
+
+.serverVisualModal, .personVisualModal, .customizeObj {
+    display: inline-block;
+    vertical-align: bottom;
+    position: relative;
+    font: 12px/12px "微软雅黑";
+    font-weight: bolder;
+    text-align: center;
+    color: #fff;
+}
+
+#progress {
+    width: 0%;
+    height: 10px;
+    background: yellow;
+}
+
+/*成员管理按钮*/
+/*.memberManagement {*/
+    /*position: absolute;*/
+    /*width: 20%;*/
+    /*border-radius: 12px;*/
+    /*height: 23px;*/
+    /*border: solid 1px #3f434c;*/
+    /*-webkit-box-shadow: inset 0 2px 2px #3e4d65, 0 0 8px #3e4d65;*/
+    /*font-size: 14px;*/
+    /*cursor: pointer;*/
+    /*color: #fff;*/
+    /*line-height: 23px;*/
+    /*border-radius: 12px;*/
+    /*top: 50px;*/
+    /*left: 15px;*/
+    /*text-align: center;*/
+    /*background: -webkit-linear-gradient(top, #435571, #43536D);*/
+/*}*/
+
+/*.memberManagement:hover {*/
+    /*border-color: #007ACC;*/
+    /*outline: 0;*/
+    /*-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(0, 122, 204, 0.6);*/
+    /*box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(0, 122, 204, 0.6);*/
+/*}*/
+
+.memberManagement:active {
+    padding-bottom: 0px;
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 2px;
+    border: 1px solid #36455c;
+    background: #3e4d65;
+}
+
+.jqx-menu-dropdown {
+    background: rgba(0, 0, 0, 0.8);
+    width: 170px;
+    padding: 2px 0;
+    border: none;
+}
+
+.jqx-menu-dropdown li {
+    /*position: relative;*/
+}
+
+.bdline {
+    border-left: 3px solid #35c94a;
+    height: 20px;
+    float: right;
+    /*position: absolute;*/
+    /*top:0;*/
+    /*left: 0;*/
+}
+
+.bdline-r {
+    border-left: 3px solid #8a8a8a;
+    height: 20px;
+    float: right;
+}
+
+/*信息展示*/
+.objectInfoTable {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 100%;
+}
+
+#api-send, #api-close {
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+    width: 50px;
+    height: 18px;
+    line-height: 18px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.api-send:hover,
+.api-close:hover {
+    background: #007ACC;
+}
+
+.apiinput {
+    /*width: 50%;*/
+    border-radius: 12px;
+    float: right;
+    padding-left: 5px;
+    background: #000;
+    border: 1px solid #ccc;
+    color: #fff
+}
+
+.apiinput:focus {
+    border-radius: 12px;
+    outline: none;
+    border-color: #007ACC;
+}
+
+.userInputApiValue {
+    cursor: pointer;
+    width: 80px;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sendApiArrayLabel {
+    word-wrap: break-word;
+}
+
+.userInputApiDesc {
+    display: inline-block;
+    width: 100px;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.userInputArrayValueRemove {
+    cursor: pointer;
+    font-weight: normal !important;
+    margin-left: 5px;
+}
+
+.rightmenuapi li.hadMatchingApi {
+    border-left-color: rgb(97, 98, 99) !important;
+}
+
+.userHadInputApi {
+    color: #fff !important;
+}
+
+.changeInputBorderColor {
+    border-color: #1c97ea !important;
+}
+
+.userInputArrayValue {
+    background: rgba(0, 0, 0, 0.2);
+    margin-right: 5px;
+}
+
+.rightClickApiDiv {
+    position: relative;
+}
+
+.clearInputApiFromLeft {
+    position: absolute;
+    top: 3px;
+    right: 0;
+}
+
+.table-json {
+    min-height: 200px;
+}
+
+.rightmenuapi {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.rightmenuapi ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+}
+
+.rightmenuapi ol {
+    position: absolute;
+    border-radius: 5px;
+    background: rgba(37, 48, 55, 0.9);
+}
+
+.rightmenuapi li {
+    font-size: 14px;
+    padding: 10px 5px;
+    overflow: hidden;
+    border-left: 5px solid rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.isDisabledInput {
+    border-color: rgba(0, 0, 0, 0) !important;
+}
+
+.jh-root {
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.jh-root td {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.jh-root th {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.jh-root tr {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/*左键点击展示*/
+.left_click {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 150px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.left_click li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 3px 0;
+}
+
+.left_click li:hover {
+    background: #007ACC;
+}
+
+/*信息展示*/
+#otherConditionType {
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#otherConditionType div {
+    float: left;
+}
+
+#popoverOther {
+    width: 50%;
+    background: rgba(37, 48, 55, 0.9);
+}
+
+#popoverMember {
+    /*background: rgba(255, 255, 255, 0.2);*/
+    background: rgba(37, 48, 55, 0.9);
+}
+
+#otherContainer {
+    height: 100%;
+    width: 100%;
+    /*display: none;*/
+    padding: 0 0.625em 0.625em;
+}
+
+.otherHeaderparent {
+    height: 100%;
+    box-sizing: border-box;
+    /*border: 1px solid #43536d;*/
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.other-module {
+    /*padding: 0.625em;*/
+}
+
+#otherInputContainer {
+    position: relative;
+    /*margin-top: 10px;*/
+    width: 100%;
+    overflow: hidden;
+}
+
+#otherSearch {
+    float: right;
+    border: 0;
+    margin-right: 4px;
+    background: rgba(0, 0, 0, 0);
+}
+
+#otherInputWrap {
+    padding: 0 10px 0 8px;
+    margin-right: 25px;
+}
+
+#otherInput {
+    padding-left: 12px;
+    padding-right: 17px;
+}
+
+#otherGirdWrap {
+    position: absolute;
+    top: 35px;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    margin: 0 15px 0 15px;
+}
+
+#otherInputHeader {
+    padding-top: 5px;
+}
+
+#otherInputHeader > div {
+    margin: 0 auto;
+}
+
+#searchTextInput {
+    border-radius: 5px;
+    float: right;
+    padding-left: 5px;
+    background: none;
+    border: 1px solid #ccc;
+    color: #fff;
+}
+
+#searchTextInput:focus {
+    border-radius: 5px;
+    outline: none;
+    border-color: #007ACC;
+}
+
+#typeSelectBtn, #typeConditionSearch {
+    display: none;
+    width: 95px;
+    border-radius: 12px;
+    height: 24px;
+    /*-webkit-box-shadow: inset 0 2px 2px #3e4d65, 0 0 8px #3e4d65;*/
+    font-size: 12px;
+    cursor: pointer;
+    color: #fff;
+    line-height: 23px;
+    text-align: center;
+    margin: 5px 0 2px 10px;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.2);
+    /*background: -webkit-linear-gradient(top, #435571, #43536D);*/
+}
+
+#fileDisplay {
+    height: 86px;
+    overflow-y: auto;
+}
+
+#fileDisplay::-webkit-scrollbar {
+    width: 3px;
+    background: rgba(97, 97, 97, 0.27);
+}
+
+#fileDisplay::-webkit-scrollbar-thumb {
+    width: 2px;
+    background-color: rgba(97, 97, 97, 0.37);
+}
+
+#fileConfirmBtn > span {
+    padding-left: 30px;
+    color: #7e8796;
+}
+
+#fileConfirmBtn > input:nth-child(2) {
+    margin-left: 70px;
+}
+
+#fileConfirmBtn > input {
+    background: rgba(37, 48, 55, 0.9);
+    border: none;
+    color: #ffffdb;
+}
+
+#fileBtnWrap {
+    width: 106px;
+    margin: 0 auto;
+}
+
+.tabDivWrap {
+    /*border: 1px solid #fff;*/
+    /*text-align: center;*/
+    padding: 0 5px 5px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.tabDivWrap > p {
+    /*background: #3e4d65;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    /*border-bottom: 1px solid #fff;*/
+}
+
+.tabDivWrap > div {
+    /*border: 1px solid rgba(0, 0, 0, 0.2);*/
+    background: rgba(255, 255, 255, 0.1);
+    /*box-shadow: 0 0 4px 3px rgba(255, 255, 255, 0.3);*/
+}
+
+#fileWindow {
+    background: rgb(37, 48, 55);
+}
+
+#itemInfo {
+    background: rgba(37, 48, 55, 0.9);
+}
+
+#fileGrid, #otherGrid, #memberGrid, #memberList, #memberSearchedList {
+    border-radius: 0;
+}
+
+#meeting_tab {
+    box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#meeting_tab ul li:first-child {
+    border-radius: 5px 0 0;
+}
+
+#meeting_tab ul li:last-child {
+    border-radius: 0 5px 0 0;
+}
+
+.moduleTitle {
+    padding-top: 5px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.manageBtn {
+    padding-top: 2px;
+    padding-right: 10px;
+    float: right;
+    cursor: pointer;
+}
+
+#otherHeader {
+    padding-top: 10px;
+}
+
+.chatTabValues {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.objInfoTable {
+    width: 100%;
+}

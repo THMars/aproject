@@ -1,0 +1,247 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "协同会战",
+    "description": "协同会战接口"
+  },
+  "host": "10.0.0.74:3050",
+  "schemes": [
+    "http"
+  ],
+  "basePath": "/",
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/config": {
+      "get": {
+        "tags": [
+          "config"
+        ],
+        "operationId": "getConfigAll",
+        "summary": "获取全部字段类型列表",
+        "description": "获取全部字段类型列表",
+        "parameters": [
+          {
+            "$ref": "#/parameters/Authorization"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "返回数据",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ri": {
+                  "$ref": "#/definitions/ri"
+                },
+                "d": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "description": "字段类型信息",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "类型ID"
+                      },
+                      "label": {
+                        "type": "string",
+                        "description": "类型名称"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/objects/detail": {
+      "get": {
+        "tags": [
+          "object"
+        ],
+        "operationId": "getObjectsDetail",
+        "summary": "通过对象ID获取对象详情",
+        "description": "通过对象ID获取对象详情",
+        "parameters": [
+          {
+            "$ref": "#/parameters/Authorization"
+          },
+          {
+            "name": "objectID",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "标准对象ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "会返回数据",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ri": {
+                  "$ref": "#/definitions/ri"
+                },
+                "d": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "description": "对象详情",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "对象ID"
+                      },
+                      "name": {
+                        "type": "string",
+                        "description": "对象名称"
+                      },
+                      "type": {
+                        "type": "string",
+                        "description": "对象类型"
+                      },
+                      "userID": {
+                        "type": "string",
+                        "description": "发送者用户ID"
+                      },
+                      "sendUserName": {
+                        "type": "string",
+                        "description": "发送者用户名"
+                      },
+                      "sendTime": {
+                        "type": "string",
+                        "description": "发送时间"
+                      },
+                      "messageID": {
+                        "type": "string",
+                        "description": "消息ID"
+                      },
+                      "meetingID": {
+                        "type": "string",
+                        "description": "会战ID"
+                      },
+                      "data": {
+                        "type": "string",
+                        "description": "对象内容,json字串"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/objects": {
+      "get": {
+        "tags": [
+          "object"
+        ],
+        "operationId": "getObjectsInfo",
+        "summary": "获取标准对象列表",
+        "description": "获取标准对象列表",
+        "parameters": [
+          {
+            "$ref": "#/parameters/Authorization"
+          },
+          {
+            "name": "meetingID",
+            "in": "query",
+            "description": "会战ID",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "返回数据",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ri": {
+                  "$ref": "#/definitions/ri"
+                },
+                "d": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "description": "对象详情",
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "对象ID"
+                      },
+                      "name": {
+                        "type": "string",
+                        "description": "对象名称"
+                      },
+                      "type": {
+                        "type": "string",
+                        "description": "对象类型"
+                      },
+                      "userID": {
+                        "type": "string",
+                        "description": "发送者用户ID"
+                      },
+                      "sendUserName": {
+                        "type": "string",
+                        "description": "发送者用户名"
+                      },
+                      "sendTime": {
+                        "type": "string",
+                        "description": "发送时间"
+                      },
+                      "messageID": {
+                        "type": "string",
+                        "description": "消息ID"
+                      },
+                      "meetingID": {
+                        "type": "string",
+                        "description": "会战ID"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "parameters": {
+    "Authorization": {
+      "name": "Authorization",
+      "in": "header",
+      "description": "token字串",
+      "required": true,
+      "type": "string"
+    }
+  },
+  "definitions": {
+    "ri": {
+      "type": "object",
+      "description": "返回状态信息",
+      "properties": {
+        "rc": {
+          "type": "number",
+          "description": "返回码，1为成功"
+        },
+        "msg": {
+          "type": "string",
+          "description": "返回状态描述"
+        }
+      }
+    }
+  }
+}

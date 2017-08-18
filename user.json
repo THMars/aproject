@@ -1,0 +1,93 @@
+[
+  {
+    "userID": "u1",
+    "userName": "张珊",
+    "userPost": "处长",
+    "userDepartment":"部门一",
+    "userLocation": "山东济南"
+  },
+  {
+    "userID": "u2",
+    "userName": "李斯",
+    "userPost": "处长",
+    "userDepartment":"部门一",
+    "userLocation": "湖南长沙"
+  },
+  {
+    "userID": "u3",
+    "userName": "王五",
+    "userPost": "处长",
+    "userDepartment":"部门一",
+    "userLocation": "湖北武汉"
+  },
+  {
+    "userID": "u4",
+    "userName": "陈立",
+    "userPost": "处长",
+    "userDepartment":"部门一",
+    "userLocation": "江西九江"
+  },
+  {
+    "userID": "u5",
+    "userName": "成理",
+    "userPost": "处长",
+    "userDepartment":"部门一",
+    "userLocation": "江西九江"
+  },
+  {
+    "userID": "u6",
+    "userName": "赵六",
+    "userPost": "处长",
+    "userDepartment":"部门二",
+    "userLocation": "江西九江"
+  },
+  {
+    "userID": "u7",
+    "userName": "宋漆",
+    "userPost": "处长",
+    "userDepartment":"部门一",
+    "userLocation": "江西九江"
+  },
+  {
+    "userID": "u8",
+    "userName": "梁八",
+    "userPost": "处长",
+    "userDepartment":"部门三",
+    "userLocation": "江西九江"
+  },
+  {
+    "userID": "u9",
+    "userName": "齐酒",
+    "userPost": "处长",
+    "userDepartment":"部门一",
+    "userLocation": "江西九江"
+  },
+  {
+    "userID": "u10",
+    "userName": "严时",
+    "userPost": "处长",
+    "userDepartment":"部门四",
+    "userLocation": "江西九江"
+  },
+  {
+    "userID": "u11",
+    "userName": "卫林",
+    "userPost": "处长",
+    "userDepartment":"部门一",
+    "userLocation": "江西九江"
+  },
+  {
+    "userID": "u12",
+    "userName": "韩易",
+    "userPost": "处长",
+    "userDepartment":"部门一",
+    "userLocation": "江西九江"
+  },
+  {
+    "userID": "u13",
+    "userName": "楚尔",
+    "userPost": "处长",
+    "userDepartment":"部门二",
+    "userLocation": "江西九江"
+  }
+]

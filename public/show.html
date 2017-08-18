@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="scripts/vis/vis.min.js"></script>
+    <link rel="stylesheet" href="scripts/vis/vis.min.css">
+    <link href="css/showcss/bootstrap.min.css" rel="stylesheet">
+    <link href="css/showcss/showcustom.css" rel="stylesheet">
+    <link href="css/showcss/svg.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<div id="eventgraph">
+
+</div>
+<div class="" style="width:100%;height:20%">
+    <div id="mytimeline" style="height:100%" class="col-lg-12">
+        <div class="tool-bar">
+            <button id="auto_btn" class="btn btn-sm btn-success">停止自动</button>
+            <button id="overview_btn" class="btn btn-sm btn-warning">数据概览</button>
+            <button id="jumpcurrent_btn" class="btn btn-sm btn-info">当前时间</button>
+            <button id="selarea_btn" class="btn btn-sm btn-danger">建立选区</button>
+        </div>
+    </div>
+    <div class="details-p">
+        <div class="details" id="itemInfo">
+        </div>
+    </div>
+</div>
+<svg width="0" height="0">
+    <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#00b7ff;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:rgba(115, 115, 115, 0.64);stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#d278fc;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:rgba(115, 115, 115, 0.64);stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#6bfff8;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:rgba(115, 115, 115, 0.64);stop-opacity:1"/>
+        </linearGradient>
+        <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#edc66d;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:rgba(115, 115, 115, 0.64);stop-opacity:1"/>
+        </linearGradient>
+
+
+        <filter id="f1" x="0" y="0" width="200%" height="200%">
+            <feOffset result="offOut" in="SourceGraphic" dx="0" dy="0"/>
+            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10"/>
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal"/>
+        </filter>
+
+
+    </defs>
+</svg>
+<script src="scripts/jquery-2.2.4.min.js"></script>
+<script src="scripts/show/d3.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/showtlconfig.js"></script>
+<script src="scripts/show/svg.js"></script>
+<script src="scripts/show/showtime1.js"></script>
+
+</body>
+</html>

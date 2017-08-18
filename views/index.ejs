@@ -1,0 +1,727 @@
+<% include head.ejs %>
+
+<link rel="stylesheet" href="css/custom.css"/>
+<div class="animent z-index">
+</div>
+
+<div class="battle clearfix" id="main">
+    <div>
+        <div id="splitterLeft">
+            <div class="my-battle">
+                <div id="splitterleftMain">
+                    <div class="create-join">
+                        <div id='content'>
+                            <!--大厅和房间开始-->
+                            <div class="chat_group">
+                                <div class="my_create" style="width:100%;height:100%">
+                                    <div class="oneself">
+                                        <div class="userbg">
+                                            <div style="display: inline-block; padding: 5px 0 0 10px;">
+                                                <span title="" class="oneself-img"><i class="fa fa-3x fa-user-circle"
+                                                                                      aria-hidden="true"></i></span>
+                                                <span title="" id="displayName" class="nickname"></span>
+                                                <span title="" id="displayDment" class="department"></span>
+                                            </div>
+                                            <!--<span class="logout" id="logout">退出</span>-->
+
+                                            <span class="tree-span" title="创建会战" id="showWindowButton"><i class="fa fa-plus-square"
+                                                                                                          aria-hidden="true"></i></span>
+                                            <span id="new-msg_sort" class="fa fa-bullhorn" title="切换排序模式"></span>
+                                            <span id="user_sort" title="分组" class="fa fa-refresh"></span>
+                                        </div>
+                                        <!--<span class="tree-span" id="showWindowButton"><i class="fa fa-plus-square"-->
+                                        <!--aria-hidden="true"></i>创建会战</span>-->
+                                        <!--<span id="new-msg_sort" class="fa fa-bullhorn" title="切换排序模式"></span>-->
+                                        <!--<span id="user_sort" class="fa fa-refresh">分组</span>-->
+                                        <div class="tree-input_search">
+                                            <input id="input_sort" type="text" placeholder="请输入会战名">
+                                            <img src="../css/images/search_lg.png" alt=""
+                                                 style="position: absolute;top: 3px;right: 10px;width: 16px;height: 16px;">
+                                        </div>
+                                        <div id="tree-search_jqx">
+
+                                        </div>
+                                    </div>
+                                    <!--添加树结构-->
+                                    <div id="main-container">
+
+                                    </div>
+                                    <!--添加树结束-->
+                                    <div id="eventWindow">
+                                        <div>
+                                            <img width="14" height="14" src="../../images/help.png" alt=""/>
+                                            提示
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <p>删除房间</p>
+                                            </div>
+                                            <div>
+                                                <div style="float: right; margin-top: 1px;">
+                                                    <input type="button" id="ok" value="确定" style="margin-right: 10px"/>
+                                                    <input type="button" id="cancel" value="取消"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="del_house" style="">
+                                         <p>删除房间</p>
+                                         <button id="confirm1">确定</button>
+                                         <button id="cancel_house1">取消</button>
+                                     </div>-->
+                                </div>
+                            </div>
+                            <!--大厅和房间结束-->
+                        </div>
+                    </div>
+                    <div>
+                        <div class="search-member">
+                            <div id="memberContainer">
+                                <div id="memberHeader">
+                                    <span class="moduleTitle">成员管理</span>
+                                    <span class="manageBtn fa fa-cog" title="成员管理" id="setMemberBtn"></span>
+                                    <!--<h4>成员列表</h4>-->
+                                    <!--<input id="setMemberBtn" type="button" value="成员管理"/>-->
+                                </div>
+                                <div id="memberInputContainer">
+                                    <div style="width: 99%;">
+                                        <div id="memberSearch">
+                                        </div>
+                                        <div id="memberInputWrap">
+                                            <input id="memberInput" type="text"/>
+                                        </div>
+                                    </div>
+                                    <!--<div class="memberManagement" id="setMemberBtn"></div>-->
+                                </div>
+                                <div id="memberGridWrap">
+                                    <div id="popoverMember">
+                                        <div id="searchInputContainer">
+                                            <input id="searchMemberInput" type="text"/>
+                                            <div id="searchMember">
+                                            </div>
+                                        </div>
+                                        <div id="memberSearchedList">
+                                        </div>
+                                        <div id="adddis">
+                                            <!--<input id="addMember" type="button" value="确定"/>-->
+                                            <!--<input id="disAdd" type="button" value="取消"/>-->
+                                            <span id="addMember">确定</span>
+                                            <span id="disAdd">取消</span>
+                                        </div>
+                                    </div>
+                                    <div id="memberGrid">
+                                    </div>
+                                    <div id="deleteWindow">
+                                        <div>
+                                            ！提示
+                                        </div>
+                                        <p style="margin-top: 15px; text-align: center">
+                                            您确定将<span id="deleteName">###</span>从本房间中删除吗？
+                                        </p>
+                                        <div style="float: right; margin-top: 15px;">
+                                            <input type="button" id="deleteConfirm" value="确认"
+                                                   style="margin-right: 10px; margin-left: 120px;">
+                                            <input type="button" id="deleteCancel" value="取消">
+                                        </div>
+                                    </div>
+                                    <div id='gridMenu'>
+                                        <ul>
+                                            <!--<li>修改成员名片</li>-->
+                                            <li>从本房间中删除</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--成员列表结束处-->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="chat-content_parent">
+                <div id="meeting_tab">
+                    <ul>
+                        <li>
+                            <span>会战室</span>
+                        </li>
+                        <li>
+                            <span>可视化</span>
+                        </li>
+                    </ul>
+                    <div class="my-chat">
+
+                        <div class="title">未进入房间</div>
+
+                        <div id='SplitterChat'>
+                            <div>
+                                <div class="chat-content">
+                                    <div class="newMsg"><span></span>条新消息</div>
+                                    <div class="scroll" id="style-2">
+                                        <ul id="add-element"></ul>
+                                    </div>
+                                    <span class="back"></span>
+                                </div>
+                            </div>
+                            <!--<div class="line"></div>-->
+                            <div class="input-box">
+                                <div class="chat-input">
+                                    <div class="text">
+                                    <textarea id="j-text" class="editor">
+                                    </textarea>
+                                    </div>
+                                    <!--xw-->
+                                    <div class="advanced-text">
+                                        <div id="editorPlaceHolder"></div>
+                                        <textarea id="editor" class="editor">
+                                    </textarea>
+                                        <!--                                    <div id="imageWindow">
+                                                                                <div id="imageUpload">
+                                                                                </div>
+                                                                            </div>-->
+                                        <div id="fileWindow">
+                                            <div>请上传文件</div>
+                                            <div>
+                                                <div id="fileBtnWrap">
+                                            <span class="btn btn-file">
+                                                <label id="file_btn" for="fileupload">选择文件</label>
+                                                <input id="fileupload" type="file" name="files[]" multiple>
+                                            </span>
+                                                </div>
+                                                <div id="fileDisplay"></div>
+                                                <div id="fileConfirmBtn">
+                                                    <span>拖拽文件即可上传</span>
+                                                    <input type="button" role="button" class="btn btn-default btn-xs"
+                                                           value="确定" onclick="sendAttachmentMsg()">
+                                                    <input type="button" role="button" class="btn btn-default btn-xs"
+                                                           value="取消" onclick="fileDisplayClear()">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--包含两个下拉框的window-->
+                                        <div id="custom_object_window">
+                                            <div>请配置自定义对象</div>
+                                            <div>
+                                                <div id="custom_object_window_top">
+                                                    <div id="custom_object_type_list"></div>
+                                                    <div id="custom_object_api_list"></div>
+                                                </div>
+                                                <div id="custom_object_window_bottom">
+                                                    <button id="confirm_configuration_btn">确定</button>
+                                                    <button id="cancel_configuration_btn">取消</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-box">
+                                    <div id="uploadProgress"></div>
+                                    <span class="sendbtn send" id="j-send" title="CTRL+ENTER：快捷发送"><i
+                                                class="fa fa-paper-plane-o" aria-hidden="true"></i> 发送</span>
+                                    <span class="sendbtn advanced common" id="j-advanced"><i
+                                                class="fa fa-pencil-square-o"
+                                                aria-hidden="true"></i> 高级</span>
+                                    <span class="sendbtn advanced" id="j-common"><i class="fa fa-pencil"
+                                                                                    aria-hidden="true"></i>  普通</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="enable_show">
+                        <% include visualization.ejs %>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="search " id="splitterRight">
+            <!--xw-->
+            <div class="other-module">
+                <!-- 右上模块 -->
+                <div id="otherContainer">
+                    <div class="otherHeaderparent">
+                        <div id="otherHeader">
+                            <span class="moduleTitle">业务数据管理</span>
+                            <span class="manageBtn fa fa-cog" id="mutilConditionSearch" style="display: none"></span>
+                            <span class="timeClock"></span>
+                        </div>
+                        <div id="otherInputContainer">
+                            <div class="mutilConditionSearch" id="mutilConditionSearch"></div>
+                        </div>
+                        <div id="popoverOther">
+                            <span class="typeBtn" id="typeSelectBtn">返回上一步</span>
+                            <span class="typeBtn" id="typeConditionSearch">搜索</span>
+                            <div id="otherConditionType">
+                                <div class="typeCheckBox" data-type="person">人</div>
+                                <div class="typeCheckBox" data-type="server">服务器</div>
+                            </div>
+                            <div id="otherConditionContainer">
+
+                            </div>
+                            <div id="otherConditionGridWrap">
+                                <div id="otherConditionGrid"></div>
+                            </div>
+                        </div>
+                        <div id="otherGirdWrap">
+                            <div id="otherGrid">
+                            </div>
+                            <div id="otherIconTable">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--mjl-->
+            <div class="search-file">
+                <!--附件开始-->
+                <div id="fileContainer">
+                    <div id="fileHeader">
+                        <!--<h4>附件列表</h4>-->
+                        <!--<div id="">-->
+                        <!--<input type="button" id="iconBtn" value="图标"/>-->
+                        <!--<input type="button" id="listBtn" value="列表"/>-->
+                        <!--</div>-->
+                        <span class="moduleTitle">附件管理</span>
+
+                    </div>
+                    <div id="fileInputContainer">
+                        <div style="width: 99%;">
+                            <div id="fileSearch">
+                            </div>
+                            <div id="fileInputWrap">
+                                <input id="fileInput" type="text"/>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="fileDropZone"></div>
+                    <div id="fileGridWrap">
+                        <div id="fileGrid">
+                        </div>
+                        <div id="fileIconTable">
+                        </div>
+                    </div>
+                </div>
+                <!--附件结束-->
+            </div>
+        </div>
+    </div>
+</div>
+<div id="customWindow">
+    <div id="inputRoomNameWrap">
+        <div><h3 style="margin-left: 6px">会战名称：</h3></div>
+        <div style="padding: 0 5px;">
+            <input id="searchTextInput" type="text"/>
+        </div>
+    </div>
+    <div class="explain">
+        <div>会战描述：</div>
+        <div id="explain" contenteditable="true"></div>
+    </div>
+
+    <div id="memberListWrap">
+        <div id="memberList"></div>
+    </div>
+
+    <div>
+        <input type="button" value="确认" id="searchTextButton"/>
+        <input type="button" value="取消" id="cancelButton"/>
+    </div>
+</div>
+
+<div id="customWindowWarp"></div>
+<span style="visibility: hidden;position: absolute;" id="userInfo"><%= userInfo %></span>
+<div class="left_click">
+    <ul></ul>
+</div>
+<div class="message-tabs" id="message_tabs">
+    <div style="font-size: 1.6em;" class="hide-tabs fa fa-times-circle" id="hide_tabs" title="关闭"></div>
+    <div style="font-size: 1.6em;" class="hide-tab top-tab fa fa-plus-circle fa-1x" id="full_tabs_btn"
+         title="跳转"></div>
+    <div style="font-size: 1.6em;" class="show-table top-table fa fa-file-text" id="show_table-excle"
+         title="发送报告"></div>
+    <div id="message-node-title" style="text-align: center"></div>
+    <div id="message-node-info"></div>
+
+</div>
+<div class="rightmenuapi">
+    <ol></ol>
+    <!--<ul></ul>-->
+</div>
+<div id="tree-room_menu"></div>
+<div id="monitor"></div>
+<span class="tree-addroom"></span>
+<span class="tree-reroom"></span>
+<div id='jqxMenu_index'></div>
+<div id='jqxMenu_tabs'></div>
+<div id="jqxMenu_object"></div>
+<div id="query_container">
+    <div class="query-cover"></div>
+    <div class="content-box">
+        <div class="border">
+            <div class="header">
+                <div id="cancel_query" class="cancel-query">×</div>
+
+                <div class="form-group-custom">
+                    <label for="system_title">查询标题</label>
+                    <input type="text" autocomplete="off" class="form-control" id="system_title" placeholder="请输入查询标题(默认 人工业务分析)">
+                </div>
+                <span class="current-time"></span>
+                <div class="form-group-custom">
+                    <label for="system_des">行为描述</label>
+                    <input type="text" autocomplete="off" class="form-control" id="system_des" placeholder="请输入查询描述(默认 人工业务描述)">
+                </div>
+
+            </div>
+
+        <div class="body">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="buttons">
+                        <button class="btn btn-sm btn-success add-query">添加子项</button>
+                        <button class="btn btn-sm btn-success add-panel">添加子项组</button>
+                        <button class="btn btn-sm btn-danger delete-panel">-</button>
+                    </div>
+
+                    <div class="inputs">
+                        <div class="input-item">
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control custom-description" placeholder="请添加描述(主键)">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown"
+                                            aria-haspopup="false" aria-expanded="false">类型 <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu"></ul>
+                                    <button class="btn btn-success  shidden"></button>
+                                </div>
+                                <input type="text" class="form-control custom-value" disabled placeholder="请选择类型">
+                                <div class="input-group-btn">
+                                    <!--<button class="btn btn-success add-query">+</button>-->
+                                    <button class="btn input-delete">-</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <button class="btn btn-sm btn-success pull-left" id="table-input-toggle">表格展示</button>
+            <button class="btn btn-sm btn-success" id="submit_query">提交</button>
+        </div>
+        </div>
+    </div>
+</div>
+<a href="#" style="display: none" id="export-csv" download="download.csv"></a>
+<script type="text/template" id="add_template">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="buttons">
+                <button class="btn btn-sm btn-success add-query">添加子项</button>
+                <button class="btn btn-sm btn-success add-panel">添加子项组</button>
+                <button class="btn btn-sm btn-danger delete-panel">-</button>
+            </div>
+            <div class="input-group input-group-sm group-label">
+                <div class="input-group-btn">
+                    <div class="btn btn-success">当前子分组名称</div>
+                </div>
+                <input type="text" onchange="this.dataset.key = this.value;" placeholder="子分组名称" class="form-control ">
+            </div>
+            <div class="inputs">
+                <div class="input-item">
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control custom-description" placeholder="请添加描述(主键)">
+                        <div class="input-group-btn">
+                            <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown"
+                                    aria-haspopup="false" aria-expanded="false">类型 <span class="caret"></span></button>
+                            <ul class="dropdown-menu"></ul>
+                            <button class="btn btn-success shidden"></button>
+                        </div>
+                        <input type="text" class="form-control custom-value" disabled placeholder="请选择类型">
+                        <div class="input-group-btn">
+                            <!--<button class="btn btn-success add-query">+</button>-->
+                            <button class="btn input-delete">-</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="input_template">
+    <div class="input-item">
+        <div class="input-group input-group-sm">
+            <input type="text" class="form-control custom-description" placeholder="请添加描述(主键)">
+            <div class="input-group-btn">
+                <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="false" aria-expanded="false">类型 <span class="caret"></span></button>
+                <ul class="dropdown-menu"></ul>
+                <button class="btn btn-success shidden"></button>
+            </div>
+            <input type="text" class="form-control custom-value" disabled placeholder="请选择类型">
+            <div class="input-group-btn">
+                <!--<button class="btn btn-success add-query">+</button>-->
+                <button class="btn input-delete">-</button>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="tables-input">
+
+    <div class="table-header" style="margin-bottom: 10px;">
+        <div class="btn-group pull-right">
+            <button type="button" id="table-btn" class="btn btn-info" data-action="creatBlackTable">创建空白表格</button>
+            <button type="button" id="table-toggle" class="btn btn-info" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                <span class="caret"></span>
+                <!--<span class="sr-only">Toggle Dropdown</span>-->
+            </button>
+            <ul class="dropdown-menu-table">
+                <li type="creatBlackTable">创建空白表格</li>
+                <li type="introCSV">导入CSV文件</li>
+                <li type="introJson">导入Json文件</li>
+                <li type="exportCSV" class="table-exports-aLink">导出CSV文件</li>
+            </ul>
+            <input type="file" class="input-file" name="files[]" multiple style="display: none;"/>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <div id="table-content">
+
+    </div>
+    <div class="table-footer"></div>
+
+
+</script>
+<script src="/jqwidgets/jqxcore.js"></script>
+<script src="/jqwidgets/jqxdata.js"></script>
+<script src="/jqwidgets/jqxbuttons.js"></script>
+<script src="/jqwidgets/jqxscrollbar.js"></script>
+<script src="/jqwidgets/jqxmenu.js"></script>
+<script src="/jqwidgets/jqxlistbox.js"></script>
+<script src="/jqwidgets/jqxdropdownlist.js"></script>
+<script src="/jqwidgets/jqxtree.js"></script>
+<script src="/jqwidgets/jqxgrid.js"></script>
+<script src="/jqwidgets/jqxgrid.selection.js"></script>
+<script src="/jqwidgets/jqxgrid.columnsresize.js"></script>
+<script src="/jqwidgets/jqxgrid.filter.js"></script>
+<script src="/jqwidgets/jqxgrid.sort.js"></script>
+<script src="/jqwidgets/jqxgrid.pager.js"></script>
+<script src="/jqwidgets/jqxgrid.grouping.js"></script>
+<script src="/jqwidgets/jqxcheckbox.js"></script>
+<script src="/jqwidgets/jqxradiobutton.js"></script>
+<script src="/jqwidgets/jqxdatetimeinput.js"></script>
+<script src="/jqwidgets/jqxtextarea.js"></script>
+<script src="/jqwidgets/jqxcalendar.js"></script>
+<script src="/jqwidgets/globalization/globalize.js"></script>
+<script src="/jqwidgets/jqxpanel.js"></script>
+<script src="/jqwidgets/jqxdropdownbutton.js"></script>
+<script src="/jqwidgets/jqxcolorpicker.js"></script>
+<script src="/jqwidgets/jqxwindow.js"></script>
+<script src="/jqwidgets/jqxpopover.js"></script>
+<script src="/jqwidgets/jqxeditor.js"></script>
+<script src="/jqwidgets/jqxtooltip.js"></script>
+<script src="/jqwidgets/jqxlayout.js"></script>
+<script src="/jqwidgets/jqxribbon.js"></script>
+<script src="/jqwidgets/jqxmaskedinput.js"></script>
+<script src="/jqwidgets/jqxinput.js"></script>
+<script src="/jqwidgets/jqxcalendar.js"></script>
+<script src="/jqwidgets/jqxdatetimeinput.js"></script>
+<script src="/jqwidgets/jqxdatatable.js"></script>
+<script src="/jqwidgets/jqxtreegrid.js"></script>
+<script src="/jqwidgets/jqxfileupload.js"></script>
+<script type="text/javascript" src="/jqwidgets/jqxsplitter.js"></script>
+<script type="text/javascript" src="/jqwidgets/jqxbuttons.js"></script>
+<script type="text/javascript" src="/jqwidgets/jqxscrollbar.js"></script>
+<script type="text/javascript" src="/jqwidgets/jqxpanel.js"></script>
+
+<script src="/scripts/data.js"></script>
+<script src="/scripts/json.human.js"></script>
+<script src="/scripts/index.js"></script>
+<script src="/scripts/meeting_tabs.js"></script>
+<!--表格功能-->
+<script type="text/javascript" src="/scripts/bootstrap-pagination.min.js"></script>
+<script type="text/javascript" src="/scripts/dmuploader.min.js"></script>
+<script type="text/javascript" src="/scripts/handsontable.full.js"></script>
+<script type="text/javascript" src="/scripts/handsontable-custom.js"></script>
+<script type="text/javascript" src="/scripts/Please.js"></script>
+<script type="text/javascript" src="/scripts/papaparse.min.js"></script>
+<script type="text/javascript" src="/scripts/sweetalert2.min.js"></script>
+<script type="text/javascript" src="/scripts/bootstrap-clockpicker.js"></script>
+<!--<script type="text/javascript" src="/scripts/jquery.mCustomScrollbar.min.js"></script>-->
+<script type="text/javascript" src="/scripts/velocity.min.js"></script>
+<script type="text/javascript" src="/scripts/velocity.ui.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery-ui-timepicker-addon.min.js"></script>
+<script type="text/javascript" src="/scripts/jquery-ui-sliderAccess.js"></script>
+<!--<script type="text/javascript" src="/scripts/flipclock.min.js"></script>-->
+<script src="/scripts/customInquire.js"></script>
+<!--11-27右键添加删除菜单-->
+<script src="/scripts/smartmenu.js"></script>
+<script src="/scripts/clipboard.min.js"></script>
+<script src="/scripts/getdata.js"></script>
+<script src="/scripts/msgframe.js"></script>
+<script src="/scripts/members.js"></script>
+<script src="/scripts/objects.js"></script>
+<!--<script src="/scripts/objects1.js"></script>-->
+<script src="/scripts/missions.js"></script>
+<script src="/scripts/nicescroll.js"></script>
+<script src="/scripts/editor.js"></script>
+<script src="/scripts/eventHandle.js"></script>
+<!--<script src="/scripts/editor1.js"></script>-->
+<script>
+    $(function () {
+        treeScrollFlag = false;
+        $(".animent").addClass("pt-page-delay").removeClass("z-index");
+        $(".battle").addClass("pt-page pt-page-delay300").addClass("z-index centered");
+        function whichTransitionEvent() {
+            var t;
+            var el = document.createElement('fakeelement');
+//            var transitions = {
+//                'transition': 'transitionend',
+//                'OTransition': 'oTransitionEnd',
+//                'MozTransition': 'transitionend',
+//                'WebkitTransition': 'webkitTransitionEnd'
+//            }
+            var transitions = {
+                'webkitAnimation': 'webkitAnimationEnd',
+                'animation': 'animationend'
+            }
+            for (t in transitions) {
+                if (el.style[t] !== undefined) {
+                    return transitions[t];
+                }
+            }
+//            console.log($("#userInfo"))
+        }
+
+        var transitionEvent = whichTransitionEvent();
+        $(".battle")[0].addEventListener(transitionEvent, function () {
+            if (!treeScrollFlag) {
+                $('#main-container').niceScroll();
+                treeScrollFlag = true;
+//                introJsFoo();
+            }
+        })
+
+/*        $('.oneself-img').on('mousedown', function () {
+            let rightClick = isRightClick(event);
+            let contextMenu;
+            if (rightClick) {
+                let data = [];
+                socket.emit('get online','', function (err, resp) {
+                    if (err) {
+                        console.log(err);
+                        return
+                    }
+                    console.log(resp);
+                    for(let d of resp) {
+                        let tempObj = {}
+                        tempObj.label = d + '号屏幕';
+                        tempObj.value = d;
+                        data.push(tempObj);
+                    }
+                    contextMenu = $("#monitor").jqxMenu({
+                        source: [],
+                        width: "170px",
+                        keyboardNavigation: "true",
+                        autoOpenPopup: false,
+                        mode: 'popup',
+                        showTopLevelArrows: true,
+                        animationShowDelay: 10,
+                        animationShowDuration: 50,
+                        animationHideDuration: 1,
+                        autoCloseOnClick: true,
+                        theme: "meeting"
+                    });
+
+//    $('#otherHeader').find('.timeClock').FlipClock({
+//        clockFace: 'TwentyFourHourClock'
+//    });
+                    contextMenu.jqxMenu('source', data);
+                    var scrollTop = $(window).scrollTop();
+                    var scrollLeft = $(window).scrollLeft();
+                    contextMenu.jqxMenu('open', parseInt(event.clientX) + 5 + scrollLeft, parseInt(event.clientY) + 5 + scrollTop);
+                })
+            }
+        });
+        $("#monitor").on('itemclick', function (event) {
+            let element = event.args;
+            socket.emit('jump monitor',[$(element).attr('item-value'), 'https://www.jd.com/?cu=true&utm_source=p.egou.com&utm_medium=tuiguang&utm_campaign=t_36378_916802_c&utm_term=7d8d4498a56e457ea692cec05ed025e5&abt=3']);
+        })*/
+
+//        function introJsFoo() {
+//            introJs().setOptions({
+//                prevLabel: "←上一步",
+//                nextLabel: "下一步→",
+//                skipLabel: "跳过",
+//                doneLabel: "结束",
+//                steps: [
+//                    {
+//                        element: '#showWindowButton',
+//                        intro: '创建会战',
+//                        position: 'right'
+//                    },
+//                    {
+//                        element: '#main-container',
+//                        intro: '房间列表',
+//                        position: 'right'
+//                    },
+//                    {
+//                        element: '#memberGrid',
+//                        intro: '成员列表',
+//                        position: 'right'
+//                    },
+//                    {
+//                        element: '#setMemberBtn',
+//                        intro: '管理成员',
+//                        position: 'right'
+//                    },
+//                    {
+//                        element: '.jqx-tabs-title-container ',
+//                        intro: '切换可视化',
+//                        position: 'bottom'
+//                    },
+//                    {
+//                        element: '#editor',
+//                        intro: '富文本编辑器',
+//                        position: 'top'
+//                    },
+//                    {
+//                        element: '#j-common',
+//                        intro: '切换普通编辑',
+//                        position: 'top'
+//                    },
+//                    {
+//                        element: '#j-send',
+//                        intro: '发送消息（ENTER+CTRL快捷发送）',
+//                        position: 'top'
+//                    },
+//                    {
+//                        element: '#contentotherGrid',
+//                        intro: '标准对象列表',
+//                        position: 'left'
+//                    },
+//                    {
+//                        element: '#fileGridWrap',
+//                        intro: '附件列表',
+//                        position: 'left'
+//                    }
+//                ]
+//            }).start();
+//        }
+    })
+
+</script>
+<script src="/jqfileupload/vendor/jquery.ui.widget.js"></script>
+<script src="/jqfileupload/jquery.iframe-transport.js"></script>
+<script src="/jqfileupload/jquery.fileupload.js"></script>
+<script src="/scripts/socket.io.js"></script>
+<script src="/scripts/socket-client.js"></script>
+<script src="/scripts/mission-client.js"></script>
+<script src="/scripts/custom-object.js"></script>
+<script src="/scripts/dynamic-createDom-event.js"></script>
+<script src="/scripts/intro.js"></script>
+
+<% include footer.ejs %>

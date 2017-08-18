@@ -1,0 +1,7 @@
+#.idea下的文件
+.config/config.js
+/rm.js
+.DS_Store
+.idea/
+/node_modules/
+

@@ -1,0 +1,496 @@
+/*reset 样式*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: Microsoft YaHei;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font: 16px "微软雅黑", "Lucida Grande", Helvetica, Arial, sans-serif;
+    overflow: hidden;
+}
+
+a {
+    color: #00ffff;
+}
+
+.node {
+    /*visibility: hidden;*/
+}
+
+.result {
+    cursor: pointer;
+}
+
+/*.room circle {*/
+/*r: 30px;*/
+/*fill: #f8f68c;*/
+/*stroke: #1ee4ff;*/
+/*stroke-width: 1px;*/
+/*}*/
+
+/*.subRoom circle {*/
+/*r: 20px;*/
+/*fill: #f8f68c;*/
+/*stroke: #1ee4ff;*/
+/*stroke-width: 1px;*/
+/*}*/
+
+/*.personconfig circle {*/
+/*r: 16px;*/
+/*fill: #3b8ef8;*/
+/*stroke: blue;*/
+/*stroke-width: 1px;*/
+/*}*/
+
+.tree-link path {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+}
+
+.tree-linked path {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+}
+
+.node rect {
+    fill: #3ffcff;
+}
+
+.node text {
+    fill: #d8d8d8;
+}
+
+.tree-linked text {
+    fill: #d8d8d8;
+    opacity: 0;
+}
+
+.tree-linked.linkTextShow text {
+    opacity: 1;
+}
+
+line {
+    opacity: 1;
+    stroke: #edfaff;
+    stroke-linejoin: bevel;
+    /*stroke-dasharray: 200;*/
+    /*stroke-dashoffset: 200;*/
+    /*animation: dash 3s 2s linear forwards;*/
+}
+
+/*@keyframes dash {*/
+/*0% {*/
+/*opacity: 0;*/
+/*}*/
+/*1% {*/
+/*opacity: 1;*/
+/*}*/
+/*100% {*/
+/*opacity: 1;*/
+/*stroke-dashoffset: 0;*/
+/*}*/
+/*}*/
+
+.unselected {
+    stroke: rgba(45, 45, 45, 0.3);
+    stroke-linejoin: bevel;
+    stroke-opacity: 0.3;
+}
+
+g.tree-linked.unselected {
+    fill-opacity: 0.3;
+}
+
+#addBtn {
+    width: 150px;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.brush {
+    cursor: pointer;
+}
+
+.brush .extent {
+    fill: #a8caec;
+    fill-opacity: 1;
+    stroke: #3399ff;
+    shape-rendering: crispEdges;
+}
+
+.selected circle {
+    /*fill:#ff4949;*/
+    stroke: #5bf7ae;
+    stroke-width: 0.3em;
+    /*stroke-opacity: 0.8;*/
+}
+
+.node {
+    /*opacity: 0;*/
+    /*animation: node-ani 2s linear forwards;*/
+}
+
+@keyframes node-ani {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+/*未被选中的节点变灰*/
+
+.node.unselected{
+    opacity: 0.2;
+}
+
+.node.unselected circle{
+    fill: rgba(45, 45, 45, 0.31);
+}
+
+.node.unselected text{
+    fill: rgba(45, 45, 45, 0.31);
+}
+
+/*收缩后的节点样式*/
+.node.shrinkedNode circle {
+    fill: #0392c5;
+}
+.room circle {
+    fill: #00B7FF;
+    /*fill-opacity: 0.8;*/
+    filter: url(#f1)
+}
+
+/* line 43, ../sass/index.scss */
+.subroom circle {
+    fill: #00B7FF;
+    /*fill-opacity: 0.8;*/
+    filter: url(#f1)
+}
+
+/* line 47, ../sass/index.scss */
+.object circle {
+    fill: #5F25FF;
+    fill-opacity: 0.8;
+    filter: url(#f1)
+}
+
+/* line 51, ../sass/index.scss */
+.app circle {
+    fill: #46CEFF;
+    filter: url(#f1)
+}
+
+.customapp circle {
+    fill: #3c4cff;
+    filter: url(#f1)
+}
+
+/* line 55, ../sass/index.scss */
+.backobject circle {
+    fill: #c0ff74;
+    filter: url(#f1)
+}
+
+.result circle {
+    fill: #FFB849;
+    filter: url(#f1)
+}
+
+.nothing circle {
+    fill: #262626;
+    filter: url(#f1)
+}
+
+.end circle {
+    fill: #d74c56;
+    filter: url(#f1)
+}
+
+.custom circle {
+    fill: #ff4e00;
+    filter: url(#f1);
+}
+
+.icon {
+    /*width: 1em; height: 1em;*/
+    vertical-align: -0.15em;
+    fill: #fff !important;
+    overflow: hidden;
+}
+
+g.unselected .icon {
+    fill-opacity: 0.3;
+}
+
+.arrow {
+    fill: #fff;
+    /*opacity: 0;*/
+    /*animation: node-arr 0s 3s linear forwards;*/
+}
+
+@keyframes node-arr {
+    0% {
+        opacity: 0
+    }
+    99% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+#unselected_arrow {
+    fill: rgba(45, 45, 45, 0.31);
+}
+
+#eventgraph {
+    position: relative;
+}
+
+#cutline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    zoom: 1;
+    hight: 130px;
+    width: 130px;
+    background-color: rgba(0, 0, 0, 0.11);
+    padding: 0 8px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    /*    border: 1px solid rgba(28, 178, 204, 0.36);*/
+    color: #fff;
+}
+
+#cutline li {
+    float: left;
+    width: 100%;
+    /*margin-left: 4px;*/
+    margin-bottom: 2px;
+    /*text-align: center;*/
+    margin-top: 2px;
+    height: 18px;
+    font-size: 1em;
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+#cutline li span {
+    font-size: 0.8em;
+    margin-left: 20px;
+}
+
+#cutline li span#hide_api {
+    margin: 0px;
+}
+
+.div_circle {
+    position: absolute;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background-color: white;
+    margin-top: 3px;
+}
+
+#circle1 {
+    background-color: #00B7FF;
+}
+
+#circle2 {
+    background-color: #5F25FF;
+}
+
+#circle3 {
+    background-color: #46CEFF;
+}
+
+#circle4 {
+    background-color: #FFB849;
+}
+
+#circle5 {
+    background-color: #262626;
+}
+
+#circle6 {
+    background-color: #c0ff74;
+}
+
+#nameHeader {
+    position: absolute;
+    width: 30%;
+    left: 35%;
+    padding: 5px 0 5px 0;
+    background: rgba(0, 0, 0, 0.11);
+}
+
+#nameHeader h1 {
+    text-align: center;
+    color: #fff;
+    line-height: 1.8em;
+    font-size: 1.8em;
+}
+
+#showMemberGrid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.11);
+    color: #fff;
+    width: 200px;
+    /*height: 50%;*/
+}
+
+#showMemberGrid p {
+    text-align: center;
+    line-height: 1.8em;
+}
+
+#showMemberGrid table {
+    /*border: 1px solid rgba(128, 128, 128, 0.6);*/
+    color: #fff;
+    /*max-height: 260px;*/
+    /*height: 100%;*/
+    /*overflow-y: scroll;*/
+    /*width: 100%;*/
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#showMemberGrid table thead {
+    display: block;
+    width: 100%;
+}
+
+#showMemberGrid table tbody {
+    display: block;
+    /*border: 1px solid rgba(128, 128, 128, 0.6);*/
+    color: #fff;
+    max-height: 260px;
+    /*height: 80%;*/
+    overflow-y: auto;
+    width: 100%;
+    font-size: 0.8em;
+}
+
+#showMemberGrid table tr {
+    width: 100%;
+    font-size: 1em;
+}
+
+#showMemberGrid table caption {
+    /*text-align: center;*/
+    line-height: 20px;
+    font-size: 0.8em;
+    width: 200px;
+    /*height:30px;*/
+    font-weight: bold;
+    color: #fff;
+    padding: 2px 8px 0;
+}
+
+#showMemberGrid table th {
+    font-weight: bold;
+}
+
+#showMemberGrid table tbody::-webkit-scrollbar {
+    width: 3px;
+    background: rgba(97, 97, 97, 0.27);
+}
+
+#showMemberGrid table tbody::-webkit-scrollbar-thumb {
+    width: 2px;
+    background-color: rgba(97, 97, 97, 0.37);
+}
+
+#showMemberGrid table th, #showMemberGrid table td {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: rgba(0, 0, 0, 0.04);
+    line-height: 30px;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+}
+
+#set_btn_group {
+    text-align: center;
+    position: absolute;
+    width: 16px;
+    right: 10px;
+    top: 50%;
+    opacity: 0.5;
+    color: #fff;
+}
+
+#set_btn_group li[class*='fa-lock'] {
+    color: #46ceff;
+    -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+    animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+.node .node_bg_rect {
+    fill: #66d50e;
+}

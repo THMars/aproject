@@ -1,0 +1,37 @@
+{
+  "name": "Web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "async": "^2.1.2",
+    "axios": "^0.16.2",
+    "body-parser": "~1.15.1",
+    "bunyan": "^1.8.4",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.1",
+    "debug": "~2.2.0",
+    "ejs": "~2.4.1",
+    "express": "~4.13.4",
+    "express-http-proxy": "^0.11.0",
+    "formidable": "^1.0.17",
+    "formidable-grid": "git+https://github.com/NealRame/formidable-grid.git",
+    "gridfs-stream": "^1.1.1",
+    "jquery-file-upload-middleware": "^0.1.8",
+    "jsonwebtoken": "~7.1.9",
+    "lodash": "^4.17.4",
+    "mongodb": "^2.2.10",
+    "morgan": "~1.7.0",
+    "node-csv": "^0.1.2",
+    "redis": "~2.6.2",
+    "request": "^2.78.0",
+    "serve-favicon": "~2.3.0",
+    "socket.io": "~1.4.5",
+    "socketio-jwt": "^4.5.0",
+    "swagger-client": "^2.1.26",
+    "swagger-tools": "^0.10.1",
+    "underscore": "^1.8.3"
+  }
+}

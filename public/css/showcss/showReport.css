@@ -1,0 +1,83 @@
+#report_top_wrap {
+    overflow: hidden;
+    margin: 10px;
+}
+
+#show_item_list {
+    float: left;
+}
+
+#export_report_btn {
+    float: right;
+}
+
+#report_foot_wrap {
+    height: 100%;
+    /*    background-color: #fff;*/
+    padding: 2em;
+    overflow-y: auto;
+}
+
+#report_export {
+    background: rgb(56, 73, 83);
+    position: relative;
+    padding: 2em;
+    border: 1px solid #1d252f;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.06) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+    /*box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;*/
+    *zoom: 1;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+    text-transform: uppercase;
+    transform-style: flat;
+    transition: all 250ms ease-out;
+}
+
+#report_export:after {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    transition: all 250ms ease-out;
+    bottom: 12px;
+    right: 10px;
+    width: 80%;
+    height: 85%;
+    box-shadow: 1px 8px 12px rgba(31, 31, 31, 0.6);
+}
+
+#report_export:hover {
+    border-radius: 0 0 10% 0 / 0 0 30% 0;
+}
+
+#report_export:hover:after {
+    transform: skew(8deg) rotate(3deg);
+    box-shadow: 8px 8px 12px rgba(31, 31, 31, 0.8);
+}
+
+/*#report_export:before {*/
+/*-webkit-transform: skew(-15deg) rotate(-6deg);*/
+/*-moz-transform: skew(-15deg) rotate(-6deg);*/
+/*transform: skew(-15deg) rotate(-6deg);*/
+/*left: 15px;*/
+/*}*/
+
+/*#report_export:after {*/
+/*-webkit-transform: skew(15deg) rotate(6deg);*/
+/*-moz-transform: skew(15deg) rotate(6deg);*/
+/*transform: skew(15deg) rotate(6deg);*/
+/*right: 15px;*/
+/*}*/
+
+/*#report_export:before, #report_export:after {*/
+/*width: 70%;*/
+/*height: 55%;*/
+/*content: ' ';*/
+
+/*-webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);*/
+/*-moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);*/
+/*box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);*/
+
+/*position: absolute;*/
+/*bottom: 10px;*/
+/*z-index: -1;*/
+/*}*/

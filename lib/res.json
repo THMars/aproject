@@ -1,0 +1,2492 @@
+[{
+	"hash": "a82ed462960b64ed3842e615fb25b47eb9489f75",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"7b1f4cbbe3bb808e399849defbf3975fc3b78b24": "app_hash",
+		"562c3075ee6632780335c56fc290d7743d720194": "version",
+		"dfc17481a741632d156d83a6969ed614167528d7": "version_name",
+		"3cd76fb0f603d7b4bff8f24048cf69e5562bd274": "program_name",
+		"94909f234ec7080f36a00cf6a4bf28fb352a0742": "sensitive ip",
+		"a2dd12ab53df215e4bfb682b92509460988a67dc": "sample_type_name",
+		"1f6c1fe552d0144a3a299e9cc48baf203d91b6bb": "sensitive_strings",
+		"2989a1d258e3e004f93635dd87312ebbd2047786": "package_name",
+		"1b9d07c4cb493c200ba124bf79cb896b547f7479": "sensitive_strings_url",
+		"9b2edd17f9cdc128beae30640ebf2ef5b3f80c41": "developers",
+		"1aab756aee402a9f43e31ebc1098b9abb479f4a1": "permissions",
+		"fc1dd91526580724859a6bf7864845de314c2ce9": "sensitive_strings_sp",
+		"1e6528d284553f4c6cfa3631f0a48182abf0b4c8": "sensitive_strings_domain",
+		"0d789de866311e89d72041b7ae3263b3446cd976": "sample_sha1",
+		"721ba7a028842fda0d68352002b53d41355adb85": "file_size",
+		"bab63acabb1d05302609992614df698aeb58228c": "sensitive_strings_email",
+		"5277609649220dcbc8a3c7e5e361214ef59ad408": "record_time",
+		"ce6c5cafc24eea44e3e89bac2afbe2eee128f1f0": "sample_sha256",
+		"9410ab9d57cf9a359d4d20e1c23b1397e57651fa": "keyhash"
+	}
+}, {
+	"hash": "a97afcdabadc31f788a4f46aa6b4ec8758a38d31",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"5c497cec7defa4968e5e06de2d2501f3cadab5b0": "user_ip",
+		"c17affbb998834d2a6b869c6ed0a3b57bbb4dc2a": "city",
+		"97c360179f0fa095902fc8f281999d7b5ae50305": "longitude",
+		"71e43958a7ed9b1a1de93ade13a4a929ac2b7fc8": "latitude"
+	}
+}, {
+	"hash": "cbd46162e2e377548b8a082039f6bf697b93f3ec",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"3a01157109d84ecdc411be87eb8ee3c69ba545a1": "app_hash",
+		"0cd1aaf1365ade0b55cd0c049a7efa7fdf21c11e": "version",
+		"ddc5127a9cc1a35fc3b0c90a4e82a7331ca83cf4": "version_name",
+		"370b45d0e268b31b3a0b8938c03063d276cacce6": "program_name",
+		"8c3a00b3374e2bbde233d3df01c56fa18cb9c79d": "sensitive ip",
+		"746d8cb1ec4a80f8d571132ae197e2ec95c5aaf4": "sample_type_name",
+		"50ea88bede3e24941a1b1d92945a2693f0664068": "sensitive_strings",
+		"4e235134875ecbcfbf87e076d8d1741cb60b9a2a": "package_name",
+		"d7e2fd885ef739ebdf5b02163962649bfddc19e6": "sensitive_strings_url",
+		"ab6407d7f67d5ac78b0d86aee0c65828b578aa24": "developers",
+		"659f10f012fbf5537684e399aba51e4ed03cc618": "permissions",
+		"6cb1d34c2f8776734ccfe267acc456585d3899b9": "sensitive_strings_sp",
+		"3167f81420edc04400a419eedd571a392abc1666": "sensitive_strings_domain",
+		"291e67f023567da776779abdd680714ad69867c1": "sample_sha1",
+		"9a51c2a52a13310bc67bd2089ba51599493898e1": "file_size",
+		"72919ee37d32e8c047ccf1ed8cf51ca8f2b4aacb": "sensitive_strings_email",
+		"8528676395eeefe03a8e14ca32ad1577c0640aad": "record_time",
+		"d14efe9b00f444c60beefc7c6ed9c14a9e59b671": "sample_sha256",
+		"d7abb491d605d5e3fe494ece358f4bf0bf0b3539": "keyhash"
+	}
+}, {
+	"hash": "33c773cc3355bc733bf4292b409487489728d1fa",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"b1f0646df0ed3e248d2f894abb8cd70624b903f1": "imei",
+		"1382ba617c0cea40ee596e7b52367e2e304f5fcf": "device_id"
+	}
+}, {
+	"hash": "34d351079f340a42ee93944f262efdd24716fa3c",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac"],
+	"res": {
+		"1988fb7bf37e03f03e48d9f4bea1d573dfdfd876": "user_ip",
+		"4d66bf9a5d95dd2f72cd9d162fd8fa2d5f7c5df9": "city",
+		"1e33f132ac7ce4778ab058213da7630613a97f29": "longitude",
+		"142cd142f706a3608a2c1062991b8bbcc3366af2": "latitude"
+	}
+}, {
+	"hash": "9bfdc91f2c868a2b3aa7b4fd1bea608441cc0bd3",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"46a75f4622b56de698dcc11913ddcf7f4160e1ce": "app_hash",
+		"f506b8283d2a2a9c3ed054816076da3deeb26dcb": "version",
+		"12a6eaa06b48b75be8eea25a14b69a8707d0bb92": "version_name",
+		"37c4b5e503a52473e1ae83534f86a1a9c1e8f226": "program_name",
+		"7367d98bc78f16535148752c28bff0b0e69089b2": "sensitive ip",
+		"54b88ab178a7cd8115185277a0d0783707fc4b95": "sample_type_name",
+		"beff9c41ef23235d0bb30ee45ab83048c459b89a": "sensitive_strings",
+		"940d9993fb92286e6cd8cdd44d4ca85b1ef30cca": "package_name",
+		"95ef3f6091dafa3af21395ce9c0b9d689bf9bfed": "sensitive_strings_url",
+		"7df403b2e41ad0957f0366d86e60abf5dd3bf747": "developers",
+		"c440b330f72c3d8f18db319eb5f129467bc30d83": "permissions",
+		"1913e02b2232ffa3f5860f74b81553eee632e3f0": "sensitive_strings_sp",
+		"fa6620b8a9ab43a4949cfccda262bc223da38e2e": "sensitive_strings_domain",
+		"b8e0b3db229f121ba573bce53205592ac4648766": "sample_sha1",
+		"1b1fabd0e7f8f511def5e8c4c096a224704e75b8": "file_size",
+		"06d24ddc2f3467fc7de35698dfa80e6d269c0103": "sensitive_strings_email",
+		"7cdfefb543d927ca4806ebf0ed32dbad166ca589": "record_time",
+		"7e00f6305d1d10109526b39fa89c107976cd8cdb": "sample_sha256",
+		"ebeeff3efc82d852c6c8a05b3dce84d1dfd58059": "keyhash"
+	}
+}, {
+	"hash": "f30676658ac8d2e918846c3c16e2698ea8ec6e1a",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip"],
+	"res": {
+		"e05b90d565c4f3905a78a0f025923d908985539d": "app_hash"
+	}
+}, {
+	"hash": "9ec1c4e59c0ac9ba9529d3390bf9ab25c072fbb1",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac"],
+	"res": {
+		"7579fdb400b6ce7fcbadff1a2f55c1e1f12bbd27": "user_ip",
+		"11a2c2f611ce20b32709eebc202f278ee38acf8e": "city",
+		"e29d24a7787284bc779613906e0bd57ff0d2a855": "longitude",
+		"7f108eb37fec7a227c0573d7eca055cbd2b40402": "latitude"
+	}
+}, {
+	"hash": "beb39029b2470963fe969e607297b9d9c0bc006c",
+	"desc": "获取用户安装的app",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"072b3a748ab277b73ea086a514938e60b052b9a2": "app_hash",
+		"b4d993cc43d755ee7b448ba5823903f72abaf4a8": "app_packagename",
+		"8c3d299f37fa84619e0720b54b1b85785937ce6f": "app_detect_family",
+		"7a16c6d95749a781b087875e65e0703999806ae6": "app_detect_type"
+	}
+}, {
+	"hash": "a33b0a63a70d17d8935c5d575c65b04721866547",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"9acbd1953196fd48d9974ad1024ceedaeea56649": "imei",
+		"139f564d45a6d6e81c760e2d670cec80d90d6c49": "device_id"
+	}
+}, {
+	"hash": "9c2a9707e7cee903700ebc642e619942e11311d1",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"b362b40aa6bf5f22f3e15a2c0641052480fd757a": "user_ip",
+		"4aeb20658b3266d8c4dfe649abd850158109c014": "city",
+		"0e36dc665f922b500c4639337100bb8bc1a457b4": "longitude",
+		"b1be7ea45a66c644ecf650fb14f67ae85c441443": "latitude"
+	}
+}, {
+	"hash": "a8dadad68777e25e667c8f2f5591dec4f71c63e2",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"9d2103c7da0e0e49d1196a8f695c3d5d57ce3867": "imei",
+		"d18f63d65cf50fd184675a4c0ab46dc3e7a556e0": "device_id"
+	}
+}, {
+	"hash": "5927b1622b1c9958b3685948a2721ed3781901c9",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip"],
+	"res": {
+		"6f349e9d2c1e3d4e7f81937eea901a573e906c43": "app_hash"
+	}
+}, {
+	"hash": "d795f29f2da7d1a38a95a380fc2f832370124c3e",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"1af9b4dfe0e716e6cae9b78d91b8a8e295b19d29": "app_hash",
+		"ecfb44b82f95d171f8bee58f20801897a44e42a9": "version",
+		"eee2015e5e5cad8d3b8e98b5c2eda24dbf098355": "version_name",
+		"8fa1fe239a4c1bbe7512c7286c3c647848ed7d07": "program_name",
+		"698c57b1f0fe94946f9d36dad67da9fa864401e9": "sensitive ip",
+		"79fbee1787985c27130031862f22d401deba912e": "sample_type_name",
+		"eed48d5a171d03b93c972fbfb82f54e307d8915f": "sensitive_strings",
+		"69af4045243e72b68d6e1c629e778e6aa0170649": "package_name",
+		"60e635fb24fb8c12195bb69195f24d42f812d47f": "sensitive_strings_url",
+		"6e170de27441992a0e95b1b7ae3c163a597c0350": "developers",
+		"390b4e5d814d42ef04c7f8506cb69274a3f5dd75": "permissions",
+		"a079a0eca50e573b3025ae01a837fecd4e828d4b": "sensitive_strings_sp",
+		"c47d04a10de98a9abf75adaea0ea5a3ae441323e": "sensitive_strings_domain",
+		"e0105f759530944dd3ff461dfca8871abb4e9ac3": "sample_sha1",
+		"a7d7d26b5c0226b1b28e6786ef401269ab8c618c": "file_size",
+		"610f72158d71a8120086466dff16d1bdfeb80641": "sensitive_strings_email",
+		"98169edfb1f29fbd27b4ff98a6ef4b12ff8d7cab": "record_time",
+		"e2466c969b58fdbaf467fbffb609678a590df39f": "sample_sha256",
+		"2e804fbe5dc50013f47828fdf4e92ea0ce535a36": "keyhash"
+	}
+}, {
+	"hash": "bba2d06bb97f02c168abc4bbca6a19f6513e1d4a",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"f619104446c550cc96d1a1df3be1373cd7229185": "app_hash",
+		"70ae8f5456f7a6e9e16863127040df20d0ea333f": "version",
+		"f4e2055a4fd5898084f01d3bae688bd993e4f4d9": "version_name",
+		"841e9300da279abbaf84d41a619701e90e081c4c": "program_name",
+		"8374b572cadab503a955aacd803a5f33bbcb5013": "sensitive ip",
+		"082e7f60da902770497ae2d4f942b4abb5c539ed": "sample_type_name",
+		"877e94c56e5efb61c9fb052c2a9099890a565b0a": "sensitive_strings",
+		"863a474aa28d3b5aac3bbf3c366f9b00d1b600b9": "package_name",
+		"89200ebbae21eb8a25e6462c83595a4f264fc6b1": "sensitive_strings_url",
+		"4597b69bc67fc51e37449163b5adf4316e6ada88": "developers",
+		"cc76784c10e30e6431b3ae8362a856825719e9a2": "permissions",
+		"ec8b8a3e84dfa6ca9491cd8997a5c4a68723d7af": "sensitive_strings_sp",
+		"6ca0ae77304e58f0853ae5d3b9c9b9684876b651": "sensitive_strings_domain",
+		"c3e8921cef0fdd1314b1a8d63883aed6d307fbcc": "sample_sha1",
+		"777c8967872e8bbfe1c44095b08ad8d77083f100": "file_size",
+		"2ee72cce485ad3501247506c7485726c90b63e77": "sensitive_strings_email",
+		"31cd17568f68ba1b9337248f8446777fb5bc2575": "record_time",
+		"1701841cfde9ea44615ba2b058f3adf1169093c2": "sample_sha256",
+		"f8cec77c37c92bb34d6bbcf48294389637b7e615": "keyhash"
+	}
+}, {
+	"hash": "626e813d0895b428a1d78f57f6e5cbc7d1381a6f",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"6722a09b335ffff03e32ca35da617c95d2804c36": "imei",
+		"945f1f77db1a41b5e8cec553cb6452eb64938077": "device_id"
+	}
+}, {
+	"hash": "025255e6ede0a3fc04484a3ae7c5f49a661817d2",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"a9d224226773e16f5ccf5ada5b3bbac613697810": "app_hash",
+		"00a3c714a8f4883ef0bcf8ba80746fbaeab5c36a": "version",
+		"98d38b9fb6f553bdf19834566a3ff38fc5f56b48": "version_name",
+		"b14deb744322905d3b0f6b5f99b11f599e746899": "program_name",
+		"45589c3c394e16073a978dfc867ba201ec76a055": "sensitive ip",
+		"9118df850c7bf2952f5b22977be85991e162073e": "sample_type_name",
+		"8592bc1e1bbe493e8e58f06a22279afd32e25ed4": "sensitive_strings",
+		"bd0f571fb88b234e8202ae72951cb436eb2245fc": "package_name",
+		"08e2e22e6c02be559d7b389d273db96600dc5dda": "sensitive_strings_url",
+		"07d33c52dbea49d6bb79dd388377434fec6021f0": "developers",
+		"5a50c7be8891c6395e4f4c7cf3857ec891ba2c7a": "permissions",
+		"d3eceed91bd02ae7ce4eb63e9ba4f7fbc6769cf4": "sensitive_strings_sp",
+		"7cd2ba47a91bcd07d80208ec84f159c9fbb49198": "sensitive_strings_domain",
+		"f46e05342eaf2e99251f6db59fa8abcaecd127d3": "sample_sha1",
+		"bd01db3a6d8830003e6f159610b647712f975775": "file_size",
+		"17c075b583c45ca5fb7fb2b2197085a9799cf23d": "sensitive_strings_email",
+		"663586fdf2e7827663afef86af57ecd968a2f410": "record_time",
+		"2f3f64040db767ad38a0e6db4d27804860dc82c3": "sample_sha256",
+		"d5bf7e9dac0da2f79818d2c80ef71ffdc97c02b6": "keyhash"
+	}
+}, {
+	"hash": "8761c5d6fed1ede4026511600c0bc5b53c4b5783",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"cc9bc30137309825684ccb1c0ace35a680ec3660": "app_hash",
+		"d24d1e9a94168775b64d85ddb2002f9ef3c5511a": "version",
+		"c3b932bd6c5d012424860461cfad4be350916c3e": "version_name",
+		"b9269b60985cf9c5188bf8f06d8498c06de0ab2c": "program_name",
+		"e480f118e6033091f119bcc47265788c72a13018": "sensitive ip",
+		"8af69de2af25afe936665570c655dc3bb30068fe": "sample_type_name",
+		"0028a1b49c72f8b13ddbda728b6831bd54771165": "sensitive_strings",
+		"a6bf75631f7b41a7fdc6c3624fa0b7282cc8b603": "package_name",
+		"af49625c5187a5827cf8e59736adbec927e5c82d": "sensitive_strings_url",
+		"982b44de4cc0863048173ce7724ea9106681710b": "developers",
+		"36ca18d940b0b36bfb8a7fca8e39b69df9b3e471": "permissions",
+		"63154ea5257f74e0b55c2d74bfe9127a86b34351": "sensitive_strings_sp",
+		"9e553b7de395fb2722cdd67ea86c17997bc473d7": "sensitive_strings_domain",
+		"a8d29abfde657e0bc2a45028e811f915bacb2c22": "sample_sha1",
+		"d29f34b39ef13c9dcbec8fce0b32b6f65f22f3e0": "file_size",
+		"d4cf2dca7f0368d2aed0750cbf15c87295be20e8": "sensitive_strings_email",
+		"77c40ddb133ed0279294c14fd58d9763a097eca1": "record_time",
+		"df0d5811b36a08ba35f31a284d0d2984a3c5edfb": "sample_sha256",
+		"65e7475780831a477d0308c88929391de84c0d77": "keyhash"
+	}
+}, {
+	"hash": "dc658955bc15d2828b1ca216ac7df1541b9987a5",
+	"desc": "在引擎日志中通过包名获取到样本HASH",
+	"params": ["package_name"],
+	"res": {
+		"564349849246181aee3fb72af802593d787c3d06": "app_hash"
+	}
+}, {
+	"hash": "ba68a7a01e97ea31fb297233499ad173ede68b15",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip"],
+	"res": {
+		"4f9c2de997b2f4620bff6b776db8eb0915f8253b": "app_hash"
+	}
+}, {
+	"hash": "7b922d0c38375fa108c0b5062678a57bfc8e4a04",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"dceeaecb5dfae5c1d4d6838bafb53008bf15146a": "imei",
+		"9936f2f7b8b8e51d1d1efbd9199e26002c4cacd1": "device_id"
+	}
+}, {
+	"hash": "fe8118ce47759a36124f0888a6678309914c9eb7",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"9ea6c24e0b3cce2074ff554ec7ad0f346cbf3659": "app_hash",
+		"13227ebb7fed11ebd407381341364d296b9a2da2": "version",
+		"5b77cc3a1ad958c2abbf573c674dc4021896097d": "version_name",
+		"77cb61b3aad20d5c610895dd882a4cbd05628e73": "program_name",
+		"752b3291e44173824e1f443829606787cdd5fa25": "sensitive ip",
+		"4a6df2df6a0914a65e84425a700b9a7f5e86c9dd": "sample_type_name",
+		"26c4b35584680f2b8452e24557341fa75709db30": "sensitive_strings",
+		"4fd091fed9497a47cb16c4c0e122f2f9f9814c73": "package_name",
+		"d9c473d965cc25487ffbbabfa2a5ce38e9489b5a": "sensitive_strings_url",
+		"9c521d1c16cce19ae56a6eee7f825da397c7e131": "developers",
+		"ed059ca4018795fc0454acf8dfe553e51e736f6f": "permissions",
+		"e41e6e76b8be58e5a8364d1d45c7c7781d6f26e0": "sensitive_strings_sp",
+		"950263f108c693d4c49f8b2a25bfc1fa014c21c1": "sensitive_strings_domain",
+		"0056a884ba42d4cb9fe7c3bd496d6bbb3d37be34": "sample_sha1",
+		"0d54cf144b8b7f198d5e0f1fe23d8b3ce58f352d": "file_size",
+		"2737ae6f57d77e9dce8ab527d38b7ab08116d909": "sensitive_strings_email",
+		"215c5b3ec6c80e45c59d49f55bd2fbf33758e8ab": "record_time",
+		"8e8a7b04c3b014b36928657a9080aa759c50bb6a": "sample_sha256",
+		"8bc86face347f8fa0af74c07434957886c99a663": "keyhash"
+	}
+}, {
+	"hash": "b2d619a9b46b9a76eaf1e010810b46d616ce55e1",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac"],
+	"res": {
+		"f9813e19fda7bd225c805ec8153f764b82c65895": "user_ip",
+		"afcbf492b43beb5006ce268f866f4129cfa883a6": "city",
+		"f9c43669090184c091efb5d0f8738b5cca1c9b24": "longitude",
+		"3095a986f525407aa0740f61ef6a1a29fff8b3ce": "latitude"
+	}
+}, {
+	"hash": "9d2a53c638b68563f2413dfc1eb75adfdab088c6",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"97884c9da6e80339187186ff436aa12d46ad7dd6": "imei",
+		"28864555ae36c20f899484da9a1c78026105d9af": "device_id"
+	}
+}, {
+	"hash": "8a84d45b79b66d404ebd69d4be33ffd814b915d2",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"2c7d3fef726f99b72144ba9b6b4bfb3e29148571": "imei",
+		"0ef5d33e1e04ae60928d94e407a0e349d7d0c614": "device_id"
+	}
+}, {
+	"hash": "d62824770c4de04a4ef4e573111b2ab0a6e8af92",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"f9cdc1415b6dc4db20a54ec2d5a858b84c720559": "imei",
+		"a3f6798f95246a1ccfb71e5fedee802c3567977c": "device_id"
+	}
+}, {
+	"hash": "3f6031e52d82649936067ccdb7a1d66eb46ad583",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"71b85fc4992a9c1e919dc085e7dede593db613fc": "imei",
+		"3a8250513db7feaea07298aa7c93559bd4be4187": "device_id"
+	}
+}, {
+	"hash": "5e489f31c1f9469ae27082f56f09b988cfffbb47",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"fb1727128e0426ffdda6f72de385ad6e7c59cbe5": "imei",
+		"c27bb3879ab35cb3c5e0918810aded76194cb029": "device_id"
+	}
+}, {
+	"hash": "34c3cbc89713ac2189b2f888a1cd9658b994f162",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"8257a0a5a3076431bd38a408333f82dcbdad43a0": "user_ip",
+		"09eef453b846498f95cd8cb7133560d00be741ac": "city",
+		"a09e850acc74d36d81f2ecff87315dda191b4593": "longitude",
+		"9f932f6879a5e2cc5744892d4ac9c33c796037e4": "latitude"
+	}
+}, {
+	"hash": "799cac51c8f816d01773e13a5f4e44199094c91f",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"665123c28eee44975a39219ca2cc976f97395392": "app_hash",
+		"e182e6cdb67908a28b93876cff4c2552d3a18387": "version",
+		"6c63e88490136924c107abe6c752da043d0354d5": "version_name",
+		"4e146195af7451b6f6ddda5947976c0dbf67c0dd": "program_name",
+		"413cb87dcf43f4ea2fedfa68ab1c06f6dcf78d33": "sensitive ip",
+		"c11579c988c91910a53534dfbfa0fbe937927dea": "sample_type_name",
+		"74f0347445e6a1226db150b73fecef1448b5cb73": "sensitive_strings",
+		"34ffa03a2f82771289750df3319b37e3af9dca2d": "package_name",
+		"9e9c43543dbe06dc7c10169432dd9257151ada54": "sensitive_strings_url",
+		"d17c193e2e93bd63ca1cf9828e1cc39ee72bcaed": "developers",
+		"2d92b76818a882b0dea1fa85854fccc80dc8aaf8": "permissions",
+		"cb06b13a7d9ec19667471a744057999849bfb131": "sensitive_strings_sp",
+		"c44bbc797c7e1f5d45cdd4f1360302018ee7745d": "sensitive_strings_domain",
+		"049df313159a20ece2ae409575b9f12de7333730": "sample_sha1",
+		"d9aea7e8083ffcb7e76f732c3f3211933e5ee0df": "file_size",
+		"365e125247b9f7b449e80f2845a1058efaf2c3dd": "sensitive_strings_email",
+		"5bdf4a7143dbce84b16f54ad560ffaddf418028c": "record_time",
+		"7bd15fb0a30de1a1900b9cf9306ffaa64c0ea00c": "sample_sha256",
+		"3c861d5000a309456343148a5e74201b52da827a": "keyhash"
+	}
+}, {
+	"hash": "fd66ec123bd99989368506161307e6fed76bf1ab",
+	"desc": "获取用户安装的app",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"13f96eff03a702f95e25465f4fdca1393d4dba16": "app_hash",
+		"cedea9cd1108f3305f1f24d2bd52f284adab7293": "app_packagename",
+		"64b14211c4dcb120f108c1cbe8c8b9cb3c5eca17": "app_detect_family",
+		"045c041db4de5a0a2fa5b0e671849d27d8d186b1": "app_detect_type"
+	}
+}, {
+	"hash": "05935d914c5a67da832d71c1e543bbc1a9f85033",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip", "authentication"],
+	"res": {
+		"db95f26c9cbc57d3b0ee7f209d4a08a3276c7110": "app_hash",
+		"0546f5eb27ffbe6bd59d4a39b279dab410ae5350": "version",
+		"0d4623ef677159322d36a40c22a738861410a537": "version_name",
+		"918c3092c30e6fc620d7fcd9c551b165c8f300ad": "program_name",
+		"c964f1d929c90ab228cd012a91deafc314a99708": "sensitive ip",
+		"20b1194788f6bcadc5b41d53ed13d674033ccd04": "sample_type_name",
+		"64e195f14083ece772fd469bee711a647f04e6cb": "sensitive_strings",
+		"a82fa6fbaed704837a3bb75da66763a7c2f4631f": "package_name",
+		"a4aa7ff3ec9d43cca71fcb7a95a443ae7928b5d5": "sensitive_strings_url",
+		"ff271feeae71e78c0fcbca0d321508942fe5b28c": "developers",
+		"9a6a28267f30344a92e3ff69edd26d27e36f9d56": "permissions",
+		"c7047401c5c1e47e5e5a584b539258704c55f6b2": "sensitive_strings_sp",
+		"7f69aa6ca402dffdec20c705436fe3550b4cb248": "sensitive_strings_domain",
+		"93055e85e3d59a7f56be1c71fb63b18009739cef": "sample_sha1",
+		"69d398dd193967b9bf3e66d0ca158212246d2c8f": "file_size",
+		"e015daed37debf60ca1099e53d234cdc4c74d093": "sensitive_strings_email",
+		"7fbd8227ac2692c1ee032867ad2cefd096f338c1": "record_time",
+		"823e489ec2f89ff605883409555b07821109353a": "sample_sha256",
+		"5227332866e4e40b33a0530187960a5c8f99a882": "keyhash"
+	}
+}, {
+	"hash": "67f1cdb065aeb4310fea4a4b2f51756038392160",
+	"desc": "获取用户安装的app",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"c7cc468caf39d9d39fc48cf2b2d56454255dda5b": "app_hash",
+		"275aaf8d886528f0b3b5b61b712cb6586cc57d41": "app_packagename",
+		"5d87e305d9b5d5c5f3c4271c8f23f405ecc497d4": "app_detect_family",
+		"3f71db21762570b54dbcdac9319fdb3b427ee02f": "app_detect_type"
+	}
+}, {
+	"hash": "48293b5059ad08f704e22069e81018acc88fe5c8",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"6ae6ec1fb6e811f23d3d681edf8c96f4119d9977": "imei",
+		"8ede6d434eb5fb01ac2de2192c6ed055b8ac0a2c": "device_id"
+	}
+}, {
+	"hash": "f767c8cd846af66cf9637b47228f6a82499979e6",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"730ad09f1cfee1d7bbbce2e932c02980292f4e1b": "imei",
+		"4fa11ab8f6fe0908f7bd69a1ecb8045f3c0e770e": "device_id"
+	}
+}, {
+	"hash": "c02ba44e25a5adf09a25b0829ab394f8a1a450cf",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"aeb7d11c375c687b1787316aa205320e02a348b5": "app_hash",
+		"a576a398014f01e1bbdda5228d0e3a7965a74bba": "version",
+		"9956323f9907f1142387d3f1cbc78fc06fec0261": "version_name",
+		"b82e91a568c8b15d46253cd79fbb2304114a8117": "program_name",
+		"6f590338e87a8fb9d594f6ace812f82c1325671b": "sensitive ip",
+		"e3b557f6fd71245274f5793ee3f361de0d7ab578": "sample_type_name",
+		"4f8e06757744dc5041622dc8c3dc7935ae7caa82": "sensitive_strings",
+		"14d647e82831c0e5d8870341e57328d96764571a": "package_name",
+		"2073b5dc9ad7803631ed7795fa22e67d778a3203": "sensitive_strings_url",
+		"938de9b14afbb2696c08206b75295854ae5c9b7d": "developers",
+		"f6d719f58e68570a133d272f81874439b320526e": "permissions",
+		"b53218c96cdd691b49b37b363ccc12663ba7a08a": "sensitive_strings_sp",
+		"2dcea0c47254129768f86b2c65af5aa216f81e0d": "sensitive_strings_domain",
+		"1251b44115e1cef32f3dc9105790949b735e70be": "sample_sha1",
+		"d47eafc711563a149addc348c8cbf620c8eac43d": "file_size",
+		"37a2283b09475b9c8ea9ba34a1724c734ddfd4a7": "sensitive_strings_email",
+		"344561f81dea79e6444002a416e956616a916f6f": "record_time",
+		"3140f691892e06bd0a81870f8f8fb66d1d3c14c0": "sample_sha256",
+		"33e35f0fc0e98582c525729c1f10b389db8a9ce7": "keyhash"
+	}
+}, {
+	"hash": "fbf298121345da158212cac76f2813b6b60f9597",
+	"desc": "获取用户安装的app",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"4618c67f24f13e1e6d09713cf4a32ffdb8d8c974": "app_hash",
+		"30b630b05bf225391bffa3c1f0f302c4fefe4a0e": "app_packagename",
+		"b4fe719fa7157fb1938efa4fda4ce3aeae319907": "app_detect_family",
+		"4a7166ee9c72df21a8deebb1b19eac630735a56d": "app_detect_type"
+	}
+}, {
+	"hash": "803c4818fd9d6f95f04915632cc87350dbeccd09",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"4ed77258da276f5316892f6b249d52c627032bd8": "imei",
+		"9878dbe5a28ea28db7f05cf3c59879ceeaf22e8d": "device_id"
+	}
+}, {
+	"hash": "1b6d7372d209004b194efb4367d7900138d04274",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"93d2b86037a5f2849f258ce12884220022e87aba": "imei",
+		"f80008b50b5933fcbfc8fc27f68c23e92a1876ba": "device_id"
+	}
+}, {
+	"hash": "c9f09b93413ef3de0e36e509b2cbc9769e803a18",
+	"desc": "获取用户安装的app",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"239a017f89c0796ba2355fbad8b13404b87f3bf2": "app_hash",
+		"8bd0341594142545e7a6cd899b5713dcf97892dd": "app_packagename",
+		"8efbcb2d929b5073e02fc7d764b8dd69a7b62408": "app_detect_family",
+		"7e0b908e4f3eb38bb9587815f8a07f279581ce25": "app_detect_type"
+	}
+}, {
+	"hash": "a5f1215f6fe9986f5f3e11a94bfb9287b9c2b469",
+	"desc": "在引擎日志中通过包名获取到样本HASH",
+	"params": ["package_name"],
+	"res": {
+		"1f38cee5d12c3b2267a66f5416cef317fcbfdd1c": "app_hash"
+	}
+}, {
+	"hash": "5af733a0bf621ea564a5b9fa69b9695ec1da78d9",
+	"desc": "在引擎日志中通过包名获取到样本HASH",
+	"params": ["package_name"],
+	"res": {
+		"872d0074f7be161cb7486e011a72de9a2b9c5f37": "app_hash"
+	}
+}, {
+	"hash": "91830926efd1231c5c684afef287098041ddcf48",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip", "authentication"],
+	"res": {
+		"d34ae482c4947099107cff74ab15b47acc55472d": "app_hash",
+		"e666f586c28799612d7d0219c4d46252898d79fb": "version",
+		"8552d189ad933756385b3c29f214e002118a70b1": "version_name",
+		"2b1a3591cd116723990ec9f1b56f4fd364bcaa03": "program_name",
+		"b33f73ce07366b0505dee850be82cb453b6b4496": "sensitive ip",
+		"a7c546bb626b190564f875bd526f96782f1707b0": "sample_type_name",
+		"047efa7916b966892d9a507218be11cded1e8e85": "sensitive_strings",
+		"27fd3d9dcefdd45a22f66b48baaf97d13c6cdca9": "package_name",
+		"8a0d4d020ab434431ea7133be761dcc4c6d2e8b0": "sensitive_strings_url",
+		"518e4b0ade740bc6ed2c841340e5bc562b10b6e1": "developers",
+		"a96d42530135330f2e5ba1bbfb22a5feafd467b3": "permissions",
+		"b0a2c0630354f239400c55b0a6a118c403a6092d": "sensitive_strings_sp",
+		"d3c7c43dc2a7979759568e3021fc55d53f8e1b80": "sensitive_strings_domain",
+		"c2e5dd89bca068c2dd03a65075e184c7103c86a7": "sample_sha1",
+		"2327dc20a376233729b74fbca59c6dbb4909fa4d": "file_size",
+		"ef5ccc1cc1acbfb73f46d9789fc1aa99e8d1c07b": "sensitive_strings_email",
+		"10030e4530f887d77e923cf787b634db381abf2d": "record_time",
+		"60c8d258b92114cc65d66bc1738c7dbf52c55c8a": "sample_sha256",
+		"002848015733e26ea30907ac99991153f4585a93": "keyhash"
+	}
+}, {
+	"hash": "3b2e81587947fa258eb5cee5bd617e1d9fa2f513",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"c97ad70e22dedfbe5cbec0d66abf3c20d894e670": "app_hash",
+		"6244a3a2c6f7a00004d5990d0a5b0ae7689aa53d": "version",
+		"b3ef60f98e97107ac46a4b7a6e8276dae6b1485a": "version_name",
+		"ddec9720cf448b654a3c2956db550b5fef276e1a": "program_name",
+		"4b41abe68c52271f530b26376ba170d03101c0f3": "sensitive ip",
+		"cc89a571b3bede742865ebfbc25cfcc3fefbaf31": "sample_type_name",
+		"22a5bac701187523ec0187a967749f140511efac": "sensitive_strings",
+		"ee6f89a733ac001df189f1c888229d318be41747": "package_name",
+		"904d939980027df234c110a8ec2a032df2394f92": "sensitive_strings_url",
+		"24e53da2fa731328ebddd5d288f472cf90d7dde2": "developers",
+		"5918ca41882d6b4e03feb993cff8a4ad9d0c95ca": "permissions",
+		"c115bc9f783c313bdbc811fe6ba3c1cc62900dfc": "sensitive_strings_sp",
+		"30ce5938d1c3ad87d4e08f1618bec3155003f56e": "sensitive_strings_domain",
+		"77f0bf0d62a02a75c95aa94bf0c97644ef71a5bd": "sample_sha1",
+		"1247517c903343d532d0c5c7c7014373d939b823": "file_size",
+		"f709511ef26e37c0dc8fb67d6e50562b6f4fcd1a": "sensitive_strings_email",
+		"40a53812d243d2ca6cb6c41728a722e48a40d9ad": "record_time",
+		"2e1ec2c7790829c53d7f84fa25907a0f17bebf9e": "sample_sha256",
+		"fe4e8c8b60c2c7fa4445333bfe7322c1f41172dd": "keyhash"
+	}
+}, {
+	"hash": "dadc6da10877ebe7bc6b16fd71d1e5b69baf5503",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"adb1baa0b2bad3f699de5746689d44c1d7b58e67": "imei",
+		"0bbc31d2e2775cf99a71d90a6b3fb20e0534d7d6": "device_id"
+	}
+}, {
+	"hash": "5874cd1399e9a923f376672c1b47cdbae4cd65e9",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip"],
+	"res": {
+		"9ba7fee1a748817a6e69fb56d2c70021f49cc68d": "app_hash"
+	}
+}, {
+	"hash": "97badcbe811d41e286a456c3cc4e7924993986b8",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip", "authentication"],
+	"res": {
+		"defd9bf6d568376457a4c55e149b15f1164ebbfe": "app_hash",
+		"8593b4247023352496458da0fddca039d534e91c": "version",
+		"5aa7ccb767eeb9db10776740f85d1348145bc401": "version_name",
+		"c1554eb0a28effc454a6ba591ee4c63ed9e1b28b": "program_name",
+		"095247e76a9b6b7889257c8c216b2030b1a1f699": "sensitive ip",
+		"bc8538baa4e88f39acbde2514872770702a6a5b6": "sample_type_name",
+		"ea57e30773aecd7aec30078eb30eacd1e353b8d1": "sensitive_strings",
+		"568d7c81f9dc01e1578d08132b78e634198baa5e": "package_name",
+		"d8ecc4f11d8824b78d3e12c89c5b4e51101bab8e": "sensitive_strings_url",
+		"602ff8a600fd7c49986cc3cbd1a15d01ae8b5aa2": "developers",
+		"cc180e71ebe6c4d97e3ec1aabbad240dbfc16937": "permissions",
+		"ca0e27276aedd8601241fa07cc5710da4d5a814c": "sensitive_strings_sp",
+		"5c073feb5e026b5fc5068487615014e716a93d00": "sensitive_strings_domain",
+		"ec7dc5abe818e89cd14124ca104fc7a876d7aaff": "sample_sha1",
+		"4ad5b5f295ceb5e7f009ce819ca72df9bc6875f9": "file_size",
+		"67f83e5eb222788050803b48febe578ee5f0d777": "sensitive_strings_email",
+		"7ecd0806057896d292bdd0a20ebcfc52a32b6a8f": "record_time",
+		"49f13388abe47ec57055da193d2201d1cdc7211b": "sample_sha256",
+		"31c01b9c4623aa85f2cd402d0619171199a0cf42": "keyhash"
+	}
+}, {
+	"hash": "109b42cff71b20393f94e8003f4c830e75445a55",
+	"desc": "获取用户安装的app",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"0eacbc6b64e5ccc1eaf4a6efa727b559a95bc8ec": "app_hash",
+		"4647c7544be1ec5cfab0fdf6f91fd6a06931af86": "app_packagename",
+		"a6f9ec2da09feebdccf4ebba4a3e6f2315c9947b": "app_detect_family",
+		"6a65668ea0b5fd4e1d44cb6241c0a592c659f1bb": "app_detect_type"
+	}
+}, {
+	"hash": "d7587fb8555284fff885485e4bcabaf57c8def08",
+	"desc": "在引擎日志中通过包名获取到样本HASH",
+	"params": ["package_name"],
+	"res": {
+		"d3ade5154742526c3e34c3b573b4084f440b1c15": "app_hash"
+	}
+}, {
+	"hash": "23def18a75c8188728dc6deec63a2cadf0a62096",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac"],
+	"res": {
+		"53bf0866a5963d02dd7b80ac88c24ab49c986194": "user_ip",
+		"c0a1699d347de7af837b929c5a67f04bed4d0994": "city",
+		"6bbd5712573a5c186b193450c02a0d74c7efd0dc": "longitude",
+		"2e9c780f079197db329bada351409d5d6f31e0e7": "latitude"
+	}
+}, {
+	"hash": "5258e79b7da0e6ae7cf4e75c7a3cff07813f577c",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"0757946eecad4bfd7baab996eed5c7fefbd20512": "user_ip",
+		"4318b847de186f05d4b4cd37f6d52e95b6dadee1": "city",
+		"fc8310d75182035751a5cdf9885f82ea51237acf": "longitude",
+		"1574eb1346d46cf0094339047f452b601e9f639a": "latitude"
+	}
+}, {
+	"hash": "3a68acf1c77668ac54d18bcc86f1b11b7c03a2f3",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"1948af863ed6abfccad1fb32cdfe989ffe5707f0": "imei",
+		"4365d602a04be25a886275d0fd42ff9ed65860a4": "device_id"
+	}
+}, {
+	"hash": "13215f7c7887e0a93d95e67276ff959d53a87bbe",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip", "authentication"],
+	"res": {
+		"4a79e7f28c837ff2c51f3b43266f8330ebb8a316": "app_hash",
+		"ddf481f4e3711c75d6c8b30f477286eb26de25e8": "version",
+		"0edcd0469a09f75a6c622a2e4022bde08dab7e46": "version_name",
+		"d68e20a4346b995176a6ad269e630e264bac8404": "program_name",
+		"c078adb15c640ad8d9358ac4d99916f005db99c8": "sensitive ip",
+		"7cf7772b6d6eb0fd9bc189cb545b718fcd82b447": "sample_type_name",
+		"e98e1fcd8cdcf1bb0210ab1fa4024f96755486e0": "sensitive_strings",
+		"e6708a96aaf28c2ddea4bd18f4414da7bdc94168": "package_name",
+		"cee8643cb767315e9624d24ac68ea11076d519e5": "sensitive_strings_url",
+		"05691b44897788e04699becfb8efcb3cf1dbd21d": "developers",
+		"3ab440a594e70b53e615f96f532e3688cb92a4e9": "permissions",
+		"0cad5359824b272dcc49065d277962f226c83560": "sensitive_strings_sp",
+		"fa0847d50391cd32cfdfbd7f6e62bbbb4082dc92": "sensitive_strings_domain",
+		"dbbfa4310d4074b61f743a0180ab66a05059a3be": "sample_sha1",
+		"1f60dbecf9820c1d05167af1d2df395c8d44716b": "file_size",
+		"802d10236f4266e52b0139a602ca019741081a1b": "sensitive_strings_email",
+		"fe66b960a9fe1537f0670d63539c0453fafaed76": "record_time",
+		"7b01f5ab8db94e51e2cbfc54383d33f7c49d3f64": "sample_sha256",
+		"7d47bdb63c969b1393317c8c919352f61d2cc22b": "keyhash"
+	}
+}, {
+	"hash": "0452df2baa9cbf0a341f8f16c2118f3651a98c7f",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip", "authentication"],
+	"res": {
+		"c0dd76f18839561577d021a63cd5da8dec234cc5": "app_hash",
+		"df9aa6768b9c6d5e5920c3db3e726a44e54b4db3": "version",
+		"497e01c32dda09e01c2b2b8f89646aa70dbab982": "version_name",
+		"cc15e2bf37902dd3f44307e7625967604489d402": "program_name",
+		"adec7af4b92a9290ce51e5144986fcd2830bcf34": "sensitive ip",
+		"8eda89c67e735ba5691597ce5ce831b24668fc9e": "sample_type_name",
+		"8e795ea02bd7a7bf8b8af65869a2b753cc39df6d": "sensitive_strings",
+		"05061c85f2fe78c5f6081ca0f9cabe08f9b57933": "package_name",
+		"6c947b8c2c0c0b5506d2ee44c3bf3b84c091ca9f": "sensitive_strings_url",
+		"11fc2e48da476bed30f542b76c7c62dba9ef2672": "developers",
+		"6c7bfe54b9875b0907ae6f5541acb05a2eccf681": "permissions",
+		"5e33be1987970e12436f22cba14f3e2e22def5e5": "sensitive_strings_sp",
+		"ccc993a948a268abae7f1a0e13d952eca9dcc630": "sensitive_strings_domain",
+		"ba602990ff98cba1f26d852cf1b4cb6f640a5e09": "sample_sha1",
+		"35b99d73425affbb00d798764b3fe34641c0c37d": "file_size",
+		"135780bcb291abf17d57f1acf1d034f32198abf8": "sensitive_strings_email",
+		"51aa82eb016a9f8f908db49d181f18df60bdbd62": "record_time",
+		"b65b1bed707881e0327c88fe219109e0fb82747f": "sample_sha256",
+		"451f4c3bafd4397ccd45765400e38204f0c5a886": "keyhash"
+	}
+}, {
+	"hash": "654fdba668ab613208f3f0e829465bf139aef513",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip", "authentication"],
+	"res": {
+		"4618e9a84b043940888e79fbd21250feaae569ee": "app_hash",
+		"8cb74a82e8b0db6becc3608dda47bc64c20ca90b": "version",
+		"ec84c60864ca4fa98b247a48ea77b59d62505f08": "version_name",
+		"35cfc17b004693b2737d244d0954609b8c8c22ae": "program_name",
+		"3cf44c0644b12bd37be9c46642092222bdcc39b0": "sensitive ip",
+		"01df9ac18a9270c0bab4e727794d4e54285fe2fc": "sample_type_name",
+		"fe1638f6aad6c86ae458d3f1d7d13cc9a0d09580": "sensitive_strings",
+		"5fbe4684980b4659f71c88582d33bcc3593bfbdc": "package_name",
+		"0dcac522ec0aabbd201a3a924b53b290ba1bf2e1": "sensitive_strings_url",
+		"af7b735ce79da6535117115e16a037ab40232fa7": "developers",
+		"27bf8631b5b531d11b4b54d764e5ff90d189b5ba": "permissions",
+		"9f7423aebf1d4a8d0e7cd56e42cb7d0c1a4580f1": "sensitive_strings_sp",
+		"7607832f9c06b14b06debfa16872313f0f763cc2": "sensitive_strings_domain",
+		"66d5542612e73812e28aab1fcd04fbd4d2a115d5": "sample_sha1",
+		"43c25190a0178b6c6ee185328005263c0e03f383": "file_size",
+		"4a3478b578aeee9843c1878fffd4714b27b4cef7": "sensitive_strings_email",
+		"18191812a4e7a7a523917cf13f47bfbbc5595639": "record_time",
+		"2482d0c845b9e51d0cb80c2dbe62d172ce2a25d0": "sample_sha256",
+		"cda46a0240c1db63a4a6e60f862cbe06c3745887": "keyhash"
+	}
+}, {
+	"hash": "3f176d585be093d3dd1438cda0ddf9ab7bbe56c7",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"558056f5e4c749143f3441bd63f1f20638dc4130": "imei",
+		"6e11ece92d670d8f9f15f936e2e23d201d985fda": "device_id"
+	}
+}, {
+	"hash": "de5ed803d49b682d6dd42358c4c27dd4541b5cb2",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"ef06212f76134e649e3a4e018c58db56c6e5efa4": "imei",
+		"750c54cef35b2008bb2017be302810aaa85a2a77": "device_id"
+	}
+}, {
+	"hash": "f5df2f51b39591cf67966c6ac8c2c7f329ba6459",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"79eaa8b7edc59c80c77cd96871d24d4317979224": "user_ip",
+		"6a9942718d2c8ce0fd62bdcd3fbd3c96551e2de3": "city",
+		"b75348e6b93b092ee137dae50b3d559bbed9fb46": "longitude",
+		"b03b2146371b3dc0f5b93ebcb83e747c82053e66": "latitude"
+	}
+}, {
+	"hash": "42c6b8ab9bf00c567464350925b46ec231d38c00",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"bd63b275b31fce40fd820deac278e73f925d0179": "app_hash",
+		"07ad2f54b221f853260041feb71d20e4e815f433": "version",
+		"3e7a81848466eeaf2811decf76947c699aa42ad7": "version_name",
+		"b22e807977700ea20b01882c4651ac23756f32ff": "program_name",
+		"965c67b30f8563b4e73907bc244a6779e2c2cf0e": "sensitive ip",
+		"1f5d8ef4b0fd3f2192e53c84876ecca79f859c2f": "sample_type_name",
+		"4dce8653c977ac1c944601a989709997baca9c30": "sensitive_strings",
+		"3ea910f5dfa04e394a7b9939d603f13ab6d3f095": "package_name",
+		"f0e75b47119412bfe4e83d24379785526ec15a5a": "sensitive_strings_url",
+		"554dd926bc3f9783baac692c2af3d4b6266bf46a": "developers",
+		"b1b3070c6fce0163882d537628893e178b9de9b1": "permissions",
+		"be9b885b68cc0a5c6b6efe2966feb18afe4a537d": "sensitive_strings_sp",
+		"c0dbdd732cbf771aa4f0bfdb7ce51b078f105a47": "sensitive_strings_domain",
+		"a5b7fb16b6694f746bf14c06acd71e6e5b8bb172": "sample_sha1",
+		"e9abb9ec6a3e02bd864e5f41ed2fffe9d7e84b9b": "file_size",
+		"a1017c1c3ac76d18542a37515bfe4cd48f76e546": "sensitive_strings_email",
+		"5b7b85af8e09d5b9fc3906743923ef9a08629ca8": "record_time",
+		"e7f3857e9f788b10d9e09992896ab5dd2891492a": "sample_sha256",
+		"0270b0d8c810daa5f41e95b9c8b1122f7c546f09": "keyhash"
+	}
+}, {
+	"hash": "4784aa1b1d846cfe8db71a27670aa9ccd5c1d551",
+	"desc": "获取用户安装的app",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"bdc0c2b38fa6e68ae041128d0570310d52d59126": "app_hash",
+		"f983df857005813ed5bd369d49e58958d01b5a3f": "app_packagename",
+		"691917e107dfd1ba355357e99b5a315adf258c32": "app_detect_family",
+		"62080222fff3108736f2286edf8faef20abebe4a": "app_detect_type"
+	}
+}, {
+	"hash": "40578261d9ba4aacb113a4f7f93fd47c38be79ea",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"81f3847b47f1f4d92be9cba4ece9888b8e4bb6cd": "imei",
+		"cb4d96a899826bffc518e3d098fcfd2b7cae90f7": "device_id"
+	}
+}, {
+	"hash": "b109a89f2a9dda379de8a5b09a4df63ccfe6888e",
+	"desc": "在引擎日志中通过包名获取到样本HASH",
+	"params": ["package_name"],
+	"res": {
+		"c9050a62052232542bd19b7b7d4d23e426a6a760": "app_hash"
+	}
+}, {
+	"hash": "43f2d0df96e9c6ddfd1165f8113dc6e53a2548e3",
+	"desc": "获取用户安装的app",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"8502bc97b82cdcbea69d1e0316a226de41775495": "app_hash",
+		"4b06f56d9e7566e9864e67b01fc6e8f6f1e03703": "app_packagename",
+		"fb033ea45af521ea6f3fcce56a2658586828ccae": "app_detect_family",
+		"6c581d8342908671019bf68c889529fa61c3eb92": "app_detect_type"
+	}
+}, {
+	"hash": "847e76441ba4b77c02fc1ed0a0c24668854efd48",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip", "authentication"],
+	"res": {
+		"c1e7e30b5966ffc6235f99efcd7195d14b9510cf": "app_hash",
+		"d2341d5eb1d236aedb7fc99d1b0ef95bb1428f0c": "version",
+		"889e653ae9d7b4f897f178bdbfd00582b8583ab1": "version_name",
+		"b74953210aa1aefd5fa0c72cf2d1e128144feff1": "program_name",
+		"d61a603e082679905da987f85fd04bee6252626d": "sensitive ip",
+		"ff02ae60e2c0ab5c5bfead1591488f99c04703ea": "sample_type_name",
+		"2ad447ebba5c1d84bd5a95bc776b4a1f5c99b03a": "sensitive_strings",
+		"9312b097cbbd232e692cfe801ec0e2c1bcb43163": "package_name",
+		"8cea8d8bc004157d6be1b68b5745829034ffb7a1": "sensitive_strings_url",
+		"9ec1065d4b95465ca0bbcea901365adc8668b612": "developers",
+		"624c34976a66270e050ad71ba6a22a879f336904": "permissions",
+		"f4be452c1e8c9f219fa5129f65d09b6031e32277": "sensitive_strings_sp",
+		"a9c82d894e715da70463e4c64684667aa0522d6f": "sensitive_strings_domain",
+		"f00a8ad5cd95bd1968fb8699d7e27fad5db1f9ab": "sample_sha1",
+		"a7d34cd7fdd96cf110159e712f63fb2fb43638dc": "file_size",
+		"dd6a5cf441381b673a90996145253c4ed712d080": "sensitive_strings_email",
+		"3520f7ba0181b491d9dbdca552765b79a2f56243": "record_time",
+		"62c9b8b81491fbfc9b50a9f2ba7c6015363f5230": "sample_sha256",
+		"dcc590b89e4c325cd9a3aa8901cea86eaa2765b6": "keyhash"
+	}
+}, {
+	"hash": "35aa632e61dfa1102284285ca3d3ea4357841ff4",
+	"desc": "在引擎日志中通过包名获取到样本HASH",
+	"params": ["package_name"],
+	"res": {
+		"95266fe3cfbf845255c4cfcb727992057e38106f": "app_hash"
+	}
+}, {
+	"hash": "e92f725b2b290fae95aea3b903fc81dc0dec920f",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac"],
+	"res": {
+		"bb22c10e9713c3297c743d0c3f39bd6f1fadee6c": "user_ip",
+		"7a55fe275bb9285e423a8a2c550fecea1104dfbd": "city",
+		"2bec9f05920e6f82f960e6ceae257e70221db137": "longitude",
+		"e0e78b3a8587de8c62910aa547f77340b0df42d7": "latitude"
+	}
+}, {
+	"hash": "fbbb47222d09ac9cf78290786e63dca578a271e9",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"0d70124469c3ee432a40d04bcaeea28cb4f51e38": "imei",
+		"2d5bc7a0c82f8e5ac7502d7e3ce2e27d1a1e2ea3": "device_id"
+	}
+}, {
+	"hash": "66fe0e40bd5e0ad58897b2c0e915649825a4d530",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"bda3e850f0afe5c54f1ba4ad946b52e7a7133e9e": "app_hash",
+		"10d7da423989a255d71970b024a37ff948d62b29": "version",
+		"0c4dff182c5970762a48e7a8c6dad8ea0b8f559d": "version_name",
+		"6a16ae38bc3f80b3fe709fa60a1078a142930afc": "program_name",
+		"350eaf0e51bf6926228f07f41434ed26fe1cfd86": "sensitive ip",
+		"0cb1ebe856bb184b7397a9efe90b1442c0537780": "sample_type_name",
+		"6d567c0617a8527331b44c84c18e4596e795eb35": "sensitive_strings",
+		"7769ec78034ac2e9b8aaa85c659243c03abcd30f": "package_name",
+		"00a9c7888d6c23dbd93ed3ae7251d5ef0de76529": "sensitive_strings_url",
+		"94a9178aab4b60042b40e33b19a505afb8ad2188": "developers",
+		"cb34815ebda88db02647b9da647c9d601cf74aba": "permissions",
+		"0605a5117346a35c0847cd009d842a6142d5b71c": "sensitive_strings_sp",
+		"49d07d1d47a846e32d6fef453f79b1ad2f8f5689": "sensitive_strings_domain",
+		"5142d83c5825c77d20cddad1e57fc5c6603a3b79": "sample_sha1",
+		"321067981bce9941b6f69f2aaec96d8398096704": "file_size",
+		"fdbb9e86d0920620cc73b09b03ad9b82a015cb83": "sensitive_strings_email",
+		"33727cdfaf0724380637527895b67a7467e5db26": "record_time",
+		"3aacd5b9fbb3362b5fe94371c3bf25ee3a00d79c": "sample_sha256",
+		"04503ca4e8a8400df0702d30c52caea279e1cde8": "keyhash"
+	}
+}, {
+	"hash": "69c554e187e1057ee9f61446e93d155fa1fe66c6",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"dbefc38a1ed27fd16621c3052db74f70c63dbd60": "imei",
+		"b36670ce413b1ad7473eb1c9f050aade980ac7c3": "device_id"
+	}
+}, {
+	"hash": "5fa665822ebeaa09904bdad02d52f6d540d8143e",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"07d7a6dd252c667227cb677bc1c9f3a21eca25cd": "imei",
+		"0131168f47c8730421d94f9bac2c1c3adb9f804e": "device_id"
+	}
+}, {
+	"hash": "c6df390e89e1b21b799f3a8a618b2e05ba9b910c",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip"],
+	"res": {
+		"3e49d48ac828a5a1ae8672b0c6105cfceb8da4d4": "app_hash"
+	}
+}, {
+	"hash": "db5a7772eb0cd19f70023f91011f080a7a441fe3",
+	"desc": "在引擎日志中通过包名获取到样本HASH",
+	"params": ["package_name"],
+	"res": {
+		"12937b1d661e641814a2cba49db01d53fc8b04c7": "app_hash"
+	}
+}, {
+	"hash": "16afd8a3adb926202e72d05baa712ff825c3442f",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"abf0c9e1a97e2dd97a53454973c69f0b42e3814b": "imei",
+		"0be4f89706b1efd91394e63e553c6aba1809b210": "device_id"
+	}
+}, {
+	"hash": "2a3950f2e87f9d60ecac3603adc5ae3fb4623b04",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"a227f16dc825682247c0ab9c306aaff59d1c1eae": "imei",
+		"7e93f8be65c31f8b04af850b49a3e34b901792b4": "device_id"
+	}
+}, {
+	"hash": "e23e02c6eb936fd4f7da3d76608eeac76b0d4d65",
+	"desc": "在引擎日志中通过包名获取到样本HASH",
+	"params": ["package_name"],
+	"res": {
+		"2cfb0f71d8f66ca8d199f350ad3154c02999a17d": "app_hash"
+	}
+}, {
+	"hash": "138d3467bf05ba0dcd81fa88c0f1455fa9e0a9af",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip", "authentication"],
+	"res": {
+		"bbe99a49d688506fb599b6748098ae5177ffa53d": "app_hash",
+		"85e7fe0801302787b026ff574eed3386318aca54": "version",
+		"81c854af131ed55e23a9f1557f9d1d6071d5f492": "version_name",
+		"21430af6d8c253e2dd2d294147c5b6171164d6bd": "program_name",
+		"b6bc5f808e0eb7c39214caa47ce2aecde879d45d": "sensitive ip",
+		"98daf68e16917f13cb9c43818c6c900c34568f76": "sample_type_name",
+		"7e0ed9b83004ef1db9b741bfe5416921086d1759": "sensitive_strings",
+		"2cc7850a551bdeb568997dd2c8631dc499f3760b": "package_name",
+		"8e91324d823894c796c95d00038f893467d9b5f4": "sensitive_strings_url",
+		"2b40b4764db49d6c836940cd01b1c6d8523917c9": "developers",
+		"b99e01502c08631645e054507f2aefcc39057b5a": "permissions",
+		"2e94fad30e5ce5d728c2753e3b7cf45bd38420de": "sensitive_strings_sp",
+		"0652287e58618b9c8b02bc57862145df1654eb23": "sensitive_strings_domain",
+		"6e4ddca319d1ff981d5999dbbcf1613a2cdaf74d": "sample_sha1",
+		"f728fc563367a3038ce8215ef53edaa6bcb31ec5": "file_size",
+		"1201b9d233f4892fe69ee43dd4c6194ff9008bee": "sensitive_strings_email",
+		"a248355958ea111b68e27184f00a05eccc3cf004": "record_time",
+		"df92655b08cf6ee399402f9dcf62203858d4262e": "sample_sha256",
+		"487d3ed06d0b16be65eb4f4ab7e0f4135da1f78e": "keyhash"
+	}
+}, {
+	"hash": "d00100b35434e71f30c0bac64625d6c1b3fdf8dc",
+	"desc": "获取用户安装的app",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"d2243a18ca73a8d310b9a6b0f57eba6da346b4b0": "app_hash",
+		"3e0c96414cafc5664b2b36bf963f393026a850a0": "app_packagename",
+		"4e1f50d8aaa117baac60ded87dbbca7993f51550": "app_detect_family",
+		"3e6b3d6ac8bed5f389e256d7249b261892a0f851": "app_detect_type"
+	}
+}, {
+	"hash": "448fe10681a548de69a98f31c924292c4c65d8ac",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"56749e6e04b26fc48e4f04fbbcf0d88802d9be93": "imei",
+		"a7d7bc3d46e715058889a35389e0af50a3a73fc4": "device_id"
+	}
+}, {
+	"hash": "0dffcf812c90a23c5db69bf9a326f936e5c865a0",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"f54e49ace84e218a634c441f03477fd1be747fdf": "app_hash",
+		"09dc0104f58f71e6b97facbd2d5fff7865df9bc6": "version",
+		"1ff68c367229413c1108e3d2c3ff05b5da7a0b10": "version_name",
+		"b911eb4695d0e487e3a5cd868dfe1837cd88cedb": "program_name",
+		"2c9f0f49b80e1a5133451b56465db934434b021a": "sensitive ip",
+		"17ad9babeaf546c94bd4124fa6954bcc96658d12": "sample_type_name",
+		"f1e474dcdd786ceddc2d6c30d072c17a0e6f8a1d": "sensitive_strings",
+		"995304aed2dd08533290e7ae5b447ffeeb55d230": "package_name",
+		"d43c232ce84293bf3d85012d37955223eeafd189": "sensitive_strings_url",
+		"42a71d58621c2c5d8ab5471cfa3aab541284ab31": "developers",
+		"b85367fc41076ecd4bb15c53ee5dcd56ac3d5652": "permissions",
+		"863cc98033460b87e38249fb150a6295c46b1b6e": "sensitive_strings_sp",
+		"d6ac7a4aa8754085f049176bfbe7faf21ba205fd": "sensitive_strings_domain",
+		"d99c08b422b27977740e752a0e98099820c5f58f": "sample_sha1",
+		"046c08cf2931494f341d7afe429220dcc869f1e0": "file_size",
+		"31c6daccd9c3eebf27711067fae233157603e369": "sensitive_strings_email",
+		"b325d413d39201450b62774de3a3976ff464d7a8": "record_time",
+		"5ecf4262a4b9a779428467833be33031e1a014e0": "sample_sha256",
+		"93fa454926715348409bb8f8fab6df84f47c1d94": "keyhash"
+	}
+}, {
+	"hash": "0d7a2cd8ac4c61e988f392f91b5cc8889eda5f39",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"c3772861de819df5c2008103c53aeb205476bfa6": "imei",
+		"ce7ffe744330d54784efc6fae96a8ff90423e7ca": "device_id"
+	}
+}, {
+	"hash": "dd6043c5d3b5110cf8efc2de5a5c0e59db3f9670",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"f9d7e64b66e6de852b633f787e8fef35f6ba6e4b": "app_hash",
+		"0125fee5e33e5f959efcb38f4f83036a059f271f": "version",
+		"2119426b041ca7218d020e1aa0a23a306c40f7e3": "version_name",
+		"575f40503dcf01b2e9733106b7dc1b3b7c32a204": "program_name",
+		"d9b731c2741566dc4dbcd743cc07ede08752fe29": "sensitive ip",
+		"97424ba47ce71b2d456c3ecbd2277840c4a597fa": "sample_type_name",
+		"32c83f3adf07517e4ee3fbb4674461abf9b82cdb": "sensitive_strings",
+		"0e86b7ee2733296f2cc8c48056ad7bbbfce14427": "package_name",
+		"0064e97adcbe43c2b5ecca56a6cad3debd0ec44f": "sensitive_strings_url",
+		"3d3a38dbfe584abce043fe9e07991b2acc3f2cc7": "developers",
+		"a299a6a539b1922503c376f23cfc907be340f634": "permissions",
+		"7e314c9b45568e51f711ee947b5510e6df18fc33": "sensitive_strings_sp",
+		"38a598463c7ebe5420a0e01b2b5fed9e92c01e84": "sensitive_strings_domain",
+		"625bec70dc3f1948639c1d98cb1e27560b1b8ea9": "sample_sha1",
+		"7abdbd3839177c4ea5d2fe4aeb2e722061f02dc2": "file_size",
+		"410b9c937862671ad2d3bb83dd370633a468baa4": "sensitive_strings_email",
+		"603d16db54572aff8afd166cdfb8144c920e78eb": "record_time",
+		"b03c928d3db28ea4f7aceed7e0e4490088aa0db8": "sample_sha256",
+		"1e6670bb9d3ead86e46274f2351082d609a022b5": "keyhash"
+	}
+}, {
+	"hash": "a0ecb013c3780eba6202c6c7ac9fbbcf1ce8d776",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"37c875ae59692f9eaade3fd466e5d4353812aa7d": "app_hash",
+		"fd3a21ce7fa9ea500ac8aa17b73ecb08c1cf400c": "version",
+		"c3fff90e3ac5903848fa19a45bde5cb267adf6d0": "version_name",
+		"ab0f0d6c147376c58f019bd80304f43b2e6f91f8": "program_name",
+		"8e1916f3b2f775fb5f6b1290e1e69bbea4a9bfd4": "sensitive ip",
+		"9fbc4555e65eb956f17f18e58aeef1ab29d79b2a": "sample_type_name",
+		"a95e3b75b21eae0fa4741bcb59a2f013c1f2169f": "sensitive_strings",
+		"7e2bdd8969e92c1a8ba6774900d49313e24ca895": "package_name",
+		"645381859b3efa6161cf3608c490602b5258ee4a": "sensitive_strings_url",
+		"9c00e7e26ff25cb4cbcfddd68b7d80c18858fa14": "developers",
+		"bcbff1e2179e495fe699690abbac2c8df8b015d9": "permissions",
+		"8f29c267dd790d5248e5186b1aec828d7e2bce4d": "sensitive_strings_sp",
+		"17124df99f19129bc822bb8247fa46acc15ed326": "sensitive_strings_domain",
+		"32d61d21bb264a0f0b471c1fefb9da45c37c3f67": "sample_sha1",
+		"07b51fcf1bad68dfa0cd102fd7321ad1801fd5ed": "file_size",
+		"adcebde811b6a89924dd170da0cb238ee8d6ddd3": "sensitive_strings_email",
+		"98136bdad4a71bc8830afb5c6417d36aa3aa111f": "record_time",
+		"0968729d28928a691d75f79595954b75ae199684": "sample_sha256",
+		"a5f23ed1d1a1b73250fba1e9e9b241cfe7e7ea6b": "keyhash"
+	}
+}, {
+	"hash": "89e98a126322349d4fa6e590b29d2bdcc0fbad05",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"014369bd39e4f50cb59568c0ab3d20d6a2386c51": "app_hash",
+		"242c115fcc116e13bebbb965af899ae83b455dcf": "version",
+		"03bc12dfb1f6354caf3d3f42099fd9f04cb0b8f1": "version_name",
+		"32736cd031a77dab4c0e950542431fab40513d05": "program_name",
+		"c0a91d1f8386e643029dd2ce0fabae963e88f6cc": "sensitive ip",
+		"2266a127bb14f7b584b41e72333ff2891799c862": "sample_type_name",
+		"0dd995379ee4368b876ba0cc2208a997227aed21": "sensitive_strings",
+		"34d3e263062b69347ebaa31728d6530b05d0d761": "package_name",
+		"645e8d4399b00101bc23d1a1da89b8d4a90188ff": "sensitive_strings_url",
+		"145a5823e4010d0486c2110767f443ba234dae99": "developers",
+		"45835554f76dee0628fbfd672ff6c389cf231253": "permissions",
+		"6e84680edbea737c8ab15bb596102c8a1a4902eb": "sensitive_strings_sp",
+		"29c7c7898c471a416427b0869c4fa5c285c348c1": "sensitive_strings_domain",
+		"dc86bf4c77bedd2c83cba07598e1429fd571883f": "sample_sha1",
+		"b74ee6dd302d27091f4daaf9cf72bb36a6fc87d6": "file_size",
+		"4388aefc3144922e409baf7243a4a422c02ad2ce": "sensitive_strings_email",
+		"5c34dd88a3338257e5e2f92feb31fb0f4aa1b832": "record_time",
+		"30b0b36a7b640ec2af299b5132d2553d109c27dc": "sample_sha256",
+		"2bd056580149e05673eb424b0c5c350b2d07ed76": "keyhash"
+	}
+}, {
+	"hash": "3343f546fcd63d98b102181cc6e7ee308268f2e4",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"0d321ee0d6981e016af75c262fef55b34a8e3f82": "imei",
+		"21cb7093bfcfc68e59248588317c86c88574e492": "device_id"
+	}
+}, {
+	"hash": "dcb243826c69f058bab2030d0ae8ea88e6652192",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"1ef7a1bc61224edf8d4b570e152b33e8ad694395": "imei",
+		"4ce9140821885f53cd96d3c7112a7b37558ea729": "device_id"
+	}
+}, {
+	"hash": "cf4aa321ac60c72b2c18a217a6d0b2f579e0b732",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"a419f75aeb7b531fe78bf485d6655450daaf10e2": "imei",
+		"be49659adbb0a4771cac93fe656c798ee2f94a07": "device_id"
+	}
+}, {
+	"hash": "001a302ba60c43182eba53640f2632afdee749d7",
+	"desc": "获取用户安装的app",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"72cf9fcc0d7125b517710a09dfc60034701a83f7": "app_hash",
+		"c53c004de882639892cc62c13d1c855f4bb391a9": "app_packagename",
+		"150f54890f6bd8b4f572feb4b36b18074a38018c": "app_detect_family",
+		"ca31f49ad513c58eded50091c4189b117daf3d56": "app_detect_type"
+	}
+}, {
+	"hash": "ef247159bd59299f86ebeb7927c1174675c007db",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"a3bddb5a57d3adcf9dd39207523c6a58889164b0": "imei",
+		"816d02c41183159dfeab00c65b59e22207597b85": "device_id"
+	}
+}, {
+	"hash": "5ccaab6c08d9bd424716e8ce6741c47d6972344d",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"825bf9398bccd7af134524f284efb62367cfc7aa": "imei",
+		"87c8bc0fc327feb3af088e853c84fd0c5bdfaec5": "device_id"
+	}
+}, {
+	"hash": "0fc6588044f81ac0cf678d2c93afcc3068f0149c",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"1fee28b5f7321f4ae319cd226cce4086f8fdabbb": "user_ip",
+		"c3866fdb9a5c3a97abe1650d02d6985756dde72b": "city",
+		"f0bf4e88ba1a7df3e3da6f39228e0ca28aa99b51": "longitude",
+		"b8220121d31b7479928221c14e426cf71068eccc": "latitude"
+	}
+}, {
+	"hash": "cbe77e94ff62e240ae4024712ca14dc7323d9c64",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"4b9d91a25a608162cc22dba592087361837459c2": "user_ip",
+		"cf24dd5f0fa0265e54210dfb65e81194c9eb8ec3": "city",
+		"7fd5509e80b6f698f7c6442583c2a8170c6754e7": "longitude",
+		"df77c8bed6138b33611ffd86e6ee1a1cfe9f640b": "latitude"
+	}
+}, {
+	"hash": "a94902893e4cbf744b65023b9d5ecf729cc705e5",
+	"desc": "在引擎日志中通过包名获取到样本HASH",
+	"params": ["package_name"],
+	"res": {
+		"f94aeda5c17110adbeae8ed1bea4ae47b74bb9e1": "app_hash"
+	}
+}, {
+	"hash": "5c0768466cb4af82fc7ab55cec99b0475e1b89fa",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip", "authentication"],
+	"res": {
+		"5aadb1186f20da052e01aa0326fb5a29aea744e0": "app_hash",
+		"3ee63b1c58af508d09d53acd5334a31473c8c0fa": "version",
+		"243b46b6a390cda68a89b226c847f6113b571dab": "version_name",
+		"dd3a103b5b383f360636a5cb82d46781fb43b1ce": "program_name",
+		"8b50ee410dd8c3ee00f5f76bcdedc9246303ec32": "sensitive ip",
+		"f922b524ed6c5a7bfb78662de92cf73aabe5632c": "sample_type_name",
+		"6ef53b81aef430b49d1766f33820ebe818eb00b6": "sensitive_strings",
+		"8fbdcc9fbd729fe6e55bb0dd443ca73e9d06fa95": "package_name",
+		"84ec6202627181a429bba570218bc91f97b060ae": "sensitive_strings_url",
+		"514e429a3f3e3f67dff63b06493e116a25229491": "developers",
+		"22d21865b94f333935c2399fba366c656dd062f8": "permissions",
+		"81a6ddf8c6f212e265463c0d18a88d56663aa638": "sensitive_strings_sp",
+		"1ac6f23c9a06aba58a302cbe81eae3329aacd3f1": "sensitive_strings_domain",
+		"a09ae381d4b37fc80f00d5a3403e54b9e98739f7": "sample_sha1",
+		"02a530ac18e645138d5366866e5353ff69454626": "file_size",
+		"5bf866d39ad2ef72b07ca29aff62e8d5e8b65cce": "sensitive_strings_email",
+		"c86f56aab26f6582440f7b0a4f28b56a5001469d": "record_time",
+		"d0e24609239c7c7d03722f23c9cc4faf2025c5aa": "sample_sha256",
+		"7267f4020fd6e6c3600e196e8a4955d3d6b622b3": "keyhash"
+	}
+}, {
+	"hash": "287c88fa6198c90f63aee3096f5db25ff81c7689",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip"],
+	"res": {
+		"3c7eef03dea809c128554333bf1fcd5526cc6661": "app_hash"
+	}
+}, {
+	"hash": "679a7715663e11d9d93f4a7cd41d379d1bc73a87",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac"],
+	"res": {
+		"d7a144f3460e75d963368c85cfe789bb9dd56314": "user_ip",
+		"1ccd02f543ea35b24692f82901109cebdc463a83": "city",
+		"6f44a45959bf70593af3cdbcc9a3e14d00bba253": "longitude",
+		"af5b33bcbecb8d563bebc607db592c029e20b3b7": "latitude"
+	}
+}, {
+	"hash": "6d719c490d82c0ef5a5071cdf55dbb3c8b68baa5",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"2cec8335b88794c77c780094de60484e8f1f8e3a": "imei",
+		"dac646b5b199941039fb1a3decf747278130b08e": "device_id"
+	}
+}, {
+	"hash": "ff81d2ddc80749898323d437162287d76fa28206",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"b262c43ba956051f48fd7595d25fd357faa90277": "imei",
+		"0661adcaf3ea9def424bae2cb53590e5ac37638d": "device_id"
+	}
+}, {
+	"hash": "b6c151fa33d2298dd80c1b1b67e5d109af9cb762",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"d4cafcd1feb49d8ff969632e79b6abf6d5b495e5": "imei",
+		"9141a50d190f5e967795573b00ee69c699ad3652": "device_id"
+	}
+}, {
+	"hash": "fbde74a766b61d93170cf82e34928c9167ac064f",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"503780fda657b364e05e88563f839fe0e29c6180": "imei",
+		"9374d91c3e1383d1e66a100c11df74e9ce9ff4bf": "device_id"
+	}
+}, {
+	"hash": "6b5cf7f70d311d6700dca048b421fea82268b7cc",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"c2c1146881f968f479394ed6b6b23eb5fb1a7eec": "app_hash",
+		"77d4f73de9828363ac6b01902411c615f9703d89": "version",
+		"25c02e8b3451cff4f419e1e40671f626bd5ca057": "version_name",
+		"c36905f1d77f9504403f65dade04db2473523267": "program_name",
+		"aa9e3d5cc36ee020e14a2ac383fa198c28fba948": "sensitive ip",
+		"0e4f4a119967e8b59f6eb6832737212f6aa97d40": "sample_type_name",
+		"c8d477db0347392d1548b08a22039dd12eda0d97": "sensitive_strings",
+		"a5dce085c468d0c375c3453ce6158157e4d81f78": "package_name",
+		"71c37cbe0fb176efc0d7ea91d5312c9f14665831": "sensitive_strings_url",
+		"686e3bd24ba79c30870a166d47d700d9a4657291": "developers",
+		"029723b8a543606d6ccdfba2e2a0d5a242d655e7": "permissions",
+		"95123e393f9334d77f9e4475597c002fdc7d3ed9": "sensitive_strings_sp",
+		"20e9b2324f793e764d7c485415dcc8e21ba41313": "sensitive_strings_domain",
+		"0a1e9a7ca1312543393323ed571a2c27b83d67c5": "sample_sha1",
+		"b492c3212e35f3061cb7b5e9d6584018bcc1562e": "file_size",
+		"042a70505a54a687f9cf2c209d580f1a3508e8a6": "sensitive_strings_email",
+		"f09ea9d98aad558a9d4b860f24984b7e142e9261": "record_time",
+		"052a6a2ba0e1d3f16b7033590c43cf92be43217b": "sample_sha256",
+		"9bdeabe584bca3e21a235ff5fbd81537d3ea77d2": "keyhash"
+	}
+}, {
+	"hash": "6c3390c3909dda30f0beb6fb01dd7eb205d331cf",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"c94c87de7dfbdd086e48825ddea3d1c0c9851b1e": "app_hash",
+		"51b4c423cffe17bd55dfb316be2830c6199d9b14": "version",
+		"fa967a7cb49110e2013ad70b5d0cacfd08a634b4": "version_name",
+		"b0fbe8ee294529d0583d61a0329ae0e640ef2559": "program_name",
+		"b1944cc41559e9078804882da209e6fec6aa170e": "sensitive ip",
+		"874bcebf34a4f23423450b75c6489c8be8ad9e6d": "sample_type_name",
+		"a3c3ca565a81111b4aebecaa47b8c7892152c0b1": "sensitive_strings",
+		"2dc24f12fe8554050cd524a09a3002cc04eea4e2": "package_name",
+		"0ba9aa72969d737de2132bcf47d399e157b4e2b9": "sensitive_strings_url",
+		"fc02a44941b0020776c03abcda730ad6c45e92ff": "developers",
+		"bbfd9e8155d55480e274bff6b904fa916a15a96a": "permissions",
+		"afa83cc7aaa959e29011938f46ac84edf0d606e9": "sensitive_strings_sp",
+		"6cbae5444d6a5d627b9c4a2662d9548437063435": "sensitive_strings_domain",
+		"cf4958568074f8099d87f5ac65bad88a419ee624": "sample_sha1",
+		"ca5c89418e2bfe8be41629ea296f4f8a831fa754": "file_size",
+		"16a2325621b82b82d550c0011851a7eb549f6130": "sensitive_strings_email",
+		"7434c87a4d5a1256b783e3c642c863f84e6f02b6": "record_time",
+		"8209ded7537acbcc2d76f92ef9e106284f22ea0a": "sample_sha256",
+		"d646e00ead085ec69092d3e225bd1ef748317647": "keyhash"
+	}
+}, {
+	"hash": "8b1eda74a51281b4b4e2cfd4948ec7ac422c28c5",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"90df4c02727a7829c6823450d98a9bd798ae765a": "imei",
+		"a000235731a4a63498cda03287b6709d7fe4f099": "device_id"
+	}
+}, {
+	"hash": "28127c6235856c18efc6b1c0f6726e550cdfda6f",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip", "authentication"],
+	"res": {
+		"dbc3d47409880777e5f09c4f35af4dc072b1fce3": "app_hash",
+		"9a1f6ccce1a057699afedfff18ff6bf3b5fac514": "version",
+		"32a607b421cf84ad4d0ec10fe150c23d83a19f1d": "version_name",
+		"cfbe0091b6fb16105334b7ef1c2f110450c35396": "program_name",
+		"fe0653304078a81cd3533bf1867bb87a9e33889e": "sensitive ip",
+		"01059515132d9bcfa077d1d68203087bfc08527a": "sample_type_name",
+		"81e765c4505fd64b96046602308fcd786e86eaf5": "sensitive_strings",
+		"fc1a06f8d0718b897f9706913bccf84605f40cbd": "package_name",
+		"1e4ef23584b6ac62e056d62020d7e72272eb30df": "sensitive_strings_url",
+		"89a24de847193d0e0f9c5dfabd8546b72a6543d4": "developers",
+		"bf38efc0a9cf44cfcad5785be431a916cd84f277": "permissions",
+		"c86ad64ce758f79d21cc00e16cde100a71a24412": "sensitive_strings_sp",
+		"02cb74f00dc9b0dcca5742fc908f2e006bfbf115": "sensitive_strings_domain",
+		"20e44e53f2ed3ede9ba2c5bd14e7a8878f834913": "sample_sha1",
+		"1a1303ef43f726fc5b70d686091a32e4f7c062d5": "file_size",
+		"dbf3016ae7e7c2446eab3b0800cc26dac470674b": "sensitive_strings_email",
+		"9553450418d9dd8cbd1e52f45a0d1d2c377d45ac": "record_time",
+		"98187f9a014d93148aa68088e129f86d8a0fda96": "sample_sha256",
+		"b11da0e2cc83c5eabfc765aaee0aea804a19f8db": "keyhash"
+	}
+}, {
+	"hash": "ad5aaad4b76a9469dc3a3442473679c2e1c179f3",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"f11b23fd066bb21e5502f2421604b850ea34f7a8": "imei",
+		"ee6057f804f6faa664004ec7e632d861eff8e68d": "device_id"
+	}
+}, {
+	"hash": "2ebb598178c428e0699f3522bfbdcf5017ae33ee",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip"],
+	"res": {
+		"8a45248d0814c5acd1f6f91778d11114663a3a62": "app_hash"
+	}
+}, {
+	"hash": "576f8da2346d6e0b5fe67c786b6af67e42c57cc1",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip", "authentication"],
+	"res": {
+		"b143e16fdf24c7f5d588967cdb6bc9b94b15d57e": "app_hash",
+		"dd50d3cfb9456f9c47be191c7996616ef52fcfaa": "version",
+		"5d30da192efad1d653b467f8a913754964eaf524": "version_name",
+		"804fa2f471b8e7febec7794a09723ab3b92fffa6": "program_name",
+		"143d40cc0486795fb8224e78a9cecedaa3270c40": "sensitive ip",
+		"aee04465723b1c68edf8368ab9f88ed104fde917": "sample_type_name",
+		"b68ff3ef778273e151e532fadc5039d99dd0bb98": "sensitive_strings",
+		"7571b7d92151c5a788dba8b3b37b683261dc4c18": "package_name",
+		"200d0fcd701e3c7f398d35601252dcb5ee91c638": "sensitive_strings_url",
+		"e4305e15893e4c789d3920cf097c45ea47279eca": "developers",
+		"95c95860cbb7e0878a73df047ac1a83587db2b98": "permissions",
+		"13a774c529851ba09e25e460c6fccb9c5065f7cd": "sensitive_strings_sp",
+		"ccd4d425b6d6443cc8b0be1e46432fc5608aaca1": "sensitive_strings_domain",
+		"8bcf49dd3e6cbde6b5af24feba95367640c48637": "sample_sha1",
+		"afe1af28dcb0e5d63df8294340835ce49624749a": "file_size",
+		"8c6259df9b45c110657b02afd84f1e040275bb53": "sensitive_strings_email",
+		"b3ba16a51fd7bad0074409c34473f9f7d80686e4": "record_time",
+		"a68a067e9e432987f8c5ab26824e850cf4de0709": "sample_sha256",
+		"d1a09291df6c138e39afb30ba34a99d2c4ac78d7": "keyhash"
+	}
+}, {
+	"hash": "545f1d360f999a27755b58e827e73df48a0b12dc",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"7cb67cddecf88ff943315336d985f0cd359dedc2": "user_ip",
+		"5dd716837925350d5f661a7eb6feda1a8a4247ce": "city",
+		"a6b238290340475e8b6a1e251b4b400875b39bbe": "longitude",
+		"2531de0d20a7a2b2486844ba3fb22a63ed14ee67": "latitude"
+	}
+}, {
+	"hash": "02a80c664bb691e48668efa756ecc8834314e201",
+	"desc": "在引擎日志中通过包名获取到样本HASH",
+	"params": ["package_name"],
+	"res": {
+		"041e7b880fbfec01fb7f16738ef9a3fc61c3baec": "app_hash"
+	}
+}, {
+	"hash": "d76026c4b1fa2fbaba8cabd8834b69bb83b4bb54",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"103be8ba3f43535776e35f2e9e55055c8e622e70": "app_hash",
+		"d6cba667cfdcba65ae9f29a7eb82b7d27842490c": "version",
+		"e72f78c602590e85ed8743c3e476dab431676237": "version_name",
+		"3833fcb6715f40f2d88377428f2597f781ad97ad": "program_name",
+		"d07592fa21fbbdb6b4e2497e204e419ad2031774": "sensitive ip",
+		"4d0d4e90bf825d35f26e9f41b68a3d62f9a2fd49": "sample_type_name",
+		"9fddc5d849f3238e7f6200066491b5bc0885432c": "sensitive_strings",
+		"552c80911c0b609c0ee79dfeb58dd33d29bb6d00": "package_name",
+		"291ffd5f0b2f4b8a5c23c87beb50cb143df4c499": "sensitive_strings_url",
+		"a17d698c1b7904fc3c781e76a54a3d3cc84d20e4": "developers",
+		"10bc300174ccb6ad50908b7083e14c7b3b4b1a57": "permissions",
+		"bf281757e445a8a9c92816b3f1b8bf592053083b": "sensitive_strings_sp",
+		"4911d392a142a09937313a6330479372e609d4be": "sensitive_strings_domain",
+		"09d5b33670604385da75e7de3e32b10094e480dd": "sample_sha1",
+		"6f9b0b155d87e674737262e1a818d2fcded8f79b": "file_size",
+		"1b7560b1c73f7d4d958b8b38df6791876784ee04": "sensitive_strings_email",
+		"f7363df9fe1f207d28dca388303f3a09a7ebbdba": "record_time",
+		"07c7dd8fc07b98088001259fdd77bb5f39a6e996": "sample_sha256",
+		"f84fc812f165892727bfdb78f8b10b38ae0449bf": "keyhash"
+	}
+}, {
+	"hash": "9f8eaf0b7aa8a9c825cd945e9285da102ffd0d6e",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"36830c699625a2c5cfd9ad453d6f8cf887b7701e": "user_ip",
+		"4907a767ec719049eb765a2bd8a7153263f54c6f": "city",
+		"e3d0353316fb7f3fbe4e120e2c8a12f8efefc3a9": "longitude",
+		"09e80247ee44a0c876ff9b2e3df870ff82a125fd": "latitude"
+	}
+}, {
+	"hash": "5de01162dd57dc888cd110ab238ea61353c5dcce",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"34cfb46f495c4414599d867e1b3ee33e196907bf": "app_hash",
+		"b0ac47e3a8e70d1ef212e594f2c4149063d6d09a": "version",
+		"8bafeea10f04a235fec07719ca77b6cf529b368a": "version_name",
+		"2038640dd39558b39a7a96f263659cfb09721ddb": "program_name",
+		"96e611aa5aa276db7c9145221663ca40c608a328": "sensitive ip",
+		"56512f30b49d609c0fcd03cf785616d731525061": "sample_type_name",
+		"68f1d77325ee2701d73180e327e5814561e2e0f3": "sensitive_strings",
+		"7b079b4f6dc0ac1ab7c3f10b84262bb141652ba2": "package_name",
+		"73976d66394a1d8585110d8115155af845cd4460": "sensitive_strings_url",
+		"b97a6232ede52ea733cdb92b1fc422e0031b238e": "developers",
+		"bf7f775a6f7aa328ce45b049f356fe22e711ef8e": "permissions",
+		"5cdde2d6d02261d4dc7fd21c8951166bc04cae32": "sensitive_strings_sp",
+		"c5a45930d7121f1b4ed6b57a84e79ba8dc90ea69": "sensitive_strings_domain",
+		"00953e2e60e7eeb2ca3f6679410311aa1ff8d597": "sample_sha1",
+		"2b22d9cd6543989e756c0691412de8fd1114bff9": "file_size",
+		"e86b29febba4b95b0748f8a194033ee85eea56d8": "sensitive_strings_email",
+		"a876a975cf16cbae09443e9aaae02ac6cfe65284": "record_time",
+		"b2fc1b36ef1cc6d0112507ed801379cfbc69d866": "sample_sha256",
+		"d069c9a83751e55e92bac8556a6761970816d217": "keyhash"
+	}
+}, {
+	"hash": "8db85a4c15fcb593300d8b5c8838d3987100304c",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"13675371dc379c6da86e484b34d86e28978aa339": "imei",
+		"f1d8970c129d0408205c1cc134ec5b3ee0c0792e": "device_id"
+	}
+}, {
+	"hash": "59aabcf12cba6aa9dc2566410cd20b0684a39423",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"55d38b836eacd4049d7d86e3dec79058cf69636e": "imei",
+		"5a4d81fe416258977c77075f0d8c2da4fd2c40a4": "device_id"
+	}
+}, {
+	"hash": "2c43e71f0f283e5ce7e46a2a548dc5c5f54ebd35",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"5ffaefa6761810b1991de6e79c87dc06fb11814f": "imei",
+		"14439ff4ac9d87d2b62bac0546841f6283840080": "device_id"
+	}
+}, {
+	"hash": "454f2dd65b7f335b74deedd11540f5d939b7938e",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"150bbf3c9958505b3c4751ea318fe17542dfe2b7": "imei",
+		"1bc83c12c258dcb1badec3ba77b8866f435bb513": "device_id"
+	}
+}, {
+	"hash": "11fd98ec4384562a32b21ffbe19fc3a0d67e0221",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"320c10a6773bbaac8b0f2adf7f656aeb0b455bb2": "imei",
+		"e81908f9e086a03f8b35d7326723eb92d50422cf": "device_id"
+	}
+}, {
+	"hash": "347a1effef8d7fc2c95d4f59da38859513dc8460",
+	"desc": "在引擎日志中通过包名获取到样本HASH",
+	"params": ["package_name"],
+	"res": {
+		"153ee6bfeba249834e6fbc287ce14ca11f1f8ebd": "app_hash"
+	}
+}, {
+	"hash": "35f77e5dd5a6d93600ce8b8d1d9718c6bf0bc14c",
+	"desc": "在引擎日志中通过包名获取到样本HASH",
+	"params": ["package_name"],
+	"res": {
+		"32059efca9c2950cac7e4bc56b1e6ee06c47cebb": "app_hash"
+	}
+}, {
+	"hash": "1ddddb3e5a77381e2713a5ef39a7622626c6bc74",
+	"desc": "获取用户安装的app",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"59a90a8a7d4d1b5751560a35d14a55ae368f6b8c": "app_hash",
+		"c696d1e7cb401b4327b1156bda134074d3e5c4f4": "app_packagename",
+		"db699b72371581454b5f7a7087e6a870e89ed9cb": "app_detect_family",
+		"74859ca7698728aa0c45761d6eb6a55a0670247f": "app_detect_type"
+	}
+}, {
+	"hash": "22f94d8419cdeca5dab76af2434ea1e51d729c9d",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"499bf15e9f221ee7886fa38844f610c3c1c447ed": "imei",
+		"dff92e3add9b66d703d4724d2b2a2bb16ae1b9f7": "device_id"
+	}
+}, {
+	"hash": "40984aa05aa729ef79f10ff60e6a33d6faea3d5e",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"71f99596fc196ac7f40f2523e3ba4f580f058d1e": "imei",
+		"2106253dbc2c91f284efea525bc74fdd2faa2445": "device_id"
+	}
+}, {
+	"hash": "c5d431432761ed4d0fdec206a426ecf95b448be8",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"348e662c76dd37bd1b39b9ece2f031c0ccbe805e": "imei",
+		"93c8b8f7096b9904f1b73a7d6cc66e22393bc906": "device_id"
+	}
+}, {
+	"hash": "e32dd91fe630ac81bfd07589c5a997ab654adcda",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"ed1808ff4147b8b13cab2263ea6df45c8b8a5d75": "app_hash",
+		"447bab2b25e2ce5946305288ad345bd3b64682fa": "version",
+		"926b8014e8646da88f093e04bd6caf35a790e60a": "version_name",
+		"8ee451334515fb23ccf2c855b61b81153c1147bc": "program_name",
+		"59c3ea47cfa828acde3a2e1b4666edda2d5268d2": "sensitive ip",
+		"a96d018e381749c8f31327067dde11885df6b6ee": "sample_type_name",
+		"1a485c405acf9832de7546b587c9c29fb5ec8e38": "sensitive_strings",
+		"41e6893f310a14a10613f508897dc82545faa3c4": "package_name",
+		"3f910697a81b76f931e984642181d8bbb0aa77d9": "sensitive_strings_url",
+		"441d464e9485b8ff5e4fcf9b74ef32e32cade6d9": "developers",
+		"32226ca8a0c22e0bbf3c48a6738771f476d8b733": "permissions",
+		"0d54ab4e0b175b6da968b1af0a03521de90cc214": "sensitive_strings_sp",
+		"ad7fa63aa18497190ad37c9c3be3590ac74903ff": "sensitive_strings_domain",
+		"f0dc80dbe6c0234b442426b69120da4c7d9bf5fc": "sample_sha1",
+		"c2ad7e5609d288e64420417fb1f80f4d4189c408": "file_size",
+		"008f0bb84fb6a56fd4f26a6b9f277716f069eaed": "sensitive_strings_email",
+		"6b85bf103ec29d1f1bfd0b041f9cd9e5fd795ad3": "record_time",
+		"eefe210ca56d62f8b270681f925c1f80d54cdae4": "sample_sha256",
+		"559e43168b71eefe2b7cd2cce40dd73e64673fd7": "keyhash"
+	}
+}, {
+	"hash": "f5de00069d8d81156665d3e675aee24cae591781",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac"],
+	"res": {
+		"66fe6f10f57aea542378432835853b4471b35ed7": "user_ip",
+		"76d749083bb821704165b69ba6f7937782f9bfd5": "city",
+		"18c7ee53a4e7e77652b79557f6f15420b6ee6b6c": "longitude",
+		"21634a1356c1d6f240ec2594739b9ecf2c30190d": "latitude"
+	}
+}, {
+	"hash": "036e31741edeb96bae8b0057265271ffcab3497b",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip"],
+	"res": {
+		"44819e1abb1a768965fa2674f6080cae7e19f850": "app_hash"
+	}
+}, {
+	"hash": "90726f668778cc018ba1b5636d90a19d74c3ed9a",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"0760acc873d629fd79f816393ae1c491cec93826": "app_hash",
+		"bf112b7d61b03f93f1003cd185fdda8164d8daa4": "version",
+		"9277d5861e7f19eac7a71c6d59fed4b8003836f7": "version_name",
+		"91603d56cff6fb0ec55b009a248f3fd092e1a803": "program_name",
+		"c45bd711738d66e9926f2bba2e6ea0f3d264f22d": "sensitive ip",
+		"876790501309a38cb77327eeb6f14727470932bf": "sample_type_name",
+		"9bf5b4fc0afaad942ec22daa2a109eae92c60a55": "sensitive_strings",
+		"07e1e6f55168f112228a0e78f778baa6064e1455": "package_name",
+		"17122f273f7d274a7a6a9ea78893df1d6abbf5fe": "sensitive_strings_url",
+		"86de69ca196fa59dfb8906412506b4ba4099347b": "developers",
+		"a3b8acae096cde6d57c57966603fe956d60ec27c": "permissions",
+		"07c9c015cb8f3ffbdf4ed68fa0de7aa47e4285c0": "sensitive_strings_sp",
+		"93e6410760841eeaf31e772a5110eae01083c577": "sensitive_strings_domain",
+		"fb33b09d7df320d178c44ae4e2d5904b5a2b9206": "sample_sha1",
+		"7ccb6f66cd944597d0c2ffd5307eee53699a9edb": "file_size",
+		"93ad9b8f52f9c99b74c6ae6ccade3fde47757d5f": "sensitive_strings_email",
+		"582931c86eed2d4aae33121a23e9154e26cddce4": "record_time",
+		"17663cb52fb1005854ed6d4e38319dce4235baf8": "sample_sha256",
+		"ef5c6af45acf7ffc56f6c99987c92a7cc2fca91e": "keyhash"
+	}
+}, {
+	"hash": "875b9323af46eeb4ac8130be213aad1d50ece31d",
+	"desc": "在引擎日志中通过包名获取到样本HASH",
+	"params": ["package_name"],
+	"res": {
+		"ea7fc44a1988b7a027740d9057a8c137b0ff9fc9": "app_hash"
+	}
+}, {
+	"hash": "5e4e8ec63f443b454c6053c799fbb3a3abfc9b7a",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac"],
+	"res": {
+		"fe7447ba3c548fa41be44c579a26b35d7a32e397": "user_ip",
+		"a52b169d8045304d6b28ff130432203c03e0db29": "city",
+		"5d1dc73046dc8ced235fc2f4c7842af50274a8a4": "longitude",
+		"3bc1bc33725a1a70edf28b0935abc302f38d5319": "latitude"
+	}
+}, {
+	"hash": "44470b4ea44f7ce07ed350fbb614ad00fdbdcdbd",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip", "authentication"],
+	"res": {
+		"bf1666e257581c279b2490c6b4fb589ffb118012": "app_hash",
+		"7a39604633dbf6c0002e7c61669e5f873e860c37": "version",
+		"d0f390859d1d4c0ca779c39a4d658dcb82ed7951": "version_name",
+		"7ead7dcaff225eea146c9eebaf691e990da1e9ae": "program_name",
+		"9e10bc5fd53fbbe0b798ded1c03d8f42530ed3be": "sensitive ip",
+		"46f30299b151d4d338b48030e12b0ac343090896": "sample_type_name",
+		"f603a9c5a91b8400892e4bb4e6f18914821945f8": "sensitive_strings",
+		"9d3b1dce6f3b655e38e11206254fb920dcd139e1": "package_name",
+		"3af09d3e76a1c903d4288fcd3a3a4aef838256d3": "sensitive_strings_url",
+		"757a87989ea1388b2a1c19ec6d6567dbeb5ab312": "developers",
+		"10a97946f63a93fc0177fdcf1e730e4ca1548118": "permissions",
+		"1fb09393f3d194d14ef9a6dad510707dbc2f5553": "sensitive_strings_sp",
+		"8d8d820a0b6ffeca23edaf9cc1877cf379f65819": "sensitive_strings_domain",
+		"4b4aac1cabbfdd6ef2016e5270ea6753f3211989": "sample_sha1",
+		"9684413c6b693c1d7e9ca78d59b61bb2b5066b36": "file_size",
+		"7466ab60766a85a5edbc73067188729f4ac98c2e": "sensitive_strings_email",
+		"4956c6bc22fa92b52f98e23b00a34f06cff866b8": "record_time",
+		"47a05574321fa3a16bb2954e4b7b34a6d2981050": "sample_sha256",
+		"bb55c2ea5736c576b2c24dd3fd7594cb9e679878": "keyhash"
+	}
+}, {
+	"hash": "aebd53e4ea6886c12e761d85327509bb37a65487",
+	"desc": "获取用户安装的app",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"ac08d08d8479736e944620a11d0087a3dee99fc3": "app_hash",
+		"f95e3f477a4b5795af0fdcae7c34861d0499a038": "app_packagename",
+		"a9c212d75c58d47bd752a6ac5bc2d0f829905674": "app_detect_family",
+		"b0626958361f6e44b66ab30e0579c88d7322853b": "app_detect_type"
+	}
+}, {
+	"hash": "2fcd87654a8664a7e9d7bca76ed4a87fa5359a2b",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip"],
+	"res": {
+		"a2e444356469c22a42866f3174697323d8b4bc24": "app_hash"
+	}
+}, {
+	"hash": "2089dbf31de191c8657a5ddfbc9b85ae96ca910f",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"ee2cffa25865234730b839de490848281ec87d18": "imei",
+		"e7dc8736e04909b0685123a96ac6b320b4ab1719": "device_id"
+	}
+}, {
+	"hash": "5ea69680931e154a27564f717632f6807c93f407",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip"],
+	"res": {
+		"9654b52a0934fd52f20d47f9713cd8075fb73d59": "app_hash"
+	}
+}, {
+	"hash": "9d9c87e150b11e0d98efe01fe50205009e6966ec",
+	"desc": "获取用户安装的app",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"c792044cb35c6624d589a85f0612d9b568af8fc0": "app_hash",
+		"fae10206a5bddd37dc878fc2f62c15d59d09e12b": "app_packagename",
+		"2a304dd218d00de7f6af38b26891c548b9458deb": "app_detect_family",
+		"8e5ec30527a6c8c8d623c0b5000a36aa8e12877c": "app_detect_type"
+	}
+}, {
+	"hash": "b567651f6e827f43776393c2f1a66bc470ea7ffc",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"908eb7dfb2e262b75c3e34dc4d51d055b5479415": "imei",
+		"d7e90bbe0947bffad4f531d3881da2c9d94abaae": "device_id"
+	}
+}, {
+	"hash": "e41bedf6b7b17be34eca3c9c4fd4791a64dde198",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip"],
+	"res": {
+		"ba09864105e7f5c2957efef243a832fce0bc7d56": "app_hash"
+	}
+}, {
+	"hash": "285d28aacdebb57d62d1caafa3e45202d14251b8",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"09d3b46b14101e6ec6e793c6dc00d3139c6897e1": "imei",
+		"69e36d1efe00e0cd16a2cd7b40e0a6700fc70110": "device_id"
+	}
+}, {
+	"hash": "cdecb6598c9888e450767dce7a708d37732abdf1",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"dbc5840d2b298785b6d801ed16e1c2f0115ce99a": "app_hash",
+		"8ceadc96d9b8560c2a6670364593e84270fd2791": "version",
+		"29860a2c71f199930b30d2cfc74e796afd41d886": "version_name",
+		"54069fde8a8045ee501cbb32f5278490362f5edd": "program_name",
+		"4107adc6869258f446a267a06aecc6754c0997bf": "sensitive ip",
+		"868261f5b7c295a021fe629bc556f77a8f90a90a": "sample_type_name",
+		"1f4ed1586597650c78c6f12c8e299071db94d33b": "sensitive_strings",
+		"4d8afe3413d537ea4e4d317346eb479a7b16298d": "package_name",
+		"268890b74b7a71902458ae346ae4432a98e16c55": "sensitive_strings_url",
+		"985467ec6ae4743924ce88eef20e828669b765d5": "developers",
+		"677b515b4047bc298d073bcc12b86367b55b42ff": "permissions",
+		"6296468fcac731814c840bc251526d1956d67c5d": "sensitive_strings_sp",
+		"952cb0d984c3ef24b75cafe216a197b8ef6f267d": "sensitive_strings_domain",
+		"408fcf7758d17a27a8df36e6de12bec528c193f1": "sample_sha1",
+		"df3159fee45c0ce3eb5847cb8c0462ea2315963a": "file_size",
+		"f45f060b497e9ae2c9b588dce8f31ba41a16fe9e": "sensitive_strings_email",
+		"e68a5aabcfe067ac9951184bac838e70c38f9bf4": "record_time",
+		"51550ecbbc314fd2a0fe22ac636ca0247c6954ef": "sample_sha256",
+		"e6490fb7fc22a86919f95b356218534c9c20672e": "keyhash"
+	}
+}, {
+	"hash": "528d3f2682a5cd0855cc92c73efea2e973812b53",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"fcadec1779dde4574ad4acd5cbee26ff9d3069a5": "imei",
+		"9944c38d036f30951aed20869fbed3950aab766f": "device_id"
+	}
+}, {
+	"hash": "4eeac22ea1f172d8f1185a59959c48733a51a43a",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac"],
+	"res": {
+		"1ab6ac11f3994db1bcebad008ea3d6eba78b45be": "user_ip",
+		"1462dab408e6566e58a6bd142207ea7260b2c1ae": "city",
+		"e03a7d3d511fa6221fe35d07f463468b87b4ea5d": "longitude",
+		"8ed96e7c9cf23eccd8d3b133c3450d15c7afdb32": "latitude"
+	}
+}, {
+	"hash": "b43194f7c46a4707a5e32d67dd39c6795314a1b3",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"8e032d2dd7fa60f3fef931dbf107f83dcd448a7e": "app_hash",
+		"a89bce37a7b8863a6b544e111c0de65fb18518ba": "version",
+		"3e4a7fcb1f3842b99ba7447bd76f20d913709b20": "version_name",
+		"8ec91268ea124980da3978740df0b7799e17647e": "program_name",
+		"d68ba0c1d7bd65e9f5937074cbeffa5cd6c0e446": "sensitive ip",
+		"99cf0f374ed2ec8b6b7cdbcf5c2af578496e7a09": "sample_type_name",
+		"c9948f8b7b905485e93e5556f958b3c29b54de7e": "sensitive_strings",
+		"97287d806df363d2c26c17365d1e94e6bffd4344": "package_name",
+		"23a36d28b8aec5ea745d319785d30d592104181e": "sensitive_strings_url",
+		"9575a85af45e4f292d8596d584a6d620d127be55": "developers",
+		"3be008f149d6f584095ec9185f73bcf97d0d33e8": "permissions",
+		"fb3bd8df25875dcc8b4078e4014d87519d38be1f": "sensitive_strings_sp",
+		"7a978b59a5cf4c3940a6198bb7a557309bdae8e1": "sensitive_strings_domain",
+		"768e2481c8019785bee3f9454736e92c40215ee0": "sample_sha1",
+		"b2dd09c00a2c0e53b3c3e3af4cfa59987ff8c97a": "file_size",
+		"722434cab611ae9727229c66e077cba777bc3661": "sensitive_strings_email",
+		"e14c995804ab411e70e44bd5e61b758697ff0909": "record_time",
+		"aac2475cf31138048604e96f419a12d068e745fb": "sample_sha256",
+		"ad6bfb35641fb07a446f9995b1596eb4fa539897": "keyhash"
+	}
+}, {
+	"hash": "0c2ef829a80f0ae6584ad2c2d4f075e2987c67bc",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"607596c16e2b3c8b7d08698987911224e67ac8d5": "imei",
+		"01cde11b053ad4216fff4de8df6bd71246e58fb9": "device_id"
+	}
+}, {
+	"hash": "cbb7847b9d92b42b63f79d6ac140ed4684b55b7a",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip", "authentication"],
+	"res": {
+		"e8311511682ff99b082faf1b813e441d85f897a2": "app_hash",
+		"bf775ec5793400a1d2124709a17234a2cda88a0d": "version",
+		"f37cbed9ba8e6ed89c5e36345bc4ccd241933928": "version_name",
+		"f6b228dd2094236fac489dc0d84fe593cbac0673": "program_name",
+		"a9569179d24f1a87a563feb326a8721ccd234835": "sensitive ip",
+		"760e55b5e41484a6ea230888cf4e4df5e1cfea4b": "sample_type_name",
+		"7d16768c6d9f5bdb80d921032eb3352a57d64251": "sensitive_strings",
+		"83736d8f5aed0851d33a90faf0f775a523402176": "package_name",
+		"eefb90f54530f1ffc6b53ebc3d54369829addbcd": "sensitive_strings_url",
+		"f7b2e93d6452026db63805a428b2df9474843813": "developers",
+		"6f722a74a223c21e5f2a7b9952c76413c1132f92": "permissions",
+		"62b27c9b8bff519e13440dc6e875a6a608d7dbad": "sensitive_strings_sp",
+		"787ce283bc2bdc3aa38b55f3b292721e43e3fddf": "sensitive_strings_domain",
+		"bac92712aaf8423da61c48940c628dc298f8f1e5": "sample_sha1",
+		"19d0532bc137b5508b31f12b8ff6c6ccabb35977": "file_size",
+		"11b9b51130502b8a28dedd9d58627414fb55d107": "sensitive_strings_email",
+		"5c5f9e037696807bdc05b61ccb42f19cef95ba1c": "record_time",
+		"d3ea5ba302054d362563a086a4a4e3d618d604c0": "sample_sha256",
+		"e426f02873260f088097f2ac47db10fb804c255b": "keyhash"
+	}
+}, {
+	"hash": "1d1c08b91c2691032fbb5d5e10f9630981e7f65d",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip"],
+	"res": {
+		"0c4167909f871475b7602de0597996c930ba2587": "app_hash"
+	}
+}, {
+	"hash": "3e7e370395306f97e3a3c950a7a2d98b1647568b",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"2edd7485f04c471ac8d808a2980bac74833ce15c": "imei",
+		"5c1211244edd35368bd905f825a7b7c748b48203": "device_id"
+	}
+}, {
+	"hash": "3d2182c108866b8b47a03139b499ffcea123f689",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"9315b52d4e7f57d53c2d6cf2f497e8ff7a5f2f3f": "app_hash",
+		"8f112dc838a3a606847ec5d7330e68d17dba39e1": "version",
+		"6a8952dfead3ed61af91fd88c75b3a6bcc16b53d": "version_name",
+		"baab08cdeac2c155dfa5ec60fdeb590ae57abeab": "program_name",
+		"e6471012ff74d314b4ee7b6f33245f1087fa3ce6": "sensitive ip",
+		"9f330aa96c6c5e228b00bb26b2b1070f125f8c94": "sample_type_name",
+		"b6f484e11be7fd4c11138623d112b943fc75c9c3": "sensitive_strings",
+		"e14472432236adfe5a1dc5ddc77665862b2aee40": "package_name",
+		"2663ae6539b97d2d54f9e29a0fdc762c224ed2e5": "sensitive_strings_url",
+		"697cc15baf851803f6dd2e3693d7c5fd8b84b156": "developers",
+		"c7d6a75008318bafc10cffd8608f43338c710529": "permissions",
+		"20d8e54aba3429a0eb2057a9cb9ef69e1af21e5f": "sensitive_strings_sp",
+		"65d2f86e90a2fa4f84abe209eecc0197a43f1c41": "sensitive_strings_domain",
+		"39ead761c82eb70effe96e82c22fbc74e964fe44": "sample_sha1",
+		"6f16490b4abc7e177a015c8c47f99ed6d9824380": "file_size",
+		"3c34640be0caaa5900e8ce3e44958406e0b46fc0": "sensitive_strings_email",
+		"05da485efcef86352704b6be7ded9a712ac897f9": "record_time",
+		"6a3a73aa5a2b78b35a88578bbb1510f451c38ca5": "sample_sha256",
+		"fcb8c81c21c7f693d9eeaa5272d1c475321f1e66": "keyhash"
+	}
+}, {
+	"hash": "91bf85cc8933f1de761f19ad8782c61f437fbeb8",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"d5a8e30e7d6142c53f5f492834106d083368ed0a": "app_hash",
+		"187117061e9cfdd817dbd4fdb55d846244cd467f": "version",
+		"5dfebaa78cfd08502b885dfbc9cbef1e5ef5aa49": "version_name",
+		"b45c67e65a7f56978c8d5f65534b8ee010ae6fc5": "program_name",
+		"b0d400d360e53a2a46735e5a555464fa2ff77068": "sensitive ip",
+		"c12ebb65d3bcef10bd7c75f6fffa3dfa94f88537": "sample_type_name",
+		"ee8ba2fd27963d53a0f6a169ac3bc72a6bec8aa7": "sensitive_strings",
+		"3ec902ba4a2b57380ad6d6cd96acd185525d4a6e": "package_name",
+		"a65249b1aff9120d24973ed817509d70a3953bf2": "sensitive_strings_url",
+		"4aebbc81ec58f63c4bb4f325f2ae0687d2cd2885": "developers",
+		"759f816d695ed32d6b0a6343202bcb14c7b9d21b": "permissions",
+		"d16647983421213b1bb70973958542df028b2aea": "sensitive_strings_sp",
+		"f76278e82696013cc679a6df06f29023ba0b04a2": "sensitive_strings_domain",
+		"04b2ec5affe8f4c5aacdb4ce57c1b3a472580e88": "sample_sha1",
+		"05631b71c29b60626021c9dfc2073a874efde6aa": "file_size",
+		"8ff6210e77275fd72dd41ff0794ebd934c1e123e": "sensitive_strings_email",
+		"323356544fdc3fa2381c43dd13ac57ec2cf58fe7": "record_time",
+		"e587a1fc2b7f94de19b7c8321008a293ea4ad24d": "sample_sha256",
+		"f6636e74cc3643c3df52ffee3762e9f90330ae59": "keyhash"
+	}
+}, {
+	"hash": "7e0b2ba480f9004d5acd62d94d972dd9507523fc",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"432aa82db63368c50a9286744a2de894e66d6ab2": "imei",
+		"900268e5bcafa49f8f4f97d5edb1514a9a3efbf2": "device_id"
+	}
+}, {
+	"hash": "3af7c4e01afc8f4b74ba0a6669f215ceaea973b7",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"7ea90997c8ccac09c5da7674d01d061efd082e63": "imei",
+		"0ed06ae3adbfebd934b9187142f36f7eda158cff": "device_id"
+	}
+}, {
+	"hash": "8c441e37781447bb82c6cc8e0b49d7a89c21f418",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip"],
+	"res": {
+		"6bc6c3d6a1833974d61d8745f5cee694a4df7606": "app_hash"
+	}
+}, {
+	"hash": "1aa47ae349b747999eec17dfa852a617792b4850",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"68f51a2a978e294ea0a553866087b98a810b881a": "imei",
+		"6dc2295d38e55fcf8d3ba3b9e6de95644fdb39aa": "device_id"
+	}
+}, {
+	"hash": "52a6dc460e6de65cc97fe61d771df9cc5d8b25c4",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"df0693d02c52a5314ddfda3a78856b3556ee0d59": "user_ip",
+		"eb1a6cff9587c1fbfd70b5adace63c60e5cbda88": "city",
+		"eb2b5b6f856d3e280ab9184651160541f7115a93": "longitude",
+		"2bac6a1600d5b87a5518e2fc003b028c8479d22c": "latitude"
+	}
+}, {
+	"hash": "e120f785e2ce16aa3402b99d98f6b947b8366f01",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"0f35a507cacee481cf150c575c94ed0371525ed6": "app_hash",
+		"a4cbc86fa9bc1c8d353049c9e99ffb7a84cdc0b3": "version",
+		"f7e2d69e6b2fe97104f3df62b056af9001e5f97b": "version_name",
+		"c9353fee6d49d8113ef5ff3a8d0f1b38f5129598": "program_name",
+		"7e8008841c6a2a080a4dee280cf6fe86e2b5c5c6": "sensitive ip",
+		"047a6f52c08539bfdf68d54831cb09cd3dfb49a0": "sample_type_name",
+		"be7cb481d501b100ebaaadc876c7d3ad8f9edcf9": "sensitive_strings",
+		"835a9b30e0dc33b40cfa7866f4ac22669be802c9": "package_name",
+		"48f45a3453f1bc5bb7195c954ca114e2e17411b0": "sensitive_strings_url",
+		"bac44ac31ba9aac2bbb0ec9b60ba65dd5b511783": "developers",
+		"620ffadcc789c7b52d5a38a8b331551d13f5e20c": "permissions",
+		"ca29062d4c17da5680578cb60a5b07e4a6458cb6": "sensitive_strings_sp",
+		"29e348eb0f73be2f8ebde47b092b3649035c1460": "sensitive_strings_domain",
+		"abdc0122d6c5a8acee9afc24c27cc97e5a3f3492": "sample_sha1",
+		"22366fd6809913ca76d0ccfc26188a27069aea08": "file_size",
+		"5fe6bdac562526c783814ec7d3630cb8d0efabdb": "sensitive_strings_email",
+		"7f1fdc59ca16d72f79a27e2836ba9d1bbd879b0b": "record_time",
+		"5ef84c68e12dbcc53f7d8fab9bf02dcf93dbff94": "sample_sha256",
+		"e68616138d6b469b949c29886803019efb998f8b": "keyhash"
+	}
+}, {
+	"hash": "1ce8eedf8cd7ffd9c7a48b19faed040d03b5961f",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"555f2bed796a624cd1e935892ebf2b1db9d21c33": "imei",
+		"3bc33e350c7dbb3c187a8854e7e9d151ce53e1b5": "device_id"
+	}
+}, {
+	"hash": "e2a1f649d7942ef707a8bc8471dd08136c66f305",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip", "authentication"],
+	"res": {
+		"5a01a3144139474d17bdcc510c22a1b78f3bd789": "app_hash",
+		"fd748493955ef4c4a3094d565d57f121a4b669c5": "version",
+		"6f076c9397abdfb9e4c929e1d8cc117dbd14a41b": "version_name",
+		"1d7d21e04eecf03f1cd6d1a63742a3663bf2d067": "program_name",
+		"fdcc342e85972d62ba35742ba42437e72e8de170": "sensitive ip",
+		"4804eabee824453866a781a0505bb32866ee2e70": "sample_type_name",
+		"63bdf51d55d0bf1efd6ef7ac9e3645ab662a9e14": "sensitive_strings",
+		"5ce60235fa9a42e7e5d9fa6aa3a3daa9100fa3ff": "package_name",
+		"c8637cec8ac73ae2019d80c638e5ba26bcb2602f": "sensitive_strings_url",
+		"0f52f966827a0c04d02015c793d8ae1f899164ff": "developers",
+		"c588000e6e307672f09434f9edd6bfbf95f468b3": "permissions",
+		"4642933e01239edd37ad785ef5293fca5d4b3599": "sensitive_strings_sp",
+		"8a58932b48cc7ca1ada671aadf86610709b975fd": "sensitive_strings_domain",
+		"bec214b4d7abd53791b91e04cb52ff8d5e761cea": "sample_sha1",
+		"3824a755a57f9314b34e310de63912a7df0f3d9d": "file_size",
+		"b96f9896c318a9f412cdf95bb1084448e43234a3": "sensitive_strings_email",
+		"7353b8932da3fa67b072b82458a55e1c865c4a08": "record_time",
+		"658f8c5da0c3a4031f6933af1cf431c5d2897a8d": "sample_sha256",
+		"7763d7eb373ccc784a33abb4a3ebd80140a9e7f3": "keyhash"
+	}
+}, {
+	"hash": "5ebb10e35cf8a1ebd53e9df907f0d0b2b75242ef",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"f0a45bd7c17b004dd0cb3387975048fcc23523a7": "imei",
+		"a95d0c98eb4e39811d101f4ee8cf1e7443a1c573": "device_id"
+	}
+}, {
+	"hash": "c440b10f99102811c4018a021a4ece5ecc4dd019",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac"],
+	"res": {
+		"21b2c9033681bda305484d291e8a22582f878981": "user_ip",
+		"8e6916f6836ee00a5bd9a24be1a01bbc94488b14": "city",
+		"0da4ffeba69737601473ceb3101717d809236c0b": "longitude",
+		"170924a4656115c6b6e9866003eef5f43239af76": "latitude"
+	}
+}, {
+	"hash": "4c6d462bb53a037dd8efe244e5a6e8ea47f76fa2",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"8571983dd861730e278f1db10299ef401ffa6cd9": "user_ip",
+		"4c53309c0f0835d8220451ef7e79b5dc4df9bf07": "city",
+		"cc95099a2d9ea672d879816293206f4cd4db5224": "longitude",
+		"870331bc2acf20d20a18bf26ca859169ac3d054b": "latitude"
+	}
+}, {
+	"hash": "6ab00bf7d6350cdb84620339f90a74a4aed854ce",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"5edb5f36f5d99f90ad00b823c1d8bf76f5855e3a": "app_hash",
+		"a7ccca6456901905e6275e54b5587decaa9de4ed": "version",
+		"2785bc063d258e28be3356774346d53537c97db9": "version_name",
+		"7181870ec75e81d6b099da7ca7a64aff9f4015b6": "program_name",
+		"6315e7e50af13ac10b0a098c95a19c4a9acec628": "sensitive ip",
+		"9a222b1461eb01eb9b04524ec6ed8cae92742a0c": "sample_type_name",
+		"d62f905288c8bd695b772df152da87686f9b64be": "sensitive_strings",
+		"2f027c67b448d4cfd0fd2a6e9e58110c6066a5c2": "package_name",
+		"9745811f2d89ca2457ac4cff7a20c2b11a2759f5": "sensitive_strings_url",
+		"02ea1950bb32736cca28b91180384467b4b882d6": "developers",
+		"c612ba2f74afea7fb2db4fab5f14086d009afc54": "permissions",
+		"d26d3c3cc358947737976682004732e77b5db156": "sensitive_strings_sp",
+		"3e4e5c8816058dae29aecfc27abb4f483e42f0df": "sensitive_strings_domain",
+		"09d8fb3e359cfbda732f4eb876e2c3d17fd0c276": "sample_sha1",
+		"54d0eb6639bacd8710046d44b43b48be9ca11255": "file_size",
+		"eb54abe607519db50e328689227252ec241e7676": "sensitive_strings_email",
+		"7cc40548c1b574e026ab5786c2db7985edd869d1": "record_time",
+		"88eea85185e409915986538e8d8abbfcdfdc95b8": "sample_sha256",
+		"8ad9302b5eab09906eb4835b689c02c732b8bdcf": "keyhash"
+	}
+}, {
+	"hash": "af6353f21b8463440f96835089a94e311f45f34c",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip"],
+	"res": {
+		"e24c1c2a2dd5f83201a6abd2f9d8b3b2977a15b7": "app_hash"
+	}
+}, {
+	"hash": "355896f925683cccc5eb3b5b91b4bfcbe18f7eec",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"8a3acbcc103a7298f4570a882ade1a6b93861322": "imei",
+		"7880b0d68bbdc28abb87f8a9b66c5b7ac425b7cc": "device_id"
+	}
+}, {
+	"hash": "1b5f59af5e37d702302cdd09e2d9f8600c24cd3f",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"2b3e3c110bfe09e7318442ba817b6c842349fead": "user_ip",
+		"04c2c80f34a1e51c94ddbaa7258ecaf087a113b6": "city",
+		"7ebea2ca06470139b711773cd80add58eb78b169": "longitude",
+		"e2ad16532c8803a862dada5caa2a86c13a46bc04": "latitude"
+	}
+}, {
+	"hash": "c55cff39f9a6f7f7b0cc7360e98b9c03d91839c1",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"0b0a3532105974f410591fb7d28a21e7e369d47b": "app_hash",
+		"b167105c1249e1790acff85f397cd3cddbf8eee1": "version",
+		"4fe028ae477e522ecda6b2e4ae180d255995adad": "version_name",
+		"dade8218e82ecec2dccf634814939bc646c1ec9c": "program_name",
+		"e2b1ceb3493bb80991e70a04aea0f7d0a8eee0cc": "sensitive ip",
+		"c619ddd3c2b4d358f71fb058b93ff1b5952aa6e7": "sample_type_name",
+		"26b72d80d269fe323ecf74644e7ef433180b0687": "sensitive_strings",
+		"ad6fd231f2130b4a2d520f62ac3c1b65025922ed": "package_name",
+		"8f55018bd52f13341dc05f1b9ba886cf52a61b24": "sensitive_strings_url",
+		"fd3345998165eee4b7f089f22b98e54d7e189616": "developers",
+		"15e3ace77c57bc9d897c4515324238f182094cd0": "permissions",
+		"42f9ad9a610f49f839a50bc088b6f3a1ddfdc934": "sensitive_strings_sp",
+		"42e391688bd24c079ac02a25ab658aa869ed9d71": "sensitive_strings_domain",
+		"6b7070faf7ca35b99248bd69fc85dc28c2d8a578": "sample_sha1",
+		"4f15a44bf3ac85edc734d9e3b8236bddc9c827dc": "file_size",
+		"133fad57054322645067c0d12f93f172407b2724": "sensitive_strings_email",
+		"db2091f55b29f587a3a65cdd0bed19bd7718ee02": "record_time",
+		"094e4d709aea239b80c3844a837741991c559e01": "sample_sha256",
+		"10ecccaee6c64d50edfdf50052ecd20daef52d64": "keyhash"
+	}
+}, {
+	"hash": "3195bd2d23a4eee51740cf99e150c00216f3e701",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"5d7fdc686a9a9a3426688377f5b7c561a5a1d457": "imei",
+		"af4c2da1176148253f1cf880a224868821be019f": "device_id"
+	}
+}, {
+	"hash": "6835cb5c961bd53779eb03f1b5189f93126dbab7",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip"],
+	"res": {
+		"0511411a18b59da89de8d3ef7d2aaf92c51ade20": "app_hash"
+	}
+}, {
+	"hash": "56d6862c738ff8e82226b61b4b78b5b587edef42",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"004845967e85025c589a90e4f8817204d1c9f81c": "app_hash",
+		"b10c43c103d2ab237d30c63148b63aa3c2308465": "version",
+		"41507a768bf59ba1aa1c40363ef51e4142b1138d": "version_name",
+		"908bfc60a294d62707d7b8c883909d0324fa372e": "program_name",
+		"89a6c052622b20bdb802f3150a5f52c52e21cf41": "sensitive ip",
+		"812ae4e51297b88cef2f2edee5f5c64a011615d7": "sample_type_name",
+		"6c50dfe4295f7ff70ac113a5fa0eeb0e706bd6d8": "sensitive_strings",
+		"e9774e0729b8a538dae466802de1cf3a8aa6343f": "package_name",
+		"a93cd486d78236d2a287f3b4bf0afe5b23d88d7a": "sensitive_strings_url",
+		"21f3e65f8ef1d756c69d0e21bae85fec18987835": "developers",
+		"1ac0af17d5e0691a814ff821ede1f5340ccc7deb": "permissions",
+		"d55db4031c00a995cbeadc503d02d04852e3f567": "sensitive_strings_sp",
+		"9cb33b9e72e8d14e0661eb7703e5632112e553ce": "sensitive_strings_domain",
+		"70d5a15980df3eff79d963ae6ea7ec7c5c8e4666": "sample_sha1",
+		"b7551cc3ba50be58e4d21884fe826cca5c04d0b1": "file_size",
+		"5be956d9e68486c0b79df6ac752d8b92faf7e479": "sensitive_strings_email",
+		"c4eb02928512e38d8341152e6f659cfc689677a3": "record_time",
+		"e93795dfeeca5cec3c095ecb2946b79e29603cc2": "sample_sha256",
+		"b6161e586c4908780b1cbeca5e2202ccb948cffe": "keyhash"
+	}
+}, {
+	"hash": "f2479c6eda3db76438d9b9e3d8ef1afe6772637f",
+	"desc": "获取用户安装的app",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"65925287278cacb34ef72c075aaa4712b2dc44f5": "app_hash",
+		"bf7662ea38361d25640edf09c56c3851d1b842dc": "app_packagename",
+		"f89c5f18fdf6dd30ca109c76d45d931ec88ef483": "app_detect_family",
+		"740d199860f9a3952dae5face147982ed586bbdd": "app_detect_type"
+	}
+}, {
+	"hash": "12337d49d51d581ea54cf46dedc175c53a58962a",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"412f8e1c4892e5c2f7bf87b6864c5e88ddf368f3": "app_hash",
+		"4c47fbcdda2b9143adff50f4f82d60bd6a7d0ff4": "version",
+		"1cbfd1774173dfb629bd23a1424fd9a3a3b89d8a": "version_name",
+		"5f22b8fdfaf96d6240f7c95a167959823f980e2b": "program_name",
+		"a9fff3f7fe48e8bbbdc6482be75a3072d4b0dabc": "sensitive ip",
+		"c93fc2989e55e4e8f0993ac9b00ccf1aecef5a99": "sample_type_name",
+		"634654c15a04315728c3e493b72324cd55a7940f": "sensitive_strings",
+		"975063c5922f9d32739cf4610c766fcb4aa5044f": "package_name",
+		"fa704a97cc5ba26e4abd7d681fa3b671b128317d": "sensitive_strings_url",
+		"c911f303c49846e205d44bbd88b53b4be9a67281": "developers",
+		"ba7c8ee63fe936b8a3d2d2d898a6d0b59bde4737": "permissions",
+		"1b3b921b825db548728975670e814e0cc2ee56db": "sensitive_strings_sp",
+		"08a0f4330163385cfa52ca5d67b7e9707bf6dbff": "sensitive_strings_domain",
+		"08efdcafd9f717b0654847b9b3ae650fd6570df5": "sample_sha1",
+		"a2fb48678c4d1f98cbfd1f2c4c7897d03e147d14": "file_size",
+		"6c7bb606845e7edf49882b8984938af5ae2ac7f6": "sensitive_strings_email",
+		"6d4ebec8b2fd962771bdd09a91b92464fb75f8c3": "record_time",
+		"16a791c265dc90abb7430e35de6d98d4c9979754": "sample_sha256",
+		"96981266b0092c7f0dacdee14e35abbfa286ca2d": "keyhash"
+	}
+}, {
+	"hash": "f0ebd41d5869208ed23063bcca3bd1c4d70ac511",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"8e46addf4e7f1591f79ece06722c50a2465da40e": "user_ip",
+		"5f6a2a6b6185c9fa23177bbde48d36e38541d991": "city",
+		"1f344a1936edd56f940ab6b93da19a149ceebd72": "longitude",
+		"46feb9cfa617a359fe714101288c1165f06be5b7": "latitude"
+	}
+}, {
+	"hash": "d164c7a0fea7ab8c41157a777175371d7232b42f",
+	"desc": "获取用户安装的app",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"d2ea7a7cd0487bc39948944a1cf1bb59f67831da": "app_hash",
+		"0a5d8c9962741d744c1a350491caecfd981e7c3c": "app_packagename",
+		"d09ad5559cde268cef0e36e151d47746bd810f52": "app_detect_family",
+		"74a9ad65148b8aa61721e33bd2985c2301db39ef": "app_detect_type"
+	}
+}, {
+	"hash": "e87825b345605f0b3081c4c601f084b707fb3e08",
+	"desc": "在引擎日志中通过包名获取到样本HASH",
+	"params": ["package_name"],
+	"res": {
+		"3fcb271fdd9143dd4ff52e03803405047aa56eb7": "app_hash"
+	}
+}, {
+	"hash": "1646cff2fa8899d759139e45fc33145b28f53626",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip"],
+	"res": {
+		"3c994c7c435ec8a78a1da2765e3810f288dcdf42": "app_hash"
+	}
+}, {
+	"hash": "83aa851a29901d2068174b9994422a1ca285d551",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"8db12d0f9db01257d43179e5d70fa92691820e57": "user_ip",
+		"797e3136394957a6aae0cec58bb5df22798f7ae4": "city",
+		"d746dd903564fbf298ae96fe301e2fb7c5db333a": "longitude",
+		"1ffa2636a786a7d8a61b38199c6182e102b43c5d": "latitude"
+	}
+}, {
+	"hash": "5f3dca791af3cf8b8451ac80f9727ce3e174da37",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip", "authentication"],
+	"res": {
+		"c70e8db6e858c859780b6c9a246d1374953f6c39": "app_hash",
+		"9a9ed605cfa2fd4abf979a85705bced25cde51d1": "version",
+		"5f6faf40d9bb2c390444890de73011ca74cfa1ff": "version_name",
+		"dd76c492fea693ed27ad1170d567d6121cb5e697": "program_name",
+		"451868e481a997900818e9a488eff698210167d1": "sensitive ip",
+		"708ed19c8a68609c2e732a28b686c3cfbcc7f282": "sample_type_name",
+		"992f1296f59f56248b7fdb489a3f6b910273c3b5": "sensitive_strings",
+		"f96aa5984152f72d40c46b2ea5e756dee929a7f6": "package_name",
+		"5a704fffab167b470b6f81d68b717cf0613769f2": "sensitive_strings_url",
+		"9ddd60007b4ae1b6b0030ccd503b169be1bde98e": "developers",
+		"74841ea1acc8588271b6d0a0dac43a88350b6992": "permissions",
+		"bb455370395033b2469db96bb8ced8a237903944": "sensitive_strings_sp",
+		"ce19b4f45a59ad2b7604217e0b675b4d33d8a2d2": "sensitive_strings_domain",
+		"4ad17b4caa062282f44bdd78ef8bf6bfd33c3be1": "sample_sha1",
+		"37519bc795abc031f9481fd5a95a117d03434f00": "file_size",
+		"8f3d060af0f5a6f349325d42435f0a5bd75c80b5": "sensitive_strings_email",
+		"f437d6f7c85b9fc9f081d157f25b63ce2a0a3aac": "record_time",
+		"654a8a006e1a8bc622a2a8531eea03b6531ec7a2": "sample_sha256",
+		"42365a0fc168adb8d36e51d4140c1ddfa7f35508": "keyhash"
+	}
+}, {
+	"hash": "ae8e7b18e9b415155e6c383501016ce167f453af",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac"],
+	"res": {
+		"693c3acb6c7d2032ffcea44a1fb528b791b1e704": "user_ip",
+		"43267ad692fc4b290562329ed03100092d9a1627": "city",
+		"4c1f2c60c4c2c36c2ce00b02b5b4819cc40f5a9a": "longitude",
+		"6d53a17a7a0ff50ef6f01e2857b8f7a710cc5b70": "latitude"
+	}
+}, {
+	"hash": "adfc9fdc9dcfa8ced5de351ac6573a1056a45dbf",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip"],
+	"res": {
+		"6a12b57cab6bab0cc2945b1705fe609708b0ce69": "app_hash"
+	}
+}, {
+	"hash": "c27cd4f7e5be6584a1f5d808ee5fa62eafa79ded",
+	"desc": "在引擎日志中通过包名获取到样本HASH",
+	"params": ["package_name"],
+	"res": {
+		"0fcb1e1a5d0692b4eea9721d84d6c6fd7d8fd917": "app_hash"
+	}
+}, {
+	"hash": "d3d7a88647db7e34da7ac847213d67c10c5af7db",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac"],
+	"res": {
+		"2b099f63e047835b5f86aa41fca9305013417a66": "user_ip",
+		"b2abc6d2bdc76be5f9c8692495c962c55e494fbf": "city",
+		"b508216ab71a7e8bd015b9dd0d05c87a3aea7d2e": "longitude",
+		"6500e91efbe861d812f087cd82943f031fa3e075": "latitude"
+	}
+}, {
+	"hash": "3b24e335dd6980e0164f274d033767d797c1278f",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"f467a88861150f957fe556331aa924d6d480ae4c": "imei",
+		"dc4ab38e6c1cd894ddd62c82e16c0a7f5860da0d": "device_id"
+	}
+}, {
+	"hash": "a95fc37946a8cdc262bd982daceb3e0061e7f79d",
+	"desc": "获取用户安装的app",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"d27a3dd23db282c0ae620564b28dae5101478781": "app_hash",
+		"79eaf0e7d7e11160cad598ed49b00d7614d7d3ba": "app_packagename",
+		"0f6c1aaf54653597de8fc7daaab0714279c518b2": "app_detect_family",
+		"f161451065819b412c6924e32cddb72e78d04a58": "app_detect_type"
+	}
+}, {
+	"hash": "9b1795c2d5273da34ad291e8747cc00c4796a9d8",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"af69d9aea0ef2d67d1d3fa2796916003d0858ae6": "imei",
+		"86553e68cd12999f0ab1df982215fc584423bcf1": "device_id"
+	}
+}, {
+	"hash": "1cc7dc628bd6bf85d30891634505e78dd3b297fb",
+	"desc": "根据Hash获取样本信息",
+	"params": ["hash"],
+	"res": {
+		"c1f3808cbe2a4359b3994f3965d959eab93b4871": "app_hash",
+		"859c80c2bf80ffa3a586b6b369fb3d45e7775529": "version",
+		"0be03ef6010840604c4e3a4b106bf1e5739b2bb9": "version_name",
+		"f56b6b7ffc5309c08b45b60cd4c314b9d9971b42": "program_name",
+		"b94ae63e7b9f4d45cc51908afdb8be3ebe71b25e": "sensitive ip",
+		"6b342a7f915fc0d85b612fb299602ec22a2a84fb": "sample_type_name",
+		"df3797b856ba572cd938b981a070543e076625c7": "sensitive_strings",
+		"d886eaa8ae7827d5c6c0ddee55fea5de60b9da8a": "package_name",
+		"4d6911f5c96532c980c6f0954cfd469fceae3c6f": "sensitive_strings_url",
+		"473c1f280c89a0863e0d1899a4f4c509dc8c37c5": "developers",
+		"f2948948b9200c3d04664f7511155d874d595470": "permissions",
+		"a2a34bdcc14e907dcddd8846aa39a6e73cfea673": "sensitive_strings_sp",
+		"3032f5f422fe3070a376cba80a13a49d7f3ab557": "sensitive_strings_domain",
+		"b4d27f87c2edf746b1b99d6a2b21b5d7d101aaff": "sample_sha1",
+		"6ad7bcaa0fab282067a85bc7df9d4789ca8414df": "file_size",
+		"abdcf60e6606e71e61ecad3749959d9d3f71d420": "sensitive_strings_email",
+		"f70b277e0033dd94f1132794a382dc423809cfe6": "record_time",
+		"3fed9a7d7c131d89874746060414149b6151cd98": "sample_sha256",
+		"2941a3146d69b15cef27779320dca1ceccaec1c3": "keyhash"
+	}
+}, {
+	"hash": "af9ce5faba7c102ceb5a09faae920f7302ca6fe4",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac"],
+	"res": {
+		"67d1a1010caed71fbcc866a009d33fc23cf47625": "user_ip",
+		"6086f4e2aa75487b4a4e382b804cc2f2e68dda0d": "city",
+		"57e10d3c56f4e8a736bd92f3604e45cd4a96f6bd": "longitude",
+		"19f2c62961a5e69beb36689177da560959e2725a": "latitude"
+	}
+}, {
+	"hash": "5a3afa35a0b32e4175b5a8c9328e63c813efb358",
+	"desc": "在引擎日志中通过包名获取到样本HASH",
+	"params": ["package_name"],
+	"res": {
+		"19b730aea092806e49cbf9e742a153d55cfcb763": "app_hash"
+	}
+}, {
+	"hash": "afed86d0d9270e9b0c4963fd71df0efd5b56e081",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac"],
+	"res": {
+		"0f9b6f4ac29f0606e3334964d9c2c4267b6f6700": "user_ip",
+		"72901b91f19779f3e843cc267effaac0aec0623d": "city",
+		"43ef8445365e95b4fb7839f8ce957009c2c0b884": "longitude",
+		"d4336727b39e526bdc206bf09576baf55025a414": "latitude"
+	}
+}, {
+	"hash": "713b1541b177690a990f59423760d876658fa984",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"1b23b51715f2b9914726fac9d4131fa00dc0e742": "user_ip",
+		"4b686c9b8539c4e1e753a28b6e71d200c24c6554": "city",
+		"20cadb23ebb84a7608e3d91e7bb92f80e4402a89": "longitude",
+		"4591bdd05411c43782677cc7df711c34a331221a": "latitude"
+	}
+}, {
+	"hash": "279a0cc723053f57a750766124ffbd3ad4590b68",
+	"desc": "获取用户安装的app",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"ce1ce1d51d82b9d520ff8d39fc775d364f92e2e4": "app_hash",
+		"6d05cbe33e7a50c3c38fb38fd181ef8a4068fa00": "app_packagename",
+		"5a586fd6589f0b8be2faf14236923cfe101cf6f2": "app_detect_family",
+		"c9e18c89c4d0acfdb27b7ce7735fbdb6805154af": "app_detect_type"
+	}
+}, {
+	"hash": "7bdeb00f9f5a39c89890710ebcb015883372336b",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"41c8e5c635fcce3569f29817a6af0d1b8e7d272d": "imei",
+		"abf03a7f5b38a2efd204bcb98841b09e8e86cbc1": "device_id"
+	}
+}, {
+	"hash": "e64847e49a851295f2fe8fae8fc00f99c704f92c",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"5c7d66f219e3c74cdb30069aad6b83f41b281b59": "user_ip",
+		"ee500534601a276f27349a00e5311719701f1b6f": "city",
+		"8ce39b6a107abd0b75e4f0fe1c8dfd8d70954180": "longitude",
+		"33f71eaea8d80fe584a64f621f494084ec3efb90": "latitude"
+	}
+}, {
+	"hash": "5b3cbd5b30f1183bc4161790136af63c4e6e7e90",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"76a374936d7b8b487cbfcee9b56d0deecb0ba554": "imei",
+		"7f342dc74b623bcbc95166f5df4e5de394d036d0": "device_id"
+	}
+}, {
+	"hash": "a4d4f6f8c20c1362342c88c9a9dbe59b7a66eae5",
+	"desc": "搜索样本信息",
+	"params": ["package_name", "developers", "keyhash", "sensitive_strings_sp", "sensitive_strings_domain", "sensitive ip", "authentication"],
+	"res": {
+		"aa3998254438c061ed8804f66416442cd6a116e8": "app_hash",
+		"5ca33e55e286e36296efc1eb04bc5f277cc98b63": "version",
+		"37e8f05e5ae9dbc3e3836401a158088e1a8ab48a": "version_name",
+		"8745b8747c46dfb1665d6f5c41c750973f710188": "program_name",
+		"d83b76bd0193be01b652c2a14906933b058e8f13": "sensitive ip",
+		"fd49c9db75c0dba44a9a47536fdb7df43d79f6cf": "sample_type_name",
+		"d4f121f550721df7923dbd5bf8e083939345a7b9": "sensitive_strings",
+		"6a8ed60ff3c32da802cf32872162eaed3bc9e74e": "package_name",
+		"c831643deea3e337df9e9c5eec5ce98bbef6d222": "sensitive_strings_url",
+		"f0bbe7e4eebcf558d2e8eeebd5b70b0275d3bc53": "developers",
+		"e013c6679a8aa4a4c4da75d1ad6ad16d2a6319cf": "permissions",
+		"c18718c060ca4c957a84890c749cdbc1f1c93634": "sensitive_strings_sp",
+		"2a12c1a7f21d19534ac39049bfcc51ee551c3545": "sensitive_strings_domain",
+		"1c6693be920680d8e8b8b408c1e58791a0402d1e": "sample_sha1",
+		"8f3adef90cc8db9a1c09427a9781d260cf083a90": "file_size",
+		"99afb15392a46e29cf6001923e6a9574bfe33cb0": "sensitive_strings_email",
+		"8cdd6a9bdfc24b51372aa26a09c19b2ab739f3d2": "record_time",
+		"af9054a1894ecb58ae77bd66cff8c3f0920ffa37": "sample_sha256",
+		"cf68cea6adb3dabe2a8be993409e9bfa5d6b0d2a": "keyhash"
+	}
+}, {
+	"hash": "337072d6beb75045142b965af1c0078f88f9ae65",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"74fdf2d51a35b83753dc5e600706487e60bd60af": "imei",
+		"74f23d3d3acd92028698b0dba813f341d1515b43": "device_id"
+	}
+}, {
+	"hash": "c2ed89f50469c994181ab56dc45918da425259e2",
+	"desc": "在引擎日志中通过包名获取到样本HASH",
+	"params": ["package_name"],
+	"res": {
+		"168200700ac818a6de35e0d569025c8165948c96": "app_hash"
+	}
+}, {
+	"hash": "be77e3dbd289ee227c39108a08b0b81495d55397",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac", "加密后的mac", "time_begin", "time_begin"],
+	"res": {
+		"a7d90f3dcb36206d956df81515ea3714a58f6a79": "user_ip",
+		"8ce88ad2c5cfa6e2b8963df9e8fd80a01abeffd2": "city",
+		"e0f725c85eb8b0102ee598f44ecbe8535d9ff652": "longitude",
+		"5aa7165d03905c9c013ba57cff21e2de15d87561": "latitude"
+	}
+}, {
+	"hash": "578bbe3433a26957a5a18a0f77753c37c1db6ef2",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"79e990a81cb6e9a9079a67f6bc8a87417e81f57b": "imei",
+		"9aa49c8f713074af3b10b7014432b61f00c00357": "device_id"
+	}
+}, {
+	"hash": "2dc2e95e42b8cfcb82f19e8b6b94c8b81a335793",
+	"desc": "根据IP获得用户",
+	"params": ["ip", "time_begin", "time_begin"],
+	"res": {
+		"2e3aaeac2f66e44725e3730f73c1ac254e257b7a": "imei",
+		"35d9a298d2c8ce9e364d3d02ce9ad94b153a8dcb": "device_id"
+	}
+}, {
+	"hash": "192caf5e19b8f03adea3b84b3118cf78282ea51d",
+	"desc": "通过样本hash获取用户",
+	"params": ["hash"],
+	"res": {
+		"62833cc916bffb2ac21709204c4538c58bef2c96": "imei",
+		"bf1fb40f8ffa72b08cdc63bf0dc5dafe40d8e4f0": "device_id"
+	}
+}, {
+	"hash": "9f6e070d01515ca6c8fc61a249e6845961334272",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac"],
+	"res": {
+		"3c5af6af97460a92e164ab31fc0157616fe54d05": "user_ip",
+		"05bed019e8f7eb5bd0b0b32b69e69973ec901a09": "city",
+		"dcb63ae33149339f5859f25abf9639cfc0603cdb": "longitude",
+		"d8927f417455a149f359e6f1b1c3de3934c84556": "latitude"
+	}
+}, {
+	"hash": "5f618b32c4f7c782792e4034544298e7aa295130",
+	"desc": "获取用户的地理位置",
+	"params": ["imei", "mac"],
+	"res": {
+		"bb4c354a47b43ad2e70576ba914266b15f3e3b73": "user_ip",
+		"691c00d19e3563d9bedade8e8395fbbc812813a4": "city",
+		"cf205fca3aa8c429085d372edb1e075cb2f352ef": "longitude",
+		"063848bddb5254b8efe930c015cf3f6149c78bf4": "latitude"
+	}
+}]

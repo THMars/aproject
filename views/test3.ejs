@@ -1,0 +1,262 @@
+<% include head.ejs %>
+
+<select class="args" id="args"></select>
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+<select class="args" id="result"></select>
+<div style="color: #fff">路径：</div>
+</body>
+<script>
+    var authorization = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZGVwdF9uYW1lIjoiZGVwMSIsImV4cCI6MTUwMTQ2OTc0Njc2OCwiaWF0IjoxNTAxNDY2MTQ2fQ.kgIwVzsIGMN4Y_uV77PUcziu3wG6t9dBN6fEOzr4ICA";
+    var keywords=[];
+    //    1.通过getConfigAll获取全部字段
+    var api = new missionClient.ConfigApi();
+    var opts = {'authorization':authorization};
+    var deployApi={};//转格式之后的apis
+    var apiCanBeUse=new Set();//未转格式之前的apis
+    api.getConfigAll(opts).then(function (data) {//1.getConfigAll()获取所有能够执行的查询；
+        console.log(data);
+        let arglist = data.d;
+        let html = "";
+        let apiRes = [];
+        let args = [];
+        arglist.forEach(function (item,index) {
+            api.getApiConfig([item.id],opts).then(function (data) {//2.将可用的api进行集中，其余api剔除
+                // console.log(data);
+                apiRes.push(data);
+                if(data.d.length>0){
+                    html += `<option value="${item.id}">${item.label}</option>`;
+                    args.push(item.id);
+                }
+            },function (err) {
+                console.log(err);
+            })
+        })
+//5，给测试页面的select标签绑定事件，出发规划路径函数，传入
+        setTimeout(function () {
+            
+            $("#args").html(html);
+            apiRes.forEach(function (item,index) {
+                if(item.d.length>0){
+                    item.d[0].apiList.forEach(function(api,index){
+                        apiCanBeUse.add(api.url);
+                    })
+                }
+            })
+            apiInfo([...apiCanBeUse],function (data) {
+                var result= [];
+                console.log(JSON.stringify(data))
+                data.forEach(function(item,idx){
+                    for (var i = 0; i < item.params.length; i++) {
+                        var obj={};
+                        obj["hash"]=item.hash;
+                        obj["res"] = item.res;
+                        deployApi[item.params[i]]=[];
+                        deployApi[item.params[i]].push(obj);
+                    }
+                })
+                console.log(deployApi);
+                
+                var apiRoad=selectApi(deployApi,data);
+                console.log(JSON.stringify(apiRoad));
+
+
+                $("#args").change(function(){
+                    api.getApiConfig([$(this).val()],opts).then(function(data){
+                        var urls=[];
+                        data.d[0].apiList.forEach(function(item){
+                            urls.push(item.url);
+                        })
+
+                        
+
+                    },function(err){
+                        console.log(err);
+                    })
+                })
+
+
+                // var id = 0;
+                // var apiTree = [];
+                // data.forEach(function(item,index){
+                //     item.params.forEach(function(p,index){
+                //         item.res.forEach(function(r,index){
+                //             var obj={};
+                //             obj.nodeId = id;
+                //             obj.params = p;
+                //             obj.hash = item.hash;
+                //             obj.res = r;
+                //             apiTree.push(obj);
+                //             id++;
+                //         })
+                //     })
+                // })
+                // console.log(apiTree);
+
+                // var against = [];
+                // for(var i = 0;i<apiTree.length;i++){
+                //     for(var j = 0;j<apiTree.length;j++){
+                //         if (apiTree[i].res==apiTree[j].params) {
+                //             var obj={};
+                //             obj.left=apiTree[i].nodeId;
+                //             obj.right=apiTree[j].nodeId;
+                //             against.push(obj);
+                //         }
+                //     }
+                // }
+                // console.log(against);
+
+                // selectApi("hash");
+                // function selectApi(keyWord){
+                //     let nodeIds=[];
+                //     let Apis=[];
+                //     for (var i = 0; i < apiTree.length; i++) {
+                        
+                //         if (apiTree[i].params==keyWord) {
+                //             nodeIds.push(apiTree[i].nodeId);
+                //         }
+                //     }
+                //     console.log(nodeIds);
+                //     nodeIds.forEach(function(item){
+                //         ag(item);
+                //     })
+                //     console.log(Apis);
+                //     function ag(id){
+                //         for(var i=0;i<against.length;i++){
+                //             if(i==against.length-1){
+                //                 return;
+                //             }else {
+                //                 if (id==against[i].left) {
+                //                     Apis.push(against[i]);
+                //                     ag(against[i].right);
+                //                 }
+                //             }
+                //         }
+                //     }
+                // }
+                // console.log(road("hash",deployApi));
+            });
+        },300)
+    },function (err) {
+        console.log(err);
+    })
+
+    //select选择事件
+    // $("#args").change(function(){
+    //     var hash = $(this).find("option:selected").val()
+    //     api.getApiConfig([hash],opts).then(function(data){
+    //         var arr=[];
+    //         var keyWord=new Set();
+    //         var res=new Set();
+    //         for (var i = 0; i < data.d[0].apiList.length; i++) {
+    //             arr.push(data.d[0].apiList[i].url);
+    //         }
+    //         arr.forEach(function(hash){
+    //             apiCanBeUse.forEach((api)=>{
+    //                 if(api.hash==hash){
+    //                     keyWord = new Set([...keyWord].concat(api.res));
+    //                 }
+    //             })
+    //         })
+    //         console.log(keyWord);
+    //     },function(err){
+    //         console.log(err);
+    //     })
+    // })
+
+
+    // [{hash:[],res:[]}]
+    // function road(apiList,args){
+    //     var way=[];
+    //     for(var k in apiList){
+    //         var obj={};
+    //         obj.hash=[];
+    //         obj.res=[];
+    //         if (k==args) {
+    //             obj.hash.push(apiList[k][0].hash);
+    //             obj.res=obj.res.concat(apiList[k][0].res);
+    //             way.push(obj);
+    //         }
+    //     }
+    //     return way;
+    // }
+
+    
+    
+    //递归查找查询途径
+    function road(k,a){
+    var hash = [];
+    var res = [];
+    var n =0;
+    dg(k,a);
+    function dg(keyWord,apis){
+        if (isInObj(keyWord,apis)) {
+            for(var k in apis){
+                if (k == keyWord) {
+                    hash.push(apis[k][0].hash);
+                    res.push(apis[k][0].res);
+                    delete apis[k];
+                    res[n].forEach(function(item){
+                        dg(item,apis)
+                    })
+                    break;
+                    n++;
+                }
+            }
+        }else{
+            return false;
+        }
+    }
+    return {hash:hash,res:res};
+}
+
+    function isInObj(k,a){
+        var arr=[];
+        for(var key in a){
+            arr.push(key);
+        }
+        if(arr.indexOf(k)!=-1){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    // 2.对输入字段进行模拟调用api，并将结果字段加入集合；
+
+
+    // 3.对结果集合检索，查出所以符合条件的路径
+
+
+    //对现有数据进行一次整合，将所有路径一次性规划完毕
+      //1.获取api详情，并展开
+    function apiInfo(arr,cb) {
+        $.ajax({
+            type:"get",
+            url:`/chooseApi/apicanbeuse?token=${authorization}`,
+            success:function (data) {
+                var apis = [];
+                arr.forEach(function (hash,idx) {
+                    data.forEach(function (item,idx) {
+                        if (item.hash == hash){
+                            apis.push(item);
+                        }
+                    })
+                })
+                localStorage.setItem("apis",JSON.stringify(apis));
+//                console.log(JSON.parse(localStorage.getItem("apis")));
+                
+                cb(apis);
+            }
+        })
+    }
+   // [{keyword:hash,way:[],result:[]}]//将数据扁平化展开
+   // 
+   // 递归实现路径规划
+   
+</script>
+</html>

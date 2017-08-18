@@ -1,0 +1,382 @@
+swagger: '2.0'
+info:
+  version: '1.0.0'
+  title: 协同会战
+  description: 协同会战接口
+host: 10.0.0.74:10010
+schemes:
+  - http
+basePath: /
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /config/type:
+    x-swagger-router-controller: config
+    get:
+      tags:
+        - config
+      operationId: getConfigAll
+      summary: 获取全部字段类型列表
+      description: 获取全部字段类型列表
+      parameters:
+        - $ref: '#/parameters/Authorization'
+      responses:
+        200:
+          description: 返回数据
+          schema:
+            type: object
+            properties:
+              ri:
+                $ref: '#/definitions/ri'
+              d:
+                type: array
+                items:
+                  type: object
+                  description: 字段类型信息
+                  properties:
+                    id:
+                      type: string
+                      description: 类型ID
+                    label:
+                      type: string
+                      description: 类型名称
+  /config/object:
+    x-swagger-router-controller: config
+    get:
+      tags:
+        - config
+      operationId: getObjectConfig
+      summary: 获取标准对象配置
+      description: 获取标准对象配置
+      parameters:
+        - $ref: '#/parameters/Authorization'
+      responses:
+        200:
+          description: 返回标准对象配置
+          schema:
+            type: object
+            properties:
+              ri:
+                $ref: '#/definitions/ri'
+              d:
+                type: array
+                items:
+                  $ref: '#/definitions/ObjectConfig'
+  /config/api-by-param:
+    x-swagger-router-controller: config
+    get:
+      tags:
+        - config
+      operationId: getApiConfig
+      summary: 通过入参获取相关api信息 
+      description: 通过入参获取相关api信息
+      parameters:
+        - $ref: '#/parameters/Authorization'
+        - name: params
+          in: query
+          description: 参数ID列表
+          required: true
+          type: array
+          items:
+            type: string
+      responses:
+        200:
+          description: 返回api信息
+          schema:
+            type: object
+            properties:
+              ri:
+                $ref: '#/definitions/ri'
+              d:
+                type: array
+                items:
+                  $ref: '#/definitions/ApiInfo'
+  /result/detail:
+    x-swagger-router-controller: result
+    get:
+      tags:
+        - result
+      operationId: getResultDetail
+      summary: 获取结果数据详情
+      description: 获取结果数据详情
+      parameters:
+        - $ref: '#/parameters/Authorization'
+        - name: id
+          in: query
+          type: string
+          description: 结果数据ID
+          required: true
+      responses:
+        200:
+          description: 返回结果数据详情
+          schema:
+            type: object
+            properties:
+              ri:
+                $ref: '#/definitions/ri'
+              d:
+                $ref: '#/definitions/ResultDetail'
+
+  /objects/detail:
+    x-swagger-router-controller: objects
+    get:
+      tags:
+        - object
+      operationId: getObjectsDetail
+      summary: 通过对象ID获取对象详情
+      description: 通过对象ID获取对象详情
+      parameters:
+        - $ref: '#/parameters/Authorization'
+        - name: id
+          in: query
+          required: true
+          type: string
+          description: 标准对象ID
+      responses:
+        200:
+          description: 返回数据
+          schema:
+            type: object
+            properties:
+              ri:
+                $ref: '#/definitions/ri'
+              d:
+                $ref: '#/definitions/ObjectDetail'
+
+  /objects:
+    x-swagger-router-controller: objects
+    get:
+      tags:
+        - object
+      operationId: getObjectsInfo
+      summary: 获取标准对象列表
+      description: 获取标准对象列表
+      parameters:
+        - $ref: '#/parameters/Authorization'
+        - name: meetingID
+          in: query
+          description: 会战ID
+          required: true
+          type: string
+      responses:
+        200:
+          description: 返回数据
+          schema:
+            type: object
+            properties:
+              ri:
+                $ref: '#/definitions/ri'
+              d:
+                type: array
+                items:
+                  $ref: '#/definitions/ObjectInfo'
+
+parameters:
+  Authorization:
+    name: Authorization
+    in: header
+    description: token字串
+    required: false
+    type: string
+definitions:
+  ri:
+    type: object
+    description: 返回状态信息
+    properties:
+      rc:
+        type: number
+        description: 返回码，1为成功
+      msg:
+        type: string
+        description: 返回状态描述
+  ObjectParam:
+    type: object
+    description: 标准对象字段信息
+    properties:
+      id:
+        type: string
+        description: 字段ID
+      label:
+        type: string
+        description: 字段名称
+  ObjectConfig:
+    type: object
+    description: 标准对象配置信息
+    properties:
+      id:
+        type: string
+        description: 配置ID
+      label:
+        type: string
+        description: 配置名称
+      params:
+        type: array
+        description: 字段列表
+        items:
+          $ref: '#/definitions/ObjectParam'
+  ObjectInfo:
+    type: object
+    description: 对象信息
+    properties:
+      id:
+        type: string
+        description: 对象ID
+      name:
+        type: string
+        description: 对象名称
+      type:
+        type: string
+        description: 对象类型
+      sendUserID:
+        type: string
+        description: 发送者用户ID
+      sendUserName:
+        type: string
+        description: 发送者用户名
+      sendTime:
+        type: string
+        description: 发送时间
+      messageID:
+        type: string
+        description: 消息ID
+      meetingID:
+        type: string
+        description: 会战ID
+  ObjectDetail:
+    type: object
+    description: 对象详情
+    properties:
+      id:
+        type: string
+        description: 对象ID
+      name:
+        type: string
+        description: 对象名称
+      type:
+        type: string
+        description: 对象类型
+      sendUserID:
+        type: string
+        description: 发送者用户ID
+      sendUserName:
+        type: string
+        description: 发送者用户名
+      sendTime:
+        type: string
+        description: 发送时间
+      messageID:
+        type: string
+        description: 消息ID
+      meetingID:
+        type: string
+        description: 会战ID
+      data:
+        type: string
+        description: 对象内容,json字串
+  ResultDetail:
+    type: object
+    description: 返回数据详情
+    properties:
+      id:
+        type: string
+        description: 返回数据ID
+      userID:
+        type: string
+        description: 操作人ID
+      userName:
+        type: string
+        description: 操作人名称
+      srcSystemID:
+        type: string
+        description: 起始系统ID
+      srcSystemTitle:
+        type: string
+        description: 起始系统名称
+      dstSystemID:
+        type: string
+        description: 目的系统ID
+      dstSystemTitle:
+        type: string
+        description: 目的系统名称
+      url:
+        type: string
+        description: 目的系统应用url
+      method:
+        type: string
+        description: 目的系统应用方法
+      params:
+        type: string
+        description: 请求数据json字串
+      data:
+        type: string
+        description: 返回数据json字串
+  ApiInfo:
+    type: object
+    description: api信息
+    properties:
+      sysID:
+        type: string
+        description: 系统ID
+      sysTitle:
+        type: string
+        description: 系统名称
+      sysVersion:
+        type: string
+        description: 系统版本
+      sysDesc:
+        type: string
+        description: 系统描述
+      apiList:
+        description: api信息列表
+        type: array
+        items:
+          type: object
+          description: api信息
+          properties:
+            desc:
+              type: string
+              description: api描述
+            summary:
+              type: string
+              description: api简述
+            url:
+              type: string
+              description: api url
+            type:
+              type: string
+              description: api类型
+            method:
+              type: string
+              description: api方法
+            parameters:
+              type: array
+              description: 参数信息列表
+              items:
+                type: object
+                description: 参数信息
+                properties:
+                  required:
+                    type: boolean
+                    description: 是否必要
+                  id:
+                    type: string
+                    description: 参数ID
+                  type:
+                    type: string
+                    description: 参数类型
+                  desc:
+                    type: string
+                    description: 参数描述
+                  params:
+                    type: array
+                    description: 可填参数ID列表
+                    items:
+                      type: string
+                      description:  参数ID
+
+
+
+
+
